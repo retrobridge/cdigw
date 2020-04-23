@@ -6,6 +6,7 @@ defmodule MusicBrainz do
   @user_agent "CDDBGateway/#{@app_version} (#{@app_url})"
 
   @sectors_per_second 75
+  @default_inc ["artists", "recordings", "genres"]
 
   plug Tesla.Middleware.BaseUrl, "http://musicbrainz.org/ws/2"
   plug Tesla.Middleware.JSON
@@ -36,20 +37,19 @@ defmodule MusicBrainz do
 
     case fuzzy_search_by_toc(toc_query) do
       {:ok, %{status: 200, body: body}} ->
-        body["releases"]
-        |> Enum.find(fn rel ->
-          toc == dig(rel, ["media", 0, "discs", 0, "offsets"])
-        end)
-        |> case do
-          nil -> {:error, :not_found}
-          disc -> {:ok, disc}
-        end
+        matches =
+          Enum.filter(body["releases"], fn rel ->
+            toc == dig(rel, ["media", 0, "discs", 0, "offsets"])
+          end)
+
+        {:ok, matches}
+
       other ->
         {:error, other}
     end
   end
 
-  def get_release(id, inc \\ ["artists", "recordings", "genres"]) do
+  def get_release(id, inc \\ @default_inc) do
     inc_list = Enum.join(inc, "+")
     case get("/release/#{id}/?fmt=json&inc=#{inc_list}") do
       {:ok, %{status: 200, body: body}} ->
@@ -113,8 +113,9 @@ defmodule MusicBrainz do
 
   https://musicbrainz.org/doc/Development/XML_Web_Service/Version_2#Non-MBID_Lookups
   """
-  def fuzzy_search_by_toc(toc) do
-    get("/discid/-?fmt=json&toc=" <> Enum.join(toc, "+"))
+  def fuzzy_search_by_toc(toc, inc \\ @default_inc) do
+    inc_list = Enum.join(inc, "+")
+    get("/discid/-?fmt=json&inc=#{inc_list}&toc=" <> Enum.join(toc, "+"))
   end
 
   defp ensure_int_list(items) do
@@ -123,6 +124,8 @@ defmodule MusicBrainz do
       item when is_binary(item) -> String.to_integer(item)
     end)
   end
+
+  defp dig(nil, _), do: nil
 
   defp dig(data, [key | keys]) when is_map(data) do
     data |> Map.get(key) |> dig(keys)
