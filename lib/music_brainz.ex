@@ -1,16 +1,16 @@
 defmodule MusicBrainz do
   use Tesla
 
-  @app_version Mix.Project.config[:version]
+  @app_version Mix.Project.config()[:version]
   @app_url "https://github.com/mroach/cddb_gateway"
   @user_agent "CDDBGateway/#{@app_version} (#{@app_url})"
 
   @sectors_per_second 75
   @default_inc ["artists", "recordings", "genres"]
 
-  plug Tesla.Middleware.BaseUrl, "http://musicbrainz.org/ws/2"
-  plug Tesla.Middleware.JSON
-  plug Tesla.Middleware.Headers, [{"user-agent", @user_agent}]
+  plug(Tesla.Middleware.BaseUrl, "http://musicbrainz.org/ws/2")
+  plug(Tesla.Middleware.JSON)
+  plug(Tesla.Middleware.Headers, [{"user-agent", @user_agent}])
 
   @doc """
   Find a disc by its length in seconds and track LBA TOC
@@ -51,9 +51,11 @@ defmodule MusicBrainz do
 
   def get_release(id, inc \\ @default_inc) do
     inc_list = Enum.join(inc, "+")
+
     case get("/release/#{id}/?fmt=json&inc=#{inc_list}") do
       {:ok, %{status: 200, body: body}} ->
         {:ok, body}
+
       other ->
         {:error, other}
     end
@@ -77,16 +79,16 @@ defmodule MusicBrainz do
       {"DISCID", disc_id},
       {"DTITLE", "#{artist} / #{title}"},
       {"DYEAR", year},
-      {"DGENRE", genre},
+      {"DGENRE", genre}
     ]
 
     # zero-based track titles
     tracks =
       release
       |> dig(["media", 0, "tracks"])
-      |> Enum.sort_by(&(&1["position"]))
+      |> Enum.sort_by(& &1["position"])
       |> Enum.map(fn track -> dig(track, ["recording", "title"]) end)
-      |> Enum.with_index
+      |> Enum.with_index()
       |> Enum.map(fn {title, ix} -> {"TTITLE#{ix}", title} end)
 
     # For maximum compatibility, include the EXT tag lines for each track
@@ -130,8 +132,10 @@ defmodule MusicBrainz do
   defp dig(data, [key | keys]) when is_map(data) do
     data |> Map.get(key) |> dig(keys)
   end
+
   defp dig(data, [key | keys]) when is_list(data) do
     data |> Enum.at(key) |> dig(keys)
   end
+
   defp dig(data, []), do: data
 end
