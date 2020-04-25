@@ -9,8 +9,8 @@ defmodule MusicBrainz do
   # To not get rate-limited, we have to provide a `user-agent` header
   # that includes the app name, version, and contact info.
   @app_version Mix.Project.config()[:version]
-  @app_url "https://github.com/mroach/cddb_gateway"
-  @user_agent "CDDBGateway/#{@app_version} (#{@app_url})"
+  @app_url "https://github.com/mroach/cdigw"
+  @user_agent "CDIGW/#{@app_version} (#{@app_url})"
 
   @sectors_per_second 75
   @default_inc ["artists", "recordings", "genres"]

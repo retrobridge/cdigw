@@ -1,8 +1,9 @@
-.PHONY: build-base release shell
+.PHONY: build-base push-release release shell
 
 HTTP_PORT = 8333
 ELIXIR_VER = 1.10
-TAG = cddb_gateway_elixir_$(ELIXIR_VER)
+APP = cdigw
+TAG = $(APP)_elixir_$(ELIXIR_VER)
 VERSION = `cat VERSION`
 
 build-base:
@@ -18,4 +19,9 @@ release:
 	@echo Building version $(VERSION)
 	docker build --build-arg elixir_ver=$(ELIXIR_VER) \
 		--target release \
-		--tag cddb_gateway:$(VERSION) .
+		--tag mfroach/$(APP):$(VERSION) .
+	docker tag mfroach/$(APP):$(VERSION) mfroach/$(APP):latest
+
+push-release: release
+	docker push mfroach/$(APP):$(VERSION)
+	docker push mfroach/$(APP):latest

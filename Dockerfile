@@ -46,6 +46,6 @@ EXPOSE 888
 
 WORKDIR /opt/app
 
-COPY --from=builder /opt/mix/build/rel/cddb_gateway ./
+COPY --from=builder /opt/mix/build/rel/cdigw ./
 
-CMD ["bin/cddb_gateway", "start"]
+CMD ["bin/cdigw", "start"]

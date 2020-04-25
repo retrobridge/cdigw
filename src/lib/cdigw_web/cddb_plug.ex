@@ -1,4 +1,4 @@
-defmodule CddbGatewayWeb.CddbPlug do
+defmodule CdigwWeb.CddbPlug do
   import Plug.Conn
   require Logger
 

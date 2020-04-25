@@ -1,8 +1,8 @@
-# defmodule CddbGatewayTest do
+# defmodule CdigwTest do
 #   use ExUnit.Case
-#   doctest CddbGateway
+#   doctest Cdigw
 
 #   test "greets the world" do
-#     assert CddbGateway.hello() == :world
+#     assert Cdigw.hello() == :world
 #   end
 # end

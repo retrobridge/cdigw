@@ -1,8 +1,8 @@
-defmodule CddbGatewayWeb.CddbPlugTest do
+defmodule CdigwWeb.CddbPlugTest do
   use ExUnit.Case, async: true
   use Plug.Test
 
-  alias CddbGatewayWeb.CddbPlug
+  alias CdigwWeb.CddbPlug
 
   # TODO: Mock-out the calls to MusicBrainz
   @tag capture_log: true

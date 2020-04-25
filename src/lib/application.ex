@@ -1,4 +1,4 @@
-defmodule CddbGateway.Application do
+defmodule Cdigw.Application do
   @moduledoc false
 
   use Application
@@ -13,7 +13,7 @@ defmodule CddbGateway.Application do
           {Cache, []}
         ]
 
-    opts = [strategy: :one_for_one, name: CddbGateway.Supervisor]
+    opts = [strategy: :one_for_one, name: Cdigw.Supervisor]
 
     Supervisor.start_link(children, opts)
   end
@@ -25,7 +25,7 @@ defmodule CddbGateway.Application do
     Logger.info("Starting the HTTP gateway on :#{port}...")
 
     [
-      {Plug.Cowboy, scheme: :http, plug: CddbGatewayWeb.Endpoint, options: [port: port]}
+      {Plug.Cowboy, scheme: :http, plug: CdigwWeb.Endpoint, options: [port: port]}
     ]
   end
 end

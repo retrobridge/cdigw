@@ -1,9 +1,9 @@
-defmodule CddbGateway.MixProject do
+defmodule Cdigw.MixProject do
   use Mix.Project
 
   def project do
     [
-      app: :cddb_gateway,
+      app: :cdigw,
       version: version(),
       elixir: "~> 1.10",
       start_permanent: Mix.env() == :prod,
@@ -15,7 +15,7 @@ defmodule CddbGateway.MixProject do
 
   def application do
     [
-      mod: {CddbGateway.Application, []},
+      mod: {Cdigw.Application, []},
       extra_applications: [:logger]
     ]
   end

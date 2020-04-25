@@ -1,4 +1,4 @@
-# CDDB Gateway
+# CDIGW: CD Info Gateway
 
 On 31 March 2020, [FreeDB] shut down its service.
 
