@@ -1,6 +1,4 @@
 defmodule Cddb.QueryResponse do
-  @header_no_match "202 No match"
-
   @default_proto 5
   @line_separator "\n"
   @eof "."

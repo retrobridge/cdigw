@@ -10,7 +10,7 @@ defmodule Cddb.ReadResponse do
   @doc """
   Render a `Disc` as a fully acceptable response body
   """
-  def render(%Disc{} = disc, proto \\ @d) do
+  def render(%Disc{} = disc, proto \\ @default_proto) do
     [header(disc), render_fields(disc, proto), @eof, ""]
     |> List.flatten()
     |> Enum.join(@line_separator)
