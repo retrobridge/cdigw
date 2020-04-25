@@ -1,11 +1,14 @@
 defmodule CddbGateway.ProxyPlug do
   import Plug.Conn
+  require Logger
 
   def init(options), do: options
 
   def call(conn, _opts) do
     conn = fetch_query_params(conn)
     ["cddb" | cmd] = String.split(conn.query_params["cmd"], " ", trim: true)
+
+    Logger.debug("handling cmd=#{inspect(cmd)}")
 
     conn |> handle_command(cmd)
   end
@@ -20,35 +23,39 @@ defmodule CddbGateway.ProxyPlug do
   # 150 ... 188495  sector start lba for each track
   # 2734            CD play time in seconds
   def handle_command(conn, ["query" | query]) do
-    [_disc_id, track_count | tracks] = query
+    [cddb_disc_id, track_count | tracks] = query
     track_count = String.to_integer(track_count)
     {tracks, [seconds]} = Enum.split(tracks, track_count)
     seconds = String.to_integer(seconds)
 
     {:ok, releases} = MusicBrainz.find_by_length_and_toc(seconds, tracks)
+    Cache.put(cddb_disc_id, hd(releases))
 
     fields = ["DGENRE", "DISCID", "DTITLE"]
 
     matched_discs =
       releases
       |> Enum.map(fn rel ->
-        cddb_data = MusicBrainz.release_to_cddb(rel)
+        cddb_data = MusicBrainz.release_to_cddb(cddb_disc_id, rel)
 
         fields
         |> Enum.map(fn field -> cddb_value(cddb_data, field) end)
         |> Enum.join(" ")
       end)
 
-    for rel <- releases do
-      disc_id = String.slice(rel["id"], 0..7)
-      Cache.put(disc_id, rel)
+    response = case conn.query_params["proto"] do
+      "1" -> "200 #{hd(matched_discs)}"
+      "2" -> "200 #{hd(matched_discs)}"
+      "3" -> "200 #{hd(matched_discs)}"
+      _ ->
+        ~s"""
+        210 Found exact matches, list follows (until terminating `.')
+        #{Enum.join(matched_discs, "\n")}
+        .
+        """
     end
 
-    response = ~s"""
-    210 Found exact matches, list follows (until terminating `.')
-    #{Enum.join(matched_discs, "\n")}
-    .
-    """
+    Logger.debug(response)
 
     conn
     |> put_resp_content_type("text/plain")
@@ -56,29 +63,53 @@ defmodule CddbGateway.ProxyPlug do
   end
 
   def handle_command(conn, ["read", genre, disc_id]) do
-    rel = Cache.get(disc_id)
-    cddb_data = MusicBrainz.release_to_cddb(rel)
+    Logger.info("fetching cached disc: genre=#{genre} disc_id=#{disc_id}")
+    proto = conn.query_params["proto"]
 
-    field_list =
-      cddb_data
-      |> Enum.map(fn {key, value} -> "#{key}=#{value}" end)
-      |> Enum.join("\n")
+    case Cache.get(disc_id) do
+      nil ->
+        send_resp(conn, 404, "404 not found")
+      release ->
+        Logger.debug("release=#{inspect(release)}")
 
-    response = ~s"""
-    210 #{genre} #{disc_id} CD database entry follow (until terminating `.')
-    #{field_list}
-    .
-    """
+        cddb_data = MusicBrainz.release_to_cddb(disc_id, release)
+        cddb_data = cddb_fields_for_proto(cddb_data, proto)
+        field_list = cddb_field_list(cddb_data)
 
-    conn
-    |> put_resp_content_type("text/plain")
-    |> send_resp(200, response)
+        response = ~s"""
+        210 #{genre} #{disc_id} CD database entry follow (until terminating `.')
+        #{field_list}
+        .
+        """
+
+        Logger.debug(response)
+
+        conn
+        |> put_resp_content_type("text/plain")
+        |> send_resp(200, response)
+    end
+  end
+
+  defp no_matches_response(disc_id) do
+    "202 No match for disc ID #{disc_id}"
+  end
+
+  defp cddb_fields_for_proto(fields, "5"), do: fields
+  defp cddb_fields_for_proto(fields, _) do
+    Enum.reject(fields, fn {k, _} -> Enum.member?(["DYEAR", "DGENRE"], k) end)
   end
 
   def handle_command(conn, _cmd) do
+    Logger.debug("unsupported request req=#{inspect(conn)}")
     conn
     |> put_resp_content_type("text/plain")
     |> send_resp(400, "unsupported command")
+  end
+
+  defp cddb_field_list(fields) do
+    fields
+    |> Enum.map(fn {key, value} -> "#{key}=#{value}" end)
+    |> Enum.join("\n")
   end
 
   defp cddb_value(fields, key) do

@@ -64,19 +64,14 @@ defmodule MusicBrainz do
   @doc """
   Convert a release to a list of CDDB field/value pairs
   """
-  def release_to_cddb(release) do
+  def release_to_cddb(cddb_disc_id, release) do
     artist = dig(release, ["artist-credit", 0, "name"])
     title = release["title"]
     year = String.slice(release["date"], 0..3)
     genre = Enum.at(release["genres"], 0) || "misc"
 
-    # we can't reliably calculate the disc ID based on the info we have, so
-    # just use the first 8 chars of the MBID. hopefully no player is actually
-    # using the disc ID to populate the track count and disc length.
-    disc_id = String.slice(release["id"], 0..7)
-
     head = [
-      {"DISCID", disc_id},
+      {"DISCID", cddb_disc_id},
       {"DTITLE", "#{artist} / #{title}"},
       {"DYEAR", year},
       {"DGENRE", genre}
