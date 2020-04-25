@@ -1,0 +1,1576 @@
+{
+  "release-offset": 0,
+  "releases": [
+    {
+      "title": "The Family Jewels",
+      "artist-credit": [
+        {
+          "artist": {
+            "disambiguation": "a.k.a. Marina and the Diamonds",
+            "id": "7f3d82ee-3817-4367-9eec-f33a312247a1",
+            "name": "MARINA",
+            "sort-name": "MARINA",
+            "genres": [
+              {
+                "name": "alternative pop",
+                "id": "d3ebe947-7c03-43f5-b333-09379881b0f6",
+                "disambiguation": "",
+                "count": 1
+              },
+              {
+                "id": "ceeaa283-5d7b-4202-8d1d-e25d116b2a18",
+                "name": "alternative rock",
+                "disambiguation": "",
+                "count": 1
+              },
+              {
+                "count": 1,
+                "name": "electropop",
+                "id": "3f3388b4-e36a-4bf8-a0be-66b10d92aaa4",
+                "disambiguation": ""
+              },
+              {
+                "id": "538c905b-642d-43c9-b071-439af11cc471",
+                "name": "indie",
+                "disambiguation": "",
+                "count": 1
+              },
+              {
+                "id": "f390be72-360b-41bb-a310-6a2e638779d2",
+                "name": "indie pop",
+                "disambiguation": "",
+                "count": 1
+              },
+              {
+                "disambiguation": "",
+                "name": "pop",
+                "id": "911c7bbb-172d-4df8-9478-dbff4296e791",
+                "count": 2
+              }
+            ]
+          },
+          "name": "Marina & the Diamonds",
+          "joinphrase": ""
+        }
+      ],
+      "packaging": "Jewel Case",
+      "release-events": [
+        {
+          "area": {
+            "id": "71bbafaa-e825-3e15-8ca9-017dcad1748b",
+            "name": "Canada",
+            "sort-name": "Canada",
+            "disambiguation": "",
+            "iso-3166-1-codes": [
+              "CA"
+            ]
+          },
+          "date": "2010-05-25"
+        }
+      ],
+      "quality": "normal",
+      "status": "Official",
+      "genres": [],
+      "packaging-id": "ec27701a-4a22-37f4-bfac-6616e0f9750a",
+      "date": "2010-05-25",
+      "asin": null,
+      "disambiguation": "",
+      "barcode": "825646836253",
+      "id": "2124ca6e-260e-4b45-b6f4-f95704e0d361",
+      "text-representation": {
+        "script": "Latn",
+        "language": "eng"
+      },
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "cover-art-archive": {
+        "darkened": false,
+        "back": false,
+        "artwork": false,
+        "front": false,
+        "count": 0
+      },
+      "media": [
+        {
+          "discs": [
+            {
+              "offset-count": 13,
+              "id": "J9dlQIdlpgKkwDn.nHo8SlQ0ks4-",
+              "sectors": 205072,
+              "offsets": [
+                150,
+                15239,
+                29625,
+                45763,
+                61420,
+                75862,
+                91642,
+                108918,
+                123698,
+                139895,
+                153589,
+                169239,
+                188495
+              ]
+            }
+          ],
+          "format": "CD",
+          "track-offset": 0,
+          "position": 1,
+          "format-id": "9712d52a-4509-3d4b-a1a2-67c88c643e31",
+          "title": "",
+          "track-count": 13,
+          "tracks": [
+            {
+              "length": 201186,
+              "recording": {
+                "length": 201000,
+                "genres": [],
+                "title": "Are You Satisfied?",
+                "disambiguation": "",
+                "video": false,
+                "id": "68e0cc0a-abe5-466b-a0dd-8c05ff575d2c"
+              },
+              "id": "bd843ae9-0240-4387-b03d-1264a83b4c40",
+              "number": "1",
+              "title": "Are You Satisfied?",
+              "position": 1
+            },
+            {
+              "length": 191813,
+              "recording": {
+                "title": "Shampain",
+                "disambiguation": "",
+                "video": false,
+                "id": "6f76c0ac-e060-4fd7-8428-400c20ed8f46",
+                "length": 191813,
+                "genres": []
+              },
+              "title": "Shampain",
+              "number": "2",
+              "position": 2,
+              "id": "345f5532-ba01-45aa-b29c-b67fc4182743"
+            },
+            {
+              "id": "bf6a0652-f8a5-4882-83d0-edbd102ccae1",
+              "title": "I Am Not a Robot",
+              "number": "3",
+              "position": 3,
+              "length": 215173,
+              "recording": {
+                "length": 215000,
+                "genres": [],
+                "title": "I Am Not a Robot",
+                "disambiguation": "",
+                "video": false,
+                "id": "fd7d9162-a284-4a10-906c-faae4f1e166b"
+              }
+            },
+            {
+              "recording": {
+                "id": "63fabbc8-a2ee-42a9-9799-ff243c32bbfe",
+                "video": false,
+                "disambiguation": "",
+                "title": "Girls",
+                "genres": [],
+                "length": 208760
+              },
+              "length": 208760,
+              "number": "4",
+              "title": "Girls",
+              "position": 4,
+              "id": "6e48425c-2a0a-4548-945c-bc2e16745ca3"
+            },
+            {
+              "position": 5,
+              "title": "Mowgli’s Road",
+              "number": "5",
+              "id": "15cdd0bc-b3bb-42ca-b2ed-433a856f56ae",
+              "recording": {
+                "id": "2c8d083b-1cf6-4a3a-be47-e50e66fdf726",
+                "video": false,
+                "title": "Mowgli’s Road",
+                "disambiguation": "",
+                "genres": [],
+                "length": 192560
+              },
+              "length": 192560
+            },
+            {
+              "id": "1ae00efc-1b49-4fa6-896e-d63160c72f94",
+              "title": "Obsessions",
+              "number": "6",
+              "position": 6,
+              "length": 210400,
+              "recording": {
+                "video": false,
+                "id": "aa7de1be-f64a-4121-9e3c-44798579d3d6",
+                "disambiguation": "",
+                "title": "Obsessions",
+                "genres": [],
+                "length": 210400
+              }
+            },
+            {
+              "recording": {
+                "title": "Hollywood",
+                "disambiguation": "",
+                "video": false,
+                "id": "af6e8cc6-160d-49c4-8196-99bebe30c6ee",
+                "length": 230000,
+                "genres": []
+              },
+              "length": 230346,
+              "number": "7",
+              "title": "Hollywood",
+              "position": 7,
+              "id": "243574c5-60fd-4904-8fc4-57a9d9748776"
+            },
+            {
+              "recording": {
+                "id": "fab863ac-d188-4de0-b4ff-07cae6e9a5ed",
+                "video": false,
+                "title": "The Outsider",
+                "disambiguation": "",
+                "genres": [],
+                "length": 197000
+              },
+              "length": 197066,
+              "position": 8,
+              "number": "8",
+              "title": "The Outsider",
+              "id": "b6e56b94-e0e9-4d29-8b61-3b5573ee6118"
+            },
+            {
+              "length": 215960,
+              "recording": {
+                "genres": [],
+                "length": 215960,
+                "id": "4e66b1d5-c6de-4388-b3f4-5458f68a57b9",
+                "video": false,
+                "title": "Hermit the Frog",
+                "disambiguation": ""
+              },
+              "id": "f7b31fdf-f8aa-4273-955d-f60b825f4a37",
+              "position": 9,
+              "title": "Hermit the Frog",
+              "number": "9"
+            },
+            {
+              "id": "7676eec9-c98e-4dbd-abc2-fa8f8ccc0560",
+              "position": 10,
+              "number": "10",
+              "title": "Oh No!",
+              "length": 182586,
+              "recording": {
+                "id": "0121354b-5fcd-4397-852a-4ea3cbf90611",
+                "video": false,
+                "disambiguation": "",
+                "title": "Oh No!",
+                "genres": [],
+                "length": 182000
+              }
+            },
+            {
+              "length": 208666,
+              "recording": {
+                "length": 208666,
+                "genres": [],
+                "title": "Rootless",
+                "disambiguation": "",
+                "video": false,
+                "id": "60347958-6382-406a-8f62-eb77041df9a0"
+              },
+              "position": 11,
+              "title": "Rootless",
+              "number": "11",
+              "id": "7940fec2-c7fa-413e-b01b-f264a657d16d"
+            },
+            {
+              "id": "64553195-a183-43e8-bc2e-196352b1aa91",
+              "position": 12,
+              "number": "12",
+              "title": "Numb",
+              "recording": {
+                "genres": [],
+                "length": 256000,
+                "video": false,
+                "id": "12b88c05-f6f5-4b44-9c84-769943277352",
+                "title": "Numb",
+                "disambiguation": ""
+              },
+              "length": 256746
+            },
+            {
+              "number": "13",
+              "title": "Guilty",
+              "position": 13,
+              "id": "506dc5ac-e929-4646-9266-b1a831f6d137",
+              "length": 221026,
+              "recording": {
+                "video": false,
+                "id": "4c29fb79-dd0f-43bd-adc3-9b8c7ccbe7c0",
+                "title": "Guilty",
+                "disambiguation": "",
+                "genres": [],
+                "length": 221000
+              }
+            }
+          ]
+        }
+      ],
+      "country": "CA"
+    },
+    {
+      "artist-credit": [
+        {
+          "artist": {
+            "disambiguation": "",
+            "sort-name": "Marcy Playground",
+            "name": "Marcy Playground",
+            "id": "64cdc08f-ba6f-41fe-94be-452dc6d5108e",
+            "genres": [
+              {
+                "count": 2,
+                "id": "ceeaa283-5d7b-4202-8d1d-e25d116b2a18",
+                "name": "alternative rock",
+                "disambiguation": ""
+              }
+            ]
+          },
+          "name": "Marcy Playground",
+          "joinphrase": ""
+        }
+      ],
+      "title": "Indaba Remixes From Wonderland",
+      "status": "Official",
+      "quality": "normal",
+      "date": "2010-09-28",
+      "genres": [],
+      "packaging-id": null,
+      "packaging": null,
+      "release-events": [
+        {
+          "date": "2010-09-28",
+          "area": {
+            "sort-name": "United States",
+            "name": "United States",
+            "id": "489ce91b-6658-3307-9877-795b68554c98",
+            "disambiguation": "",
+            "iso-3166-1-codes": [
+              "US"
+            ]
+          }
+        }
+      ],
+      "id": "2d7232ee-a932-4ed7-8c4f-3e9ea45f63c9",
+      "text-representation": {
+        "language": "eng",
+        "script": "Latn"
+      },
+      "disambiguation": "",
+      "barcode": null,
+      "asin": null,
+      "media": [
+        {
+          "discs": [],
+          "format": "CD",
+          "track-offset": 0,
+          "format-id": "9712d52a-4509-3d4b-a1a2-67c88c643e31",
+          "title": "",
+          "position": 1,
+          "tracks": [
+            {
+              "position": 1,
+              "number": "1",
+              "title": "Blackbird (Max Kourilov remix)",
+              "id": "db7dbfa5-d6c3-301f-81cd-91f9b30f1d9e",
+              "length": 214000,
+              "recording": {
+                "genres": [],
+                "length": 214000,
+                "video": false,
+                "id": "43addb0e-1e2d-457a-8375-0010d0909d50",
+                "title": "Blackbird (Max Kourilov remix)",
+                "disambiguation": ""
+              }
+            },
+            {
+              "recording": {
+                "video": false,
+                "id": "6bb4c7ca-0a18-4664-b941-b070d24269ca",
+                "title": "Memphis (Man of Goodwill remix)",
+                "disambiguation": "",
+                "genres": [],
+                "length": 221000
+              },
+              "length": 221000,
+              "id": "3e0b8df1-0b05-3f48-a085-45f0ce5e355b",
+              "position": 2,
+              "title": "Memphis (Man of Goodwill remix)",
+              "number": "2"
+            },
+            {
+              "recording": {
+                "title": "I Must Have Been Dreaming (Soundminister remix)",
+                "disambiguation": "",
+                "video": false,
+                "id": "194e772c-c66f-4269-a23a-718033ddd61e",
+                "length": 182000,
+                "genres": []
+              },
+              "length": 182000,
+              "number": "3",
+              "title": "I Must Have Been Dreaming (Soundminister remix)",
+              "position": 3,
+              "id": "4e83640d-5e93-3da7-9d92-af3c0f2a7a6a"
+            },
+            {
+              "recording": {
+                "genres": [],
+                "length": 167000,
+                "id": "cf09c0cf-a7dc-46d6-82e3-3aecbca759bd",
+                "video": false,
+                "disambiguation": "",
+                "title": "Star Baby (Star Capella Baby remix)"
+              },
+              "length": 167000,
+              "position": 4,
+              "title": "Star Baby (Star Capella Baby remix)",
+              "number": "4",
+              "id": "674cfe49-fc7b-3e2e-aed1-feef87871794"
+            },
+            {
+              "title": "Gin and Money (Ben Crea remix)",
+              "number": "5",
+              "position": 5,
+              "id": "461eedab-87f7-3a8f-9693-8ffa5fa9dece",
+              "recording": {
+                "disambiguation": "",
+                "title": "Gin and Money (Ben Crea remix)",
+                "video": false,
+                "id": "4b34c215-2cfa-4923-a53b-90066ee71918",
+                "length": 219000,
+                "genres": []
+              },
+              "length": 219000
+            },
+            {
+              "recording": {
+                "video": false,
+                "id": "1bd81fa6-4f95-4e76-8899-c97185ce6067",
+                "title": "I Burned the Bed (Metal Monger remix)",
+                "disambiguation": "",
+                "genres": [],
+                "length": 195000
+              },
+              "length": 195000,
+              "title": "I Burned the Bed (Metal Monger remix)",
+              "number": "6",
+              "position": 6,
+              "id": "508f55ad-d43b-3b19-938f-f38b8f366695"
+            },
+            {
+              "position": 7,
+              "number": "7",
+              "title": "Blackbird (Assaf Spector & Roy Gural remix)",
+              "id": "8849c2d4-475b-3a2a-a95e-5e4fb99c9511",
+              "length": 227000,
+              "recording": {
+                "genres": [],
+                "length": 227000,
+                "id": "e4984acf-886e-47d7-b747-c554b85f26e0",
+                "video": false,
+                "disambiguation": "",
+                "title": "Blackbird (Assaf Spector & Roy Gural remix)"
+              }
+            },
+            {
+              "length": 204000,
+              "recording": {
+                "disambiguation": "",
+                "title": "Devil Woman (Orby Spectre remix)",
+                "id": "240894e5-4991-41c7-ae25-d96e416d6a43",
+                "video": false,
+                "length": 204000,
+                "genres": []
+              },
+              "id": "e8e58463-a48c-3854-8826-50f3bd394bbb",
+              "number": "8",
+              "title": "Devil Woman (Orby Spectre remix)",
+              "position": 8
+            },
+            {
+              "length": 228000,
+              "recording": {
+                "length": 228000,
+                "genres": [],
+                "title": "Emperor (Chinese Emperor remix)",
+                "disambiguation": "",
+                "id": "95c53f26-fa1b-451e-9d52-d568ea000b33",
+                "video": false
+              },
+              "id": "879cc4dd-078f-3103-95fe-cf614a455d44",
+              "title": "Emperor (Chinese Emperor remix)",
+              "number": "9",
+              "position": 9
+            },
+            {
+              "number": "10",
+              "title": "Good Times (Jus Bus remix)",
+              "position": 10,
+              "id": "7e1cbee2-5c8b-3193-af08-746a9483e2d3",
+              "recording": {
+                "disambiguation": "",
+                "title": "Good Times (Jus Bus remix)",
+                "id": "5ba339da-5f6f-40f9-8f85-c0427e2e04b3",
+                "video": false,
+                "length": 195000,
+                "genres": []
+              },
+              "length": 195000
+            },
+            {
+              "length": 199000,
+              "recording": {
+                "id": "45f5f4a6-fd71-4e60-b1ab-f0a62322b9dd",
+                "video": false,
+                "title": "Irene (Spoon remix)",
+                "disambiguation": "",
+                "genres": [],
+                "length": 199000
+              },
+              "title": "Irene (Spoon remix)",
+              "number": "11",
+              "position": 11,
+              "id": "f00c67f2-e1d6-300e-bc0f-90d3f06648c6"
+            },
+            {
+              "number": "12",
+              "title": "Thank You (James Merrifield remix)",
+              "position": 12,
+              "id": "d0357fd5-5785-3b7e-9c95-2da9896610fd",
+              "recording": {
+                "video": false,
+                "id": "79d706c3-c3a8-4365-b2ec-c378863d35d1",
+                "disambiguation": "",
+                "title": "Thank You (James Merrifield remix)",
+                "genres": [],
+                "length": 220000
+              },
+              "length": 220000
+            },
+            {
+              "recording": {
+                "id": "2c44a815-752b-41a2-8159-667eb40e4e2d",
+                "video": false,
+                "title": "Down the Drain (Morescode remix)",
+                "disambiguation": "",
+                "genres": [],
+                "length": 267000
+              },
+              "length": 267000,
+              "id": "aea46060-8fcd-3751-aef1-1a110ceb7c7a",
+              "title": "Down the Drain (Morescode remix)",
+              "number": "13",
+              "position": 13
+            }
+          ],
+          "track-count": 13
+        }
+      ],
+      "country": "US",
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "cover-art-archive": {
+        "back": false,
+        "darkened": false,
+        "front": false,
+        "count": 0,
+        "artwork": false
+      }
+    },
+    {
+      "media": [
+        {
+          "discs": [
+            {
+              "sectors": 205072,
+              "offsets": [
+                150,
+                15239,
+                29625,
+                45763,
+                61420,
+                75862,
+                91642,
+                108918,
+                123698,
+                139895,
+                153589,
+                169239,
+                188495
+              ],
+              "id": "J9dlQIdlpgKkwDn.nHo8SlQ0ks4-",
+              "offset-count": 13
+            }
+          ],
+          "format": "CD",
+          "track-offset": 0,
+          "position": 1,
+          "title": "",
+          "format-id": "9712d52a-4509-3d4b-a1a2-67c88c643e31",
+          "tracks": [
+            {
+              "recording": {
+                "genres": [],
+                "length": 201000,
+                "video": false,
+                "id": "68e0cc0a-abe5-466b-a0dd-8c05ff575d2c",
+                "title": "Are You Satisfied?",
+                "disambiguation": ""
+              },
+              "length": 201186,
+              "id": "ed5ed17e-d65b-37a9-a3a6-33023d3dc1cd",
+              "position": 1,
+              "number": "1",
+              "title": "Are You Satisfied?"
+            },
+            {
+              "position": 2,
+              "title": "Shampain",
+              "number": "2",
+              "id": "f61183e8-39b4-3128-8641-c96095a31046",
+              "recording": {
+                "length": 191813,
+                "genres": [],
+                "disambiguation": "",
+                "title": "Shampain",
+                "id": "6f76c0ac-e060-4fd7-8428-400c20ed8f46",
+                "video": false
+              },
+              "length": 191813
+            },
+            {
+              "position": 3,
+              "title": "I Am Not a Robot",
+              "number": "3",
+              "id": "77668462-0436-35fd-97cd-6f8373d71951",
+              "recording": {
+                "id": "fd7d9162-a284-4a10-906c-faae4f1e166b",
+                "video": false,
+                "disambiguation": "",
+                "title": "I Am Not a Robot",
+                "genres": [],
+                "length": 215000
+              },
+              "length": 215173
+            },
+            {
+              "id": "4f2f97cc-dcb2-3525-8f47-92e81d100606",
+              "position": 4,
+              "title": "Girls",
+              "number": "4",
+              "length": 208760,
+              "recording": {
+                "genres": [],
+                "length": 208760,
+                "video": false,
+                "id": "63fabbc8-a2ee-42a9-9799-ff243c32bbfe",
+                "title": "Girls",
+                "disambiguation": ""
+              }
+            },
+            {
+              "length": 192560,
+              "recording": {
+                "genres": [],
+                "length": 192560,
+                "video": false,
+                "id": "2c8d083b-1cf6-4a3a-be47-e50e66fdf726",
+                "disambiguation": "",
+                "title": "Mowgli’s Road"
+              },
+              "id": "a25dae0f-f2b6-3380-b327-ac218c98ebc6",
+              "position": 5,
+              "title": "Mowgli's Road",
+              "number": "5"
+            },
+            {
+              "length": 210400,
+              "recording": {
+                "genres": [],
+                "length": 210400,
+                "id": "aa7de1be-f64a-4121-9e3c-44798579d3d6",
+                "video": false,
+                "title": "Obsessions",
+                "disambiguation": ""
+              },
+              "position": 6,
+              "title": "Obsessions",
+              "number": "6",
+              "id": "fa868256-19de-37fc-909f-f6cbcb03737b"
+            },
+            {
+              "title": "Hollywood",
+              "number": "7",
+              "position": 7,
+              "id": "b9248abf-c29b-354c-9897-15bd55b0ea3c",
+              "recording": {
+                "video": false,
+                "id": "af6e8cc6-160d-49c4-8196-99bebe30c6ee",
+                "title": "Hollywood",
+                "disambiguation": "",
+                "genres": [],
+                "length": 230000
+              },
+              "length": 230346
+            },
+            {
+              "recording": {
+                "genres": [],
+                "length": 197000,
+                "id": "fab863ac-d188-4de0-b4ff-07cae6e9a5ed",
+                "video": false,
+                "title": "The Outsider",
+                "disambiguation": ""
+              },
+              "length": 197066,
+              "id": "8dd7c93e-336a-3022-8f62-8f13c5dc0188",
+              "title": "The Outsider",
+              "number": "8",
+              "position": 8
+            },
+            {
+              "recording": {
+                "genres": [],
+                "length": 215960,
+                "id": "4e66b1d5-c6de-4388-b3f4-5458f68a57b9",
+                "video": false,
+                "disambiguation": "",
+                "title": "Hermit the Frog"
+              },
+              "length": 215960,
+              "position": 9,
+              "title": "Hermit the Frog",
+              "number": "9",
+              "id": "9a46f881-f558-35b4-952a-b3320651f945"
+            },
+            {
+              "length": 182586,
+              "recording": {
+                "video": false,
+                "id": "0121354b-5fcd-4397-852a-4ea3cbf90611",
+                "disambiguation": "",
+                "title": "Oh No!",
+                "genres": [],
+                "length": 182000
+              },
+              "id": "1cf60312-1cde-3251-9825-e6a3db1f11d8",
+              "position": 10,
+              "title": "Oh No!",
+              "number": "10"
+            },
+            {
+              "id": "f74c008a-a85e-3f5a-bc1b-5d10bd62b71d",
+              "position": 11,
+              "number": "11",
+              "title": "Rootless",
+              "length": 208666,
+              "recording": {
+                "length": 208666,
+                "genres": [],
+                "title": "Rootless",
+                "disambiguation": "",
+                "id": "60347958-6382-406a-8f62-eb77041df9a0",
+                "video": false
+              }
+            },
+            {
+              "recording": {
+                "genres": [],
+                "length": 256000,
+                "video": false,
+                "id": "12b88c05-f6f5-4b44-9c84-769943277352",
+                "disambiguation": "",
+                "title": "Numb"
+              },
+              "length": 256746,
+              "id": "6ad29758-50dc-35db-a32f-ba293d09b3f9",
+              "position": 12,
+              "title": "Numb",
+              "number": "12"
+            },
+            {
+              "id": "32c1a3b3-fd56-3211-9687-4cdfd1e5205e",
+              "position": 13,
+              "title": "Guilty",
+              "number": "13",
+              "recording": {
+                "title": "Guilty",
+                "disambiguation": "",
+                "id": "4c29fb79-dd0f-43bd-adc3-9b8c7ccbe7c0",
+                "video": false,
+                "length": 221000,
+                "genres": []
+              },
+              "length": 221026
+            }
+          ],
+          "track-count": 13
+        }
+      ],
+      "country": "DE",
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "cover-art-archive": {
+        "back": false,
+        "darkened": false,
+        "count": 0,
+        "front": false,
+        "artwork": false
+      },
+      "disambiguation": "",
+      "barcode": "825646836253",
+      "text-representation": {
+        "language": "eng",
+        "script": "Latn"
+      },
+      "id": "35629054-834b-3192-a103-ad3d4dc47ab1",
+      "asin": "B002ZTIILC",
+      "release-events": [
+        {
+          "date": "2010-05-14",
+          "area": {
+            "disambiguation": "",
+            "name": "Germany",
+            "sort-name": "Germany",
+            "id": "85752fda-13c4-31a3-bee5-0e5cb1f51dad",
+            "iso-3166-1-codes": [
+              "DE"
+            ]
+          }
+        }
+      ],
+      "packaging": null,
+      "status": "Official",
+      "quality": "normal",
+      "genres": [],
+      "date": "2010-05-14",
+      "packaging-id": null,
+      "title": "The Family Jewels",
+      "artist-credit": [
+        {
+          "artist": {
+            "genres": [
+              {
+                "disambiguation": "",
+                "name": "alternative pop",
+                "id": "d3ebe947-7c03-43f5-b333-09379881b0f6",
+                "count": 1
+              },
+              {
+                "disambiguation": "",
+                "name": "alternative rock",
+                "id": "ceeaa283-5d7b-4202-8d1d-e25d116b2a18",
+                "count": 1
+              },
+              {
+                "id": "3f3388b4-e36a-4bf8-a0be-66b10d92aaa4",
+                "name": "electropop",
+                "disambiguation": "",
+                "count": 1
+              },
+              {
+                "name": "indie",
+                "id": "538c905b-642d-43c9-b071-439af11cc471",
+                "disambiguation": "",
+                "count": 1
+              },
+              {
+                "disambiguation": "",
+                "id": "f390be72-360b-41bb-a310-6a2e638779d2",
+                "name": "indie pop",
+                "count": 1
+              },
+              {
+                "name": "pop",
+                "id": "911c7bbb-172d-4df8-9478-dbff4296e791",
+                "disambiguation": "",
+                "count": 2
+              }
+            ],
+            "id": "7f3d82ee-3817-4367-9eec-f33a312247a1",
+            "name": "MARINA",
+            "sort-name": "MARINA",
+            "disambiguation": "a.k.a. Marina and the Diamonds"
+          },
+          "name": "Marina & the Diamonds",
+          "joinphrase": ""
+        }
+      ]
+    },
+    {
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "cover-art-archive": {
+        "back": false,
+        "darkened": false,
+        "count": 0,
+        "front": false,
+        "artwork": false
+      },
+      "country": "US",
+      "media": [
+        {
+          "track-offset": 0,
+          "discs": [
+            {
+              "offsets": [
+                150,
+                13862,
+                29115,
+                46920,
+                63165,
+                76360,
+                94490,
+                109272,
+                121987,
+                138872,
+                154897,
+                169232,
+                186887
+              ],
+              "sectors": 203937,
+              "offset-count": 13,
+              "id": "cdg6qoKrzyU8Mr9rVFw2Knj8cOo-"
+            },
+            {
+              "id": "lEvymbtLakTbvv7l_9KkiwyAjfE-",
+              "offset-count": 13,
+              "sectors": 203787,
+              "offsets": [
+                150,
+                13862,
+                29115,
+                46920,
+                63165,
+                76360,
+                94490,
+                109272,
+                121987,
+                138872,
+                154897,
+                169232,
+                186887
+              ]
+            }
+          ],
+          "format": "HDCD",
+          "tracks": [
+            {
+              "length": 182826,
+              "recording": {
+                "id": "6f930070-f288-441f-a283-20001a12512c",
+                "video": false,
+                "disambiguation": "",
+                "title": "La La Land",
+                "genres": [],
+                "length": 182826
+              },
+              "position": 1,
+              "title": "La La Land",
+              "number": "1",
+              "id": "282fccaf-a0a6-3585-b945-3c47671670f2"
+            },
+            {
+              "recording": {
+                "length": 203360,
+                "genres": [],
+                "disambiguation": "",
+                "title": "Unforgiven",
+                "id": "f1c2731c-ea2c-49fe-8a25-406b194c7a2f",
+                "video": false
+              },
+              "length": 203373,
+              "number": "2",
+              "title": "Unforgiven",
+              "position": 2,
+              "id": "b3039d6b-d68c-38db-a030-7d0036877d88"
+            },
+            {
+              "id": "4c02b78d-9eb1-3762-ba14-da84c07943ac",
+              "position": 3,
+              "title": "Apology",
+              "number": "3",
+              "length": 237400,
+              "recording": {
+                "video": false,
+                "id": "9ae4eec5-40ab-49b1-8461-67df3b5e0162",
+                "disambiguation": "",
+                "title": "Apology",
+                "genres": [],
+                "length": 237400
+              }
+            },
+            {
+              "length": 216600,
+              "recording": {
+                "genres": [],
+                "length": 216600,
+                "id": "c88b9459-516c-4252-baf3-6bd9b12a8aac",
+                "video": false,
+                "title": "Stuck in My Car",
+                "disambiguation": ""
+              },
+              "position": 4,
+              "title": "Stuck in My Car",
+              "number": "4",
+              "id": "0367b6f8-846e-3395-a1a4-5758bb1932e6"
+            },
+            {
+              "position": 5,
+              "title": "Vision of Nowness",
+              "number": "5",
+              "id": "0b328b0d-887d-3be3-9642-d25626785cda",
+              "recording": {
+                "title": "Vision of Nowness",
+                "disambiguation": "",
+                "id": "03e19585-050c-47ec-97dc-7ecf066d0439",
+                "video": false,
+                "length": 175933,
+                "genres": []
+              },
+              "length": 175933
+            },
+            {
+              "recording": {
+                "id": "d8dffd19-a8dc-41f1-80dd-88c2552c920c",
+                "video": false,
+                "title": "Here You Are",
+                "disambiguation": "",
+                "genres": [],
+                "length": 241733
+              },
+              "length": 241733,
+              "title": "Here You Are",
+              "number": "6",
+              "position": 6,
+              "id": "0cf01aad-07dd-3e7d-9755-1e72ae517106"
+            },
+            {
+              "id": "7adb6656-6ad4-3364-9570-97d717653970",
+              "number": "7",
+              "title": "Automatic Rainy Day",
+              "position": 7,
+              "length": 197093,
+              "recording": {
+                "length": 197093,
+                "genres": [],
+                "disambiguation": "",
+                "title": "Automatic Rainy Day",
+                "id": "da04519f-ed66-4ebe-952d-41945b467df9",
+                "video": false
+              }
+            },
+            {
+              "recording": {
+                "video": false,
+                "id": "c910081b-4fcd-4dfb-b0dd-55e088a8d3e2",
+                "disambiguation": "",
+                "title": "Kissing Asphalt",
+                "genres": [],
+                "length": 169533
+              },
+              "length": 169533,
+              "id": "d9dd7966-f179-3075-93bc-2079655a3339",
+              "number": "8",
+              "title": "Kissing Asphalt",
+              "position": 8
+            },
+            {
+              "title": "Insincere",
+              "number": "9",
+              "position": 9,
+              "id": "249a7e76-a683-34e7-a827-cdb3cd902615",
+              "length": 225133,
+              "recording": {
+                "length": 225133,
+                "genres": [],
+                "disambiguation": "",
+                "title": "Insincere",
+                "id": "11c480bb-3af5-4b5d-a127-1141eb2aa7d2",
+                "video": false
+              }
+            },
+            {
+              "recording": {
+                "video": false,
+                "id": "def55c81-0369-4450-8cb7-6fa06fdf3345",
+                "title": "Superslide",
+                "disambiguation": "",
+                "genres": [],
+                "length": 213666
+              },
+              "length": 213666,
+              "id": "252b18b0-b715-3ec5-a8ac-4f2f107e9aff",
+              "number": "10",
+              "title": "Sonic Superslide",
+              "position": 10
+            },
+            {
+              "recording": {
+                "length": 191133,
+                "genres": [],
+                "title": "Throw Me a Curve",
+                "disambiguation": "",
+                "id": "7464be46-dd8b-4efe-98b9-2fbf4bd457da",
+                "video": false
+              },
+              "length": 191133,
+              "position": 11,
+              "title": "Throw Me a Curve",
+              "number": "11",
+              "id": "af905b5d-167b-3383-babc-019824aebe33"
+            },
+            {
+              "recording": {
+                "genres": [],
+                "length": 235400,
+                "id": "121cf5b8-4395-4c74-8d15-c84ce1c47b73",
+                "video": false,
+                "disambiguation": "",
+                "title": "Talking Myself Down"
+              },
+              "length": 235400,
+              "id": "1db48ca4-a269-35b3-abb8-62a86c0c2420",
+              "position": 12,
+              "number": "12",
+              "title": "Talking Myself Down"
+            },
+            {
+              "number": "13",
+              "title": "Daisy Chain",
+              "position": 13,
+              "id": "1afe4336-f43e-3abf-8c8e-93be7580f553",
+              "length": 227333,
+              "recording": {
+                "video": false,
+                "id": "e4278392-08bc-4473-86bd-d93e2556e094",
+                "disambiguation": "",
+                "title": "Daisy Chain",
+                "genres": [],
+                "length": 229426
+              }
+            }
+          ],
+          "track-count": 13,
+          "title": "",
+          "format-id": "8759db4e-8451-33c0-8a8f-05e5f95f192e",
+          "position": 1
+        }
+      ],
+      "asin": "B00005B9SH",
+      "id": "3b562cc2-284e-4028-9e9e-2449d4efd737",
+      "text-representation": {
+        "language": "eng",
+        "script": "Latn"
+      },
+      "barcode": "639857818225",
+      "disambiguation": "",
+      "date": "2001-05-15",
+      "genres": [],
+      "packaging-id": "ec27701a-4a22-37f4-bfac-6616e0f9750a",
+      "status": "Official",
+      "quality": "normal",
+      "release-events": [
+        {
+          "date": "2001-05-15",
+          "area": {
+            "sort-name": "United States",
+            "name": "United States",
+            "id": "489ce91b-6658-3307-9877-795b68554c98",
+            "disambiguation": "",
+            "iso-3166-1-codes": [
+              "US"
+            ]
+          }
+        }
+      ],
+      "packaging": "Jewel Case",
+      "artist-credit": [
+        {
+          "name": "The Go‐Go’s",
+          "artist": {
+            "genres": [
+              {
+                "count": 1,
+                "disambiguation": "",
+                "name": "new wave",
+                "id": "56407f9d-3398-4bf3-bbbd-ea372fa5adeb"
+              },
+              {
+                "name": "pop",
+                "id": "911c7bbb-172d-4df8-9478-dbff4296e791",
+                "disambiguation": "",
+                "count": 0
+              },
+              {
+                "count": 1,
+                "disambiguation": "",
+                "id": "60e21d01-ce21-4127-86b7-aada79558dab",
+                "name": "pop punk"
+              },
+              {
+                "count": 1,
+                "disambiguation": "",
+                "id": "797e2e85-5ffd-495c-a757-8b4079052f0e",
+                "name": "pop rock"
+              },
+              {
+                "disambiguation": "",
+                "id": "618704fc-daac-44a2-92c9-89e3b1a2fc8c",
+                "name": "power pop",
+                "count": 1
+              },
+              {
+                "name": "punk",
+                "id": "8cc9b280-230b-4a3a-b1e2-8acab0744dd3",
+                "disambiguation": "",
+                "count": 0
+              },
+              {
+                "name": "surf rock",
+                "id": "b76ee78d-ec97-49e9-8ea6-cfc46ecc3b23",
+                "disambiguation": "",
+                "count": 1
+              }
+            ],
+            "name": "The Go‐Go’s",
+            "sort-name": "Go‐Go’s, The",
+            "id": "eec163e4-a013-4af0-9641-c5b2df41fff7",
+            "disambiguation": "all-female American rock band formed in 1978"
+          },
+          "joinphrase": ""
+        }
+      ],
+      "title": "God Bless the Go‐Go’s"
+    },
+    {
+      "quality": "normal",
+      "status": "Official",
+      "genres": [],
+      "date": "2010-02-22",
+      "packaging-id": "ec27701a-4a22-37f4-bfac-6616e0f9750a",
+      "packaging": "Jewel Case",
+      "release-events": [
+        {
+          "date": "2010-02-22",
+          "area": {
+            "disambiguation": "",
+            "name": "United Kingdom",
+            "sort-name": "United Kingdom",
+            "id": "8a754a16-0027-3a29-b6d7-2b40ea0481ed",
+            "iso-3166-1-codes": [
+              "GB"
+            ]
+          }
+        }
+      ],
+      "artist-credit": [
+        {
+          "name": "Marina & the Diamonds",
+          "artist": {
+            "id": "7f3d82ee-3817-4367-9eec-f33a312247a1",
+            "name": "MARINA",
+            "sort-name": "MARINA",
+            "disambiguation": "a.k.a. Marina and the Diamonds",
+            "genres": [
+              {
+                "count": 1,
+                "disambiguation": "",
+                "name": "alternative pop",
+                "id": "d3ebe947-7c03-43f5-b333-09379881b0f6"
+              },
+              {
+                "count": 1,
+                "disambiguation": "",
+                "name": "alternative rock",
+                "id": "ceeaa283-5d7b-4202-8d1d-e25d116b2a18"
+              },
+              {
+                "count": 1,
+                "id": "3f3388b4-e36a-4bf8-a0be-66b10d92aaa4",
+                "name": "electropop",
+                "disambiguation": ""
+              },
+              {
+                "count": 1,
+                "disambiguation": "",
+                "id": "538c905b-642d-43c9-b071-439af11cc471",
+                "name": "indie"
+              },
+              {
+                "count": 1,
+                "disambiguation": "",
+                "name": "indie pop",
+                "id": "f390be72-360b-41bb-a310-6a2e638779d2"
+              },
+              {
+                "name": "pop",
+                "id": "911c7bbb-172d-4df8-9478-dbff4296e791",
+                "disambiguation": "",
+                "count": 2
+              }
+            ]
+          },
+          "joinphrase": ""
+        }
+      ],
+      "title": "The Family Jewels",
+      "media": [
+        {
+          "format": "CD",
+          "discs": [
+            {
+              "sectors": 205072,
+              "offsets": [
+                150,
+                15239,
+                29625,
+                45763,
+                61420,
+                75862,
+                91642,
+                108918,
+                123698,
+                139895,
+                153589,
+                169239,
+                188495
+              ],
+              "id": "J9dlQIdlpgKkwDn.nHo8SlQ0ks4-",
+              "offset-count": 13
+            }
+          ],
+          "track-offset": 0,
+          "format-id": "9712d52a-4509-3d4b-a1a2-67c88c643e31",
+          "title": "",
+          "position": 1,
+          "tracks": [
+            {
+              "title": "Are You Satisfied?",
+              "number": "1",
+              "position": 1,
+              "id": "352d8cab-104e-3482-a10e-1479cf329d4f",
+              "recording": {
+                "length": 201000,
+                "genres": [],
+                "disambiguation": "",
+                "title": "Are You Satisfied?",
+                "video": false,
+                "id": "68e0cc0a-abe5-466b-a0dd-8c05ff575d2c"
+              },
+              "length": 201186
+            },
+            {
+              "length": 191813,
+              "recording": {
+                "genres": [],
+                "length": 191813,
+                "id": "6f76c0ac-e060-4fd7-8428-400c20ed8f46",
+                "video": false,
+                "disambiguation": "",
+                "title": "Shampain"
+              },
+              "id": "35ac92a6-262c-312c-8f34-ea06d8f85e66",
+              "title": "Shampain",
+              "number": "2",
+              "position": 2
+            },
+            {
+              "number": "3",
+              "title": "I Am Not a Robot",
+              "position": 3,
+              "id": "4b95835b-f722-38e8-bc8f-8f382519263b",
+              "recording": {
+                "genres": [],
+                "length": 215000,
+                "video": false,
+                "id": "fd7d9162-a284-4a10-906c-faae4f1e166b",
+                "disambiguation": "",
+                "title": "I Am Not a Robot"
+              },
+              "length": 215173
+            },
+            {
+              "length": 208760,
+              "recording": {
+                "title": "Girls",
+                "disambiguation": "",
+                "video": false,
+                "id": "63fabbc8-a2ee-42a9-9799-ff243c32bbfe",
+                "length": 208760,
+                "genres": []
+              },
+              "id": "f3ee847e-7ecf-36bc-8e25-696ad8420d30",
+              "title": "Girls",
+              "number": "4",
+              "position": 4
+            },
+            {
+              "recording": {
+                "length": 192560,
+                "genres": [],
+                "disambiguation": "",
+                "title": "Mowgli’s Road",
+                "video": false,
+                "id": "2c8d083b-1cf6-4a3a-be47-e50e66fdf726"
+              },
+              "length": 192560,
+              "position": 5,
+              "number": "5",
+              "title": "Mowgli's Road",
+              "id": "0b693230-6131-3d67-8bfd-42321432a4a0"
+            },
+            {
+              "length": 210400,
+              "recording": {
+                "id": "aa7de1be-f64a-4121-9e3c-44798579d3d6",
+                "video": false,
+                "title": "Obsessions",
+                "disambiguation": "",
+                "genres": [],
+                "length": 210400
+              },
+              "id": "1304fd68-c1fc-3ef2-9bd1-6ecd0db4fded",
+              "number": "6",
+              "title": "Obsessions",
+              "position": 6
+            },
+            {
+              "position": 7,
+              "number": "7",
+              "title": "Hollywood",
+              "id": "6d9eb33f-1c08-30bb-841d-c8c4b3c922ea",
+              "length": 230346,
+              "recording": {
+                "length": 230000,
+                "genres": [],
+                "disambiguation": "",
+                "title": "Hollywood",
+                "id": "af6e8cc6-160d-49c4-8196-99bebe30c6ee",
+                "video": false
+              }
+            },
+            {
+              "title": "The Outsider",
+              "number": "8",
+              "position": 8,
+              "id": "b50ac90c-dae6-3eac-bc3c-38f3859e2e8d",
+              "length": 197066,
+              "recording": {
+                "disambiguation": "",
+                "title": "The Outsider",
+                "id": "fab863ac-d188-4de0-b4ff-07cae6e9a5ed",
+                "video": false,
+                "length": 197000,
+                "genres": []
+              }
+            },
+            {
+              "length": 215960,
+              "recording": {
+                "genres": [],
+                "length": 215960,
+                "id": "4e66b1d5-c6de-4388-b3f4-5458f68a57b9",
+                "video": false,
+                "title": "Hermit the Frog",
+                "disambiguation": ""
+              },
+              "position": 9,
+              "number": "9",
+              "title": "Hermit the Frog",
+              "id": "56c4c7de-2bd5-3877-b8d0-0025f22c64a7"
+            },
+            {
+              "recording": {
+                "genres": [],
+                "length": 182000,
+                "video": false,
+                "id": "0121354b-5fcd-4397-852a-4ea3cbf90611",
+                "disambiguation": "",
+                "title": "Oh No!"
+              },
+              "length": 182586,
+              "number": "10",
+              "title": "Oh No!",
+              "position": 10,
+              "id": "68fcfa8d-05a4-32b4-a0bc-25f0268bb2d8"
+            },
+            {
+              "number": "11",
+              "title": "Rootless",
+              "position": 11,
+              "id": "0f9101cd-0d9e-30fb-a7f3-8dfbdf38b6f2",
+              "length": 208666,
+              "recording": {
+                "genres": [],
+                "length": 208666,
+                "video": false,
+                "id": "60347958-6382-406a-8f62-eb77041df9a0",
+                "title": "Rootless",
+                "disambiguation": ""
+              }
+            },
+            {
+              "recording": {
+                "length": 256000,
+                "genres": [],
+                "disambiguation": "",
+                "title": "Numb",
+                "id": "12b88c05-f6f5-4b44-9c84-769943277352",
+                "video": false
+              },
+              "length": 256746,
+              "number": "12",
+              "title": "Numb",
+              "position": 12,
+              "id": "b8294074-8273-3ba1-bfb9-8809e27efc6e"
+            },
+            {
+              "title": "Guilty",
+              "number": "13",
+              "position": 13,
+              "id": "6b2eaadc-3701-3a4b-a3c9-b89257736863",
+              "recording": {
+                "id": "4c29fb79-dd0f-43bd-adc3-9b8c7ccbe7c0",
+                "video": false,
+                "title": "Guilty",
+                "disambiguation": "",
+                "genres": [],
+                "length": 221000
+              },
+              "length": 221026
+            }
+          ],
+          "track-count": 13
+        }
+      ],
+      "country": "GB",
+      "cover-art-archive": {
+        "darkened": false,
+        "back": false,
+        "artwork": true,
+        "count": 1,
+        "front": true
+      },
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "text-representation": {
+        "language": "eng",
+        "script": "Latn"
+      },
+      "id": "5e4c784a-3d34-4bc3-aa6a-e5478b006fb5",
+      "disambiguation": "",
+      "barcode": "825646836253",
+      "asin": "B002ZTIILC"
+    }
+  ],
+  "release-count": 5
+}

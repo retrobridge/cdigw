@@ -4,6 +4,14 @@
 
 CDDB can be accessed with `cddbp` or `http`.
 
+## Usage
+
+Clients should do a `cddb query` before a `cddb read`
+
+## Protocols
+
+Both specify that `\n`, `\r` or `\r\n` are acceptable line endings.
+
 ### CDDB
 
 Custom protocol for talking to the server, expected on port 888
@@ -16,7 +24,7 @@ HTTP is expected on port 80 but many clients can configure a port.
 The endpoint is expected to be at `/~cddb/cddb.cgi` and some clients have
 this hardcoded, so it's best to stick to.
 
-## Protocol Levels
+## API Protocol Versions
 
 The original protocol specifications are in the `CDDBPROTO` file.
 This is a quick summary of the protocol levels with info relevant to this app.

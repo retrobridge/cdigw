@@ -1,4 +1,7 @@
 defmodule Cache do
+  @moduledoc """
+  Quick and dirty in-memory key-value store.
+  """
   use Agent
 
   def start_link(_) do

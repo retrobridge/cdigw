@@ -1,6 +1,13 @@
 defmodule MusicBrainz do
-  use Tesla
+  @moduledoc """
+  Client library for accessing the MusicBrainz API over HTTP
+  """
 
+  use Tesla
+  import Ext.Enum, only: [dig: 2]
+
+  # To not get rate-limited, we have to provide a `user-agent` header
+  # that includes the app name, version, and contact info.
   @app_version Mix.Project.config()[:version]
   @app_url "https://github.com/mroach/cddb_gateway"
   @user_agent "CDDBGateway/#{@app_version} (#{@app_url})"
@@ -62,36 +69,23 @@ defmodule MusicBrainz do
   end
 
   @doc """
-  Convert a release to a list of CDDB field/value pairs
+  Convert a release to a `Disc` structure
   """
-  def release_to_cddb(cddb_disc_id, release) do
-    artist = dig(release, ["artist-credit", 0, "name"])
-    title = release["title"]
-    year = String.slice(release["date"], 0..3)
-    genre = Enum.at(release["genres"], 0) || "misc"
+  def release_to_disc(cddb_disc_id, release) do
+    disc = %Disc{
+      id: cddb_disc_id,
+      artist: dig(release, ["artist-credit", 0, "name"]),
+      title: release["title"],
+      year: String.slice(release["date"], 0..3),
+      genre: Enum.at(release["genres"], 0) || "misc"
+    }
 
-    head = [
-      {"DISCID", cddb_disc_id},
-      {"DTITLE", "#{artist} / #{title}"},
-      {"DYEAR", year},
-      {"DGENRE", genre}
-    ]
-
-    # zero-based track titles
-    tracks =
-      release
-      |> dig(["media", 0, "tracks"])
-      |> Enum.sort_by(& &1["position"])
-      |> Enum.map(fn track -> dig(track, ["recording", "title"]) end)
-      |> Enum.with_index()
-      |> Enum.map(fn {title, ix} -> {"TTITLE#{ix}", title} end)
-
-    # For maximum compatibility, include the EXT tag lines for each track
-    ext =
-      Range.new(0, length(tracks) - 1)
-      |> Enum.map(fn ix -> {"EXTT#{ix}", ""} end)
-
-    head ++ tracks ++ [{"EXTD", ""}] ++ ext ++ [{"PLAYORDER", ""}]
+    release
+    |> dig(["media", 0, "tracks"])
+    |> Enum.reduce(disc, fn track, disc ->
+      title = dig(track, ["recording", "title"])
+      Disc.add_track(disc, title)
+    end)
   end
 
   @doc """
@@ -121,16 +115,4 @@ defmodule MusicBrainz do
       item when is_binary(item) -> String.to_integer(item)
     end)
   end
-
-  defp dig(nil, _), do: nil
-
-  defp dig(data, [key | keys]) when is_map(data) do
-    data |> Map.get(key) |> dig(keys)
-  end
-
-  defp dig(data, [key | keys]) when is_list(data) do
-    data |> Enum.at(key) |> dig(keys)
-  end
-
-  defp dig(data, []), do: data
 end
