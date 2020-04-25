@@ -8,8 +8,9 @@ defmodule CddbGatewayWeb.CddbPlug do
     conn = fetch_query_params(conn)
     {cmd, data} = Cddb.RequestParser.parse_cmd(conn.query_params["cmd"])
     proto = conn.query_params |> Map.get("proto", "1") |> String.to_integer()
+    hello = conn.query_params |> Map.get("hello") |> Cddb.HelloParser.parse()
 
-    Logger.debug("handling cmd=#{cmd} data=#{inspect(data)}")
+    Logger.debug("cmd=#{cmd} data=#{inspect(data)} hello=#{inspect(hello)}")
 
     handle_command(conn, cmd, data, proto)
   end
