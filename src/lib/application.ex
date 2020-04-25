@@ -4,18 +4,28 @@ defmodule CddbGateway.Application do
   use Application
   require Logger
 
-  def start(_type, _args) do
-    port = System.get_env("HTTP_PORT", "80") |> String.to_integer()
+  @env Mix.env()
 
-    children = [
-      {Plug.Cowboy, scheme: :http, plug: CddbGatewayWeb.Endpoint, options: [port: port]},
-      {Cache, []}
-    ]
+  def start(_type, _args) do
+    children =
+      apps(@env) ++
+        [
+          {Cache, []}
+        ]
 
     opts = [strategy: :one_for_one, name: CddbGateway.Supervisor]
 
+    Supervisor.start_link(children, opts)
+  end
+
+  def apps(:test), do: []
+
+  def apps(_) do
+    port = System.get_env("HTTP_PORT", "80") |> String.to_integer()
     Logger.info("Starting the HTTP gateway on :#{port}...")
 
-    Supervisor.start_link(children, opts)
+    [
+      {Plug.Cowboy, scheme: :http, plug: CddbGatewayWeb.Endpoint, options: [port: port]}
+    ]
   end
 end
