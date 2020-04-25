@@ -23,3 +23,29 @@ COPY docker/entrypoint.sh /opt/bin/entrypoint
 ENV PATH=${PATH}:/opt/bin
 
 ENTRYPOINT ["/opt/bin/entrypoint"]
+
+
+################################################################################
+FROM base AS builder
+
+COPY src /opt/app
+COPY VERSION /opt/app
+
+ENV MIX_ENV=prod
+
+RUN mix do deps.get --only $MIX_ENV, release
+
+
+################################################################################
+FROM alpine AS release
+
+RUN apk --no-cache add bash openssl
+
+EXPOSE 80
+EXPOSE 888
+
+WORKDIR /opt/app
+
+COPY --from=builder /opt/mix/build/rel/cddb_gateway ./
+
+CMD ["bin/cddb_gateway", "start"]
