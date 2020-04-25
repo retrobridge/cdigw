@@ -41,20 +41,20 @@ defmodule CddbGatewayWeb.CddbPlug do
   def handle_command(conn, :read, data, proto) do
     Logger.info("fetching cached disc: genre=#{data.genre} disc_id=#{data.disc_id}")
 
-    case Cache.get(data.disc_id) do
-      nil ->
-        send_resp(conn, 200, "401 #{data.genre} #{data.disc_id} No such CD entry in database")
+    response_text =
+      case Cache.get(data.disc_id) do
+        nil ->
+          "401 #{data.genre} #{data.disc_id} No such CD entry in database"
 
-      release ->
-        response =
+        release ->
           data.disc_id
           |> MusicBrainz.release_to_disc(release)
           |> Cddb.ReadResponse.render(proto)
+      end
 
-        conn
-        |> put_resp_content_type("text/plain")
-        |> send_resp(200, response)
-    end
+    conn
+    |> put_resp_content_type("text/plain")
+    |> send_resp(200, response_text)
   end
 
   def handle_command(conn, cmd, data, _proto) do
