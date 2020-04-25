@@ -3,7 +3,7 @@ defmodule CddbGateway.Application do
   require Logger
 
   def start(_type, _args) do
-    port = System.get_env("PORT", "8333") |> String.to_integer()
+    port = System.get_env("HTTP_PORT", "8333") |> String.to_integer()
 
     children = [
       {Plug.Cowboy, scheme: :http, plug: CddbGateway.Endpoint, options: [port: port]},
