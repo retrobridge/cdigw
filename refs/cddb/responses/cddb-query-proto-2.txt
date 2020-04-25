@@ -1,0 +1,19 @@
+*   Trying 195.214.216.38...
+* TCP_NODELAY set
+* Connected to us.freedb.org (195.214.216.38) port 80 (#0)
+> GET /~cddb/cddb.cgi?cmd=cddb+query+940aac0d+13+150+15239+29625+45763+61420+75862+91642+108918+123698+139895+153589+169239+188495+2734+&hello=joe+my.host.com+sgi-cdplayer+6.5.30f&proto=2 HTTP/1.1
+> Host: us.freedb.org
+> User-Agent: curl/7.64.1
+> Accept: */*
+> 
+< HTTP/1.1 200 OK
+< Date: Sat, 25 Apr 2020 15:03:00 GMT
+< Server: Apache/2.0.54 (Debian GNU/Linux)
+< Expires: Sat Apr 25 17:03:00 2020
+< Transfer-Encoding: chunked
+< Content-Type: text/plain; charset=ISO-8859-1
+< 
+{ [72 bytes data]
+* Connection #0 to host us.freedb.org left intact
+200 data 940aac0d Marina & The Diamonds / The Family Jewels
+* Closing connection 0

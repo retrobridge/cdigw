@@ -1,0 +1,73 @@
+*   Trying 195.214.216.38...
+* TCP_NODELAY set
+* Connected to us.freedb.org (195.214.216.38) port 80 (#0)
+> GET /~cddb/cddb.cgi?cmd=cddb++read+misc+940aac0d&hello=joe+my.host.com+sgi-cdplayer+6.5.30f&proto=1 HTTP/1.1
+> Host: us.freedb.org
+> User-Agent: curl/7.64.1
+> Accept: */*
+> 
+< HTTP/1.1 200 OK
+< Date: Sat, 25 Apr 2020 15:04:39 GMT
+< Server: Apache/2.0.54 (Debian GNU/Linux)
+< Expires: Sat Apr 25 17:04:39 2020
+< Transfer-Encoding: chunked
+< Content-Type: text/plain; charset=ISO-8859-1
+< 
+{ [962 bytes data]
+* Connection #0 to host us.freedb.org left intact
+210 misc 940aac0d CD database entry follows (until terminating `.')
+# xmcd
+#
+# Track frame offsets: 
+#        150
+#        15239
+#        29625
+#        45763
+#        61420
+#        75862
+#        91642
+#        108918
+#        123698
+#        139895
+#        153589
+#        169239
+#        188495
+#
+# Disc length: 2734 seconds
+#
+# Revision: 2
+# Processed by: cddbd v1.5.2PL0 Copyright (c) Steve Scherf et al.
+# Submitted via: ExactAudioCopyFreeDBPlugin 1.0
+#
+DISCID=940aac0d
+DTITLE=Marina & The Diamonds / The Family Jewels
+TTITLE0=Are You Satisfied?
+TTITLE1=Shampain
+TTITLE2=I Am Not A Robot
+TTITLE3=Girls
+TTITLE4=Mowgli's Road
+TTITLE5=Obsessions
+TTITLE6=Hollywood
+TTITLE7=The Outsider
+TTITLE8=Hermit The Frog
+TTITLE9=Oh No!
+TTITLE10=Rootless
+TTITLE11=Numb
+TTITLE12=Guilty
+EXTD=
+EXTT0=
+EXTT1=
+EXTT2=
+EXTT3=
+EXTT4=
+EXTT5=
+EXTT6=
+EXTT7=
+EXTT8=
+EXTT9=
+EXTT10=
+EXTT11=
+EXTT12=
+PLAYORDER=
+.
+* Closing connection 0
