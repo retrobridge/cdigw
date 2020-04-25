@@ -4,7 +4,7 @@ defmodule CddbGateway.MixProject do
   def project do
     [
       app: :cddb_gateway,
-      version: "0.1.0",
+      version: version(),
       elixir: "~> 1.10",
       start_permanent: Mix.env() == :prod,
       deps: deps(),
@@ -35,4 +35,12 @@ defmodule CddbGateway.MixProject do
 
   defp deps_path, do: Mix.env() |> deps_path()
   defp deps_path(_env), do: System.get_env("MIX_DEPS_PATH", "deps")
+
+  defp version do
+    if File.exists?("VERSION") do
+      "VERSION" |> File.read! |> String.trim
+    else
+      "0.0.1"
+    end
+  end
 end
