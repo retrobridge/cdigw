@@ -45,7 +45,9 @@ defmodule MusicBrainz do
     case fuzzy_search_by_toc(toc_query) do
       {:ok, %{status: 200, body: body}} ->
         matches =
-          Enum.filter(body["releases"], fn rel ->
+          body
+          |> Map.get("releases")
+          |> Enum.filter(fn rel ->
             toc == dig(rel, ["media", 0, "discs", 0, "offsets"])
           end)
 
