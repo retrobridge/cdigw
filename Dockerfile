@@ -18,7 +18,7 @@ RUN apk --no-cache add \
 # for local development on non-Linux hosts, this circumvents an I/O bottleneck
 # and allows for easily testing against multiple versions of Elixir.
 ENV MIX_DEPS_PATH=/opt/mix/deps \
-    MIX_BUILD_PATH=/opt/mix/build \
+    MIX_BUILD_PATH_ROOT=/opt/mix/build \
     MIX_ENV=dev \
     PS1="\u@\h:\w \$ "
 

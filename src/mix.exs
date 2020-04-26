@@ -8,8 +8,7 @@ defmodule Cdigw.MixProject do
       elixir: "~> 1.10",
       start_permanent: Mix.env() == :prod,
       deps: deps(),
-      build_path: build_path(),
-      deps_path: deps_path()
+      build_path: build_path(Mix.env())
     ]
   end
 
@@ -30,17 +29,20 @@ defmodule Cdigw.MixProject do
     ]
   end
 
-  defp build_path, do: Mix.env() |> build_path()
-  defp build_path(_env), do: System.get_env("MIX_BUILD_PATH", "_build")
-
-  defp deps_path, do: Mix.env() |> deps_path()
-  defp deps_path(_env), do: System.get_env("MIX_DEPS_PATH", "deps")
-
   defp version do
     if File.exists?("VERSION") do
       "VERSION" |> File.read! |> String.trim
     else
       "0.0.1"
     end
+  end
+
+  # When you use the MIX_BUILD_PATH environment variable it overrides all
+  # other configuration and disables building per environment.
+  # This causes problems with some applications that have different compile-time
+  # behaviour per environment. For example, mix_text_watch was totally broken.
+  defp build_path(env) do
+    root = System.get_env("MIX_BUILD_PATH_ROOT", "_build")
+    Path.join(root, to_string(env))
   end
 end
