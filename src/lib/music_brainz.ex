@@ -5,6 +5,7 @@ defmodule MusicBrainz do
 
   use Tesla
   import Ext.Enum, only: [dig: 2]
+  alias Cddb.Disc
 
   # To not get rate-limited, we have to provide a `user-agent` header
   # that includes the app name, version, and contact info.

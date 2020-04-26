@@ -1,5 +1,7 @@
 defmodule MusicBrainzTest do
   use ExUnit.Case, async: true
+  alias Cddb.Disc
+
   doctest MusicBrainz
 
   test "release_to_disc/2 converts release info to Disc" do

@@ -1,5 +1,7 @@
-defmodule DiscTest do
+defmodule Cddb.DiscTest do
   use ExUnit.Case, async: true
+  alias Cddb.Disc
+
   doctest Disc
 
   test "to_cddb_keyword/1 renders in the correct order" do

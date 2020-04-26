@@ -1,7 +1,9 @@
 defmodule Cddb.QueryResponse do
-  @default_proto 5
-  @line_separator "\n"
-  @eof "."
+  alias Cddb.Disc
+
+  @default_proto Cddb.default_proto()
+  @line_separator Cddb.line_separator()
+  @eof Cddb.eof_marker()
 
   @no_match_header "202 No match"
   @multi_header "210 Found exact matches, list follows (until terminating `.')"

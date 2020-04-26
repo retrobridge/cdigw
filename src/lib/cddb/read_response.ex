@@ -3,9 +3,11 @@ defmodule Cddb.ReadResponse do
   Render a response for a `cddb read`
   """
 
-  @default_proto 5
-  @line_separator "\n"
-  @eof "."
+  alias Cddb.Disc
+
+  @default_proto Cddb.default_proto()
+  @line_separator Cddb.line_separator()
+  @eof Cddb.eof_marker()
 
   @doc """
   Render a `Disc` as a fully acceptable response body

@@ -1,4 +1,4 @@
-defmodule Disc do
+defmodule Cddb.Disc do
   @moduledoc """
   Represents enough disc information to generate CDDB replies
   """

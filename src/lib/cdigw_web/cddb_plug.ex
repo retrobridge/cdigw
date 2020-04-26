@@ -1,6 +1,7 @@
 defmodule CdigwWeb.CddbPlug do
   import Plug.Conn
   require Logger
+  alias Cdigw.Cache
 
   def init(options), do: options
 

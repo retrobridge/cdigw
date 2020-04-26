@@ -1,7 +1,7 @@
 defmodule Cddb.ReadResponseTest do
   use ExUnit.Case, async: true
 
-  alias Cddb.ReadResponse
+  alias Cddb.{Disc, ReadResponse}
 
   doctest ReadResponse
 

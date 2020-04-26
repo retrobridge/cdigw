@@ -1,7 +1,7 @@
 defmodule Cddb.QueryResponseTest do
   use ExUnit.Case, async: true
 
-  alias Cddb.QueryResponse
+  alias Cddb.{Disc, QueryResponse}
 
   doctest QueryResponse
 

@@ -5,7 +5,10 @@ defmodule CdigwWeb.Endpoint do
   plug(:match)
   plug(:dispatch)
 
-  forward("/~cddb/cddb.cgi", to: CdigwWeb.CddbPlug)
+
+  match "/~cddb/cddb.cgi" do
+    CdigwWeb.CddbPlug.call(conn, %{})
+  end
 
   match _ do
     send_resp(conn, 404, "not_found")

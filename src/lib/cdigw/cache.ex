@@ -1,4 +1,4 @@
-defmodule Cache do
+defmodule Cdigw.Cache do
   @moduledoc """
   Quick and dirty in-memory key-value store.
   """

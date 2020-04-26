@@ -10,7 +10,7 @@ defmodule Cdigw.Application do
     children =
       apps(@env) ++
         [
-          {Cache, []}
+          {Cdigw.Cache, []}
         ]
 
     opts = [strategy: :one_for_one, name: Cdigw.Supervisor]
