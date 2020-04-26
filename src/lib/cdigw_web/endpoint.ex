@@ -16,6 +16,15 @@ defmodule CdigwWeb.Endpoint do
     |> send_file(200, "priv/static/index.html")
   end
 
+  match "/robots.txt" do
+    conn
+    |> put_resp_content_type("text/plain")
+    |> send_resp(200, ~S"""
+    User-agent: *
+    Disallow: /~cddb/
+    """)
+  end
+
   match _ do
     send_resp(conn, 404, "not_found")
   end
