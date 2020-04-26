@@ -2,7 +2,7 @@ defmodule CdigwWeb.Endpoint do
   use Plug.Router
 
   plug Plug.Logger
-  plug Plug.Static, at: "/public", from: :cdigw
+  plug Plug.Static, at: "/", from: :cdigw, only: ~w[favicon.ico images]
   plug :match
   plug :dispatch
 
