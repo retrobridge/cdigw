@@ -15,3 +15,9 @@ jobs:
 
       - name: Run unit tests
         run: make test
+
+      - name: check code formatting
+        run: make test-format
+
+      - name: credot
+        run: make test-credo
