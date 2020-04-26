@@ -1,5 +1,7 @@
 # CDIGW: CD Info Gateway
 
+![Tests](https://github.com/mroach/cdigw/workflows/Tests/badge.svg)
+
 On 31 March 2020, [FreeDB] shut down its service.
 
 To continue to support older CD player software, this gateway will accept
