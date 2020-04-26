@@ -13,11 +13,14 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Run unit tests
+      - name: Build test image
+        run: make build-test
+
+      - name: Unit tests
         run: make test
 
-      - name: check code formatting
+      - name: Check code formatting
         run: make test-format
 
-      - name: credot
+      - name: Credo
         run: make test-credo
