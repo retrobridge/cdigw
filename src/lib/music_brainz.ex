@@ -82,7 +82,7 @@ defmodule MusicBrainz do
       artist: dig(release, ["artist-credit", 0, "name"]),
       title: release["title"],
       year: String.slice(release["date"], 0..3),
-      genre: Enum.at(release["genres"], 0) || "misc"
+      genre: genre(release["genres"])
     }
 
     release
@@ -112,6 +112,14 @@ defmodule MusicBrainz do
   def fuzzy_search_by_toc(toc, inc \\ @default_inc) do
     inc_list = Enum.join(inc, "+")
     get("/discid/-?fmt=json&inc=#{inc_list}&toc=" <> Enum.join(toc, "+"))
+  end
+
+  defp genre([]), do: "misc"
+  defp genre(nil), do: "misc"
+  defp genre(genres) do
+    genres
+    |> Enum.map(fn %{"name" => name} -> name |> String.split() |> hd() end)
+    |> Enum.find("misc", fn name -> Enum.member?(Cddb.genres(), name) end)
   end
 
   defp ensure_int_list(items) do

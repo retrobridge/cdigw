@@ -1,0 +1,1931 @@
+{
+  "release-offset": 0,
+  "release-count": 3,
+  "releases": [
+    {
+      "title": "Privateering",
+      "packaging-id": "ec27701a-4a22-37f4-bfac-6616e0f9750a",
+      "status": "Official",
+      "genres": [
+        {
+          "name": "blues",
+          "count": 1,
+          "id": "fe12b346-a10e-450f-bf81-fa20894b5ea2",
+          "disambiguation": ""
+        },
+        {
+          "disambiguation": "",
+          "count": 1,
+          "name": "blues rock",
+          "id": "58e325d5-54fd-4e98-b39a-3aa6bc319273"
+        },
+        {
+          "disambiguation": "",
+          "name": "folk rock",
+          "count": 1,
+          "id": "445dc48f-5233-4b4f-987f-867ff9ade836"
+        },
+        {
+          "disambiguation": "",
+          "name": "rock",
+          "count": 1,
+          "id": "0e3fc579-2d24-4f20-9dae-736e1ec78798"
+        }
+      ],
+      "date": "2012-08-31",
+      "media": [
+        {
+          "discs": [
+            {
+              "offset-count": 10,
+              "sectors": 203826,
+              "offsets": [
+                150,
+                15103,
+                33211,
+                56815,
+                85230,
+                104576,
+                120450,
+                142378,
+                164415,
+                184395
+              ],
+              "id": "77diLBmOzvdQyy.JKG10eMh2STU-"
+            }
+          ],
+          "track-count": 10,
+          "track-offset": 0,
+          "format-id": "9712d52a-4509-3d4b-a1a2-67c88c643e31",
+          "title": "",
+          "tracks": [
+            {
+              "number": "1",
+              "title": "Redbud Tree",
+              "position": 1,
+              "id": "ab6b2478-b8d5-300d-b130-496897814295",
+              "recording": {
+                "title": "Redbud Tree",
+                "id": "6467ede7-2f33-497a-be68-973f606d2c2d",
+                "genres": [
+                  {
+                    "count": 1,
+                    "name": "blues rock",
+                    "id": "58e325d5-54fd-4e98-b39a-3aa6bc319273",
+                    "disambiguation": ""
+                  }
+                ],
+                "video": false,
+                "length": 199000,
+                "disambiguation": ""
+              },
+              "length": 199000
+            },
+            {
+              "id": "b8edd92e-96e0-3da9-95ba-16153485cae3",
+              "title": "Haul Away",
+              "position": 2,
+              "number": "2",
+              "length": 241000,
+              "recording": {
+                "id": "7b740203-7599-4229-a266-ffd89dae62f3",
+                "genres": [
+                  {
+                    "disambiguation": "",
+                    "name": "blues rock",
+                    "count": 1,
+                    "id": "58e325d5-54fd-4e98-b39a-3aa6bc319273"
+                  }
+                ],
+                "title": "Haul Away",
+                "disambiguation": "",
+                "length": 241000,
+                "video": false
+              }
+            },
+            {
+              "id": "8aebed91-c0cc-3f38-9bc1-558046ccd51a",
+              "title": "Don’t Forget Your Hat",
+              "number": "3",
+              "position": 3,
+              "recording": {
+                "genres": [
+                  {
+                    "name": "blues rock",
+                    "count": 1,
+                    "id": "58e325d5-54fd-4e98-b39a-3aa6bc319273",
+                    "disambiguation": ""
+                  }
+                ],
+                "id": "2792fac9-0d23-4720-b243-bb5752c8941e",
+                "title": "Don’t Forget Your Hat",
+                "video": false,
+                "disambiguation": "",
+                "length": 315000
+              },
+              "length": 315000
+            },
+            {
+              "recording": {
+                "disambiguation": "",
+                "length": 379000,
+                "video": false,
+                "id": "3b364d76-5c08-49ce-8ee2-bd8d0aee93e7",
+                "genres": [
+                  {
+                    "disambiguation": "",
+                    "name": "blues rock",
+                    "count": 1,
+                    "id": "58e325d5-54fd-4e98-b39a-3aa6bc319273"
+                  }
+                ],
+                "title": "Privateering"
+              },
+              "length": 379000,
+              "title": "Privateering",
+              "position": 4,
+              "number": "4",
+              "id": "b89bff5f-fb0a-3f61-9285-70debad770f9"
+            },
+            {
+              "length": 258000,
+              "recording": {
+                "length": 258000,
+                "disambiguation": "",
+                "video": false,
+                "title": "Miss You Blues",
+                "id": "ac57c35d-a1ee-4430-8d92-c16352383d9b",
+                "genres": [
+                  {
+                    "count": 1,
+                    "name": "blues rock",
+                    "id": "58e325d5-54fd-4e98-b39a-3aa6bc319273",
+                    "disambiguation": ""
+                  }
+                ]
+              },
+              "title": "Miss You Blues",
+              "number": "5",
+              "position": 5,
+              "id": "9978854d-8d2e-3780-88cc-113bac459855"
+            },
+            {
+              "id": "4e6cc17a-f9af-3d49-bd90-d6f3e4af5c85",
+              "title": "Corned Beef City",
+              "position": 6,
+              "number": "6",
+              "recording": {
+                "length": 212000,
+                "disambiguation": "",
+                "video": false,
+                "title": "Corned Beef City",
+                "id": "745f3dba-2e24-4638-8c2f-50b591b67292",
+                "genres": [
+                  {
+                    "id": "58e325d5-54fd-4e98-b39a-3aa6bc319273",
+                    "name": "blues rock",
+                    "count": 1,
+                    "disambiguation": ""
+                  }
+                ]
+              },
+              "length": 212000
+            },
+            {
+              "title": "Go, Love",
+              "position": 7,
+              "number": "7",
+              "id": "3b910046-ba99-3bc9-baca-70da099d90dc",
+              "recording": {
+                "title": "Go, Love",
+                "id": "cbbbe95d-48ef-484c-b7f8-860f7ef75e35",
+                "genres": [
+                  {
+                    "name": "blues rock",
+                    "id": "58e325d5-54fd-4e98-b39a-3aa6bc319273",
+                    "count": 1,
+                    "disambiguation": ""
+                  }
+                ],
+                "video": false,
+                "length": 292000,
+                "disambiguation": ""
+              },
+              "length": 292000
+            },
+            {
+              "length": 294000,
+              "recording": {
+                "title": "Hot or What",
+                "id": "8d26d1dd-0f79-4e2c-a4b2-65f6e71c8dc5",
+                "genres": [
+                  {
+                    "name": "blues rock",
+                    "id": "58e325d5-54fd-4e98-b39a-3aa6bc319273",
+                    "count": 1,
+                    "disambiguation": ""
+                  }
+                ],
+                "video": false,
+                "length": 294000,
+                "disambiguation": ""
+              },
+              "title": "Hot or What",
+              "number": "8",
+              "position": 8,
+              "id": "e0561fd7-a5e7-3998-bfe8-50fc46f5c5f6"
+            },
+            {
+              "id": "e925bab9-0d45-33f9-9d3d-44a025fda308",
+              "position": 9,
+              "title": "Yon Two Crows",
+              "number": "9",
+              "recording": {
+                "id": "a1baefa8-3263-4f37-a528-bea692312fef",
+                "genres": [
+                  {
+                    "disambiguation": "",
+                    "name": "blues rock",
+                    "count": 1,
+                    "id": "58e325d5-54fd-4e98-b39a-3aa6bc319273"
+                  }
+                ],
+                "title": "Yon Two Crows",
+                "disambiguation": "",
+                "length": 266000,
+                "video": false
+              },
+              "length": 266000
+            },
+            {
+              "length": 259000,
+              "recording": {
+                "title": "Seattle",
+                "genres": [
+                  {
+                    "id": "58e325d5-54fd-4e98-b39a-3aa6bc319273",
+                    "name": "blues rock",
+                    "count": 1,
+                    "disambiguation": ""
+                  }
+                ],
+                "id": "df8c8c60-3213-405a-9d77-484ddcb853f5",
+                "video": false,
+                "length": 259000,
+                "disambiguation": ""
+              },
+              "id": "c8f34b53-0cb0-3e26-90e2-1201a87d5db9",
+              "title": "Seattle",
+              "position": 10,
+              "number": "10"
+            }
+          ],
+          "format": "CD",
+          "position": 1
+        },
+        {
+          "track-offset": 0,
+          "format-id": "9712d52a-4509-3d4b-a1a2-67c88c643e31",
+          "discs": [
+            {
+              "id": "wMr.cvfMuhfUKZQ4cTUL48rPo1Y-",
+              "offsets": [
+                150,
+                24396,
+                42447,
+                65922,
+                82134,
+                101226,
+                116734,
+                139014,
+                162924,
+                184302
+              ],
+              "sectors": 202001,
+              "offset-count": 10
+            }
+          ],
+          "track-count": 10,
+          "title": "",
+          "format": "CD",
+          "tracks": [
+            {
+              "id": "4f8c2c54-540b-3df2-a07f-825bdf11bf00",
+              "title": "Kingdom of Gold",
+              "number": "1",
+              "position": 1,
+              "recording": {
+                "title": "Kingdom of Gold",
+                "id": "2c14839f-c16e-4cf9-98a6-3068746675f1",
+                "genres": [
+                  {
+                    "name": "blues rock",
+                    "id": "58e325d5-54fd-4e98-b39a-3aa6bc319273",
+                    "count": 1,
+                    "disambiguation": ""
+                  }
+                ],
+                "video": false,
+                "length": 323000,
+                "disambiguation": ""
+              },
+              "length": 323000
+            },
+            {
+              "recording": {
+                "video": false,
+                "disambiguation": "",
+                "length": 241000,
+                "id": "de9fd29d-bce3-4415-90ec-1f081375a40e",
+                "genres": [
+                  {
+                    "disambiguation": "",
+                    "name": "blues rock",
+                    "count": 1,
+                    "id": "58e325d5-54fd-4e98-b39a-3aa6bc319273"
+                  }
+                ],
+                "title": "Got to Have Something"
+              },
+              "length": 241000,
+              "number": "2",
+              "title": "Got to Have Something",
+              "position": 2,
+              "id": "fa25e2ce-fc47-3622-9ca6-76026e1a43f2"
+            },
+            {
+              "recording": {
+                "video": false,
+                "disambiguation": "",
+                "length": 313000,
+                "id": "bbf83813-e7eb-48d0-b7f0-64d817f2fc27",
+                "genres": [
+                  {
+                    "name": "blues rock",
+                    "id": "58e325d5-54fd-4e98-b39a-3aa6bc319273",
+                    "count": 1,
+                    "disambiguation": ""
+                  }
+                ],
+                "title": "Radio City Serenade"
+              },
+              "length": 313000,
+              "title": "Radio City Serenade",
+              "position": 3,
+              "number": "3",
+              "id": "e7988af4-5476-3fca-a1d8-91485b60de26"
+            },
+            {
+              "recording": {
+                "disambiguation": "",
+                "length": 216000,
+                "video": false,
+                "genres": [
+                  {
+                    "count": 1,
+                    "name": "blues rock",
+                    "id": "58e325d5-54fd-4e98-b39a-3aa6bc319273",
+                    "disambiguation": ""
+                  }
+                ],
+                "id": "e9280584-ccc7-432a-b358-177fd86044ee",
+                "title": "I Used to Could"
+              },
+              "length": 216000,
+              "id": "00509740-56cc-3378-8b3b-3dd5a3e10e41",
+              "title": "I Used to Could",
+              "number": "4",
+              "position": 4
+            },
+            {
+              "length": 255000,
+              "recording": {
+                "title": "Gator Blood",
+                "id": "03c343d4-aa4d-4cb7-a96b-5c239fb62e99",
+                "genres": [
+                  {
+                    "name": "blues rock",
+                    "id": "58e325d5-54fd-4e98-b39a-3aa6bc319273",
+                    "count": 1,
+                    "disambiguation": ""
+                  }
+                ],
+                "video": false,
+                "length": 255000,
+                "disambiguation": ""
+              },
+              "title": "Gator Blood",
+              "position": 5,
+              "number": "5",
+              "id": "833bb66f-923a-37e4-b1bc-1278b5b8cd87"
+            },
+            {
+              "title": "Bluebird",
+              "position": 6,
+              "number": "6",
+              "id": "67d464f3-516d-3f68-aff8-18379e8c03e7",
+              "recording": {
+                "id": "f8af3a71-df14-4226-8ebd-f265700997ab",
+                "genres": [
+                  {
+                    "name": "blues rock",
+                    "id": "58e325d5-54fd-4e98-b39a-3aa6bc319273",
+                    "count": 1,
+                    "disambiguation": ""
+                  }
+                ],
+                "title": "Bluebird",
+                "disambiguation": "",
+                "length": 207000,
+                "video": false
+              },
+              "length": 207000
+            },
+            {
+              "recording": {
+                "video": false,
+                "length": 297000,
+                "disambiguation": "",
+                "title": "Dream of the Drowned Submariner",
+                "genres": [
+                  {
+                    "name": "blues rock",
+                    "id": "58e325d5-54fd-4e98-b39a-3aa6bc319273",
+                    "count": 1,
+                    "disambiguation": ""
+                  }
+                ],
+                "id": "a4253515-e2e8-470d-9aa5-a3edf332782f"
+              },
+              "length": 297000,
+              "position": 7,
+              "title": "Dream of the Drowned Submariner",
+              "number": "7",
+              "id": "18f5b157-cc47-3f85-9afa-377254033dbe"
+            },
+            {
+              "title": "Blood and Water",
+              "number": "8",
+              "position": 8,
+              "id": "ad3c3d70-bac0-390c-a2b7-52a1df5e793c",
+              "recording": {
+                "title": "Blood and Water",
+                "id": "a8c53290-b9e5-439e-9842-aef3ab03ed33",
+                "genres": [
+                  {
+                    "id": "58e325d5-54fd-4e98-b39a-3aa6bc319273",
+                    "name": "blues rock",
+                    "count": 1,
+                    "disambiguation": ""
+                  }
+                ],
+                "video": false,
+                "length": 319000,
+                "disambiguation": ""
+              },
+              "length": 319000
+            },
+            {
+              "id": "cd34ae6b-1dce-3f78-bba3-a4ecaa4fdf41",
+              "title": "Today Is Okay",
+              "position": 9,
+              "number": "9",
+              "recording": {
+                "video": false,
+                "length": 285000,
+                "disambiguation": "",
+                "title": "Today Is Okay",
+                "id": "2fc478ba-a68d-4870-8560-3228c02d9d63",
+                "genres": [
+                  {
+                    "id": "58e325d5-54fd-4e98-b39a-3aa6bc319273",
+                    "name": "blues rock",
+                    "count": 1,
+                    "disambiguation": ""
+                  }
+                ]
+              },
+              "length": 285000
+            },
+            {
+              "position": 10,
+              "title": "After the Beanstalk",
+              "number": "10",
+              "id": "3068ad5d-f5a1-359d-91a6-3e3e2ca2e942",
+              "recording": {
+                "title": "After the Beanstalk",
+                "id": "3941184e-4a3c-4abc-ab9a-e256f331559c",
+                "genres": [
+                  {
+                    "name": "blues rock",
+                    "id": "58e325d5-54fd-4e98-b39a-3aa6bc319273",
+                    "count": 1,
+                    "disambiguation": ""
+                  }
+                ],
+                "length": 236000,
+                "disambiguation": "",
+                "video": false
+              },
+              "length": 236000
+            }
+          ],
+          "position": 2
+        }
+      ],
+      "release-events": [
+        {
+          "area": {
+            "disambiguation": "",
+            "sort-name": "Europe",
+            "id": "89a675c2-3e37-3518-b83c-418bad59a85a",
+            "name": "Europe",
+            "iso-3166-1-codes": [
+              "XE"
+            ]
+          },
+          "date": "2012-08-31"
+        }
+      ],
+      "cover-art-archive": {
+        "front": true,
+        "darkened": false,
+        "count": 6,
+        "back": true,
+        "artwork": true
+      },
+      "asin": "B0086449YA",
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "disambiguation": "",
+      "country": "XE",
+      "barcode": "602537043217",
+      "id": "a196e795-6cac-4b70-b5f4-dc32fad24b8a",
+      "text-representation": {
+        "language": "eng",
+        "script": "Latn"
+      },
+      "artist-credit": [
+        {
+          "joinphrase": "",
+          "artist": {
+            "genres": [
+              {
+                "count": 2,
+                "name": "blues rock",
+                "id": "58e325d5-54fd-4e98-b39a-3aa6bc319273",
+                "disambiguation": ""
+              },
+              {
+                "disambiguation": "",
+                "id": "93244085-20e5-4f16-9067-1d19143b3810",
+                "name": "classic rock",
+                "count": 2
+              },
+              {
+                "name": "folk",
+                "count": 1,
+                "id": "a91eed3a-fdd0-494e-ade0-95ea4117f6eb",
+                "disambiguation": ""
+              },
+              {
+                "disambiguation": "",
+                "name": "rock",
+                "count": 2,
+                "id": "0e3fc579-2d24-4f20-9dae-736e1ec78798"
+              },
+              {
+                "disambiguation": "",
+                "name": "singer-songwriter",
+                "id": "455f264b-db00-4716-991d-fbd32dc24523",
+                "count": 2
+              },
+              {
+                "id": "7d0c6a6b-5d56-4b1e-a8c7-e32194f246b9",
+                "name": "soft rock",
+                "count": 2,
+                "disambiguation": ""
+              }
+            ],
+            "id": "e49f69da-17d5-4c5c-bac0-dadcb0e588f5",
+            "name": "Mark Knopfler",
+            "sort-name": "Knopfler, Mark",
+            "disambiguation": ""
+          },
+          "name": "Mark Knopfler"
+        }
+      ],
+      "quality": "normal",
+      "packaging": "Jewel Case"
+    },
+    {
+      "disambiguation": "limited deluxe edition",
+      "country": "DE",
+      "barcode": "602537081189",
+      "asin": "B008HOR7VQ",
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "quality": "normal",
+      "packaging": null,
+      "id": "ad62022f-9dab-4202-8a5a-8bf563e371b2",
+      "text-representation": {
+        "language": "eng",
+        "script": "Latn"
+      },
+      "artist-credit": [
+        {
+          "joinphrase": "",
+          "artist": {
+            "disambiguation": "",
+            "sort-name": "Knopfler, Mark",
+            "genres": [
+              {
+                "count": 2,
+                "name": "blues rock",
+                "id": "58e325d5-54fd-4e98-b39a-3aa6bc319273",
+                "disambiguation": ""
+              },
+              {
+                "name": "classic rock",
+                "id": "93244085-20e5-4f16-9067-1d19143b3810",
+                "count": 2,
+                "disambiguation": ""
+              },
+              {
+                "disambiguation": "",
+                "name": "folk",
+                "id": "a91eed3a-fdd0-494e-ade0-95ea4117f6eb",
+                "count": 1
+              },
+              {
+                "disambiguation": "",
+                "name": "rock",
+                "id": "0e3fc579-2d24-4f20-9dae-736e1ec78798",
+                "count": 2
+              },
+              {
+                "count": 2,
+                "name": "singer-songwriter",
+                "id": "455f264b-db00-4716-991d-fbd32dc24523",
+                "disambiguation": ""
+              },
+              {
+                "count": 2,
+                "name": "soft rock",
+                "id": "7d0c6a6b-5d56-4b1e-a8c7-e32194f246b9",
+                "disambiguation": ""
+              }
+            ],
+            "id": "e49f69da-17d5-4c5c-bac0-dadcb0e588f5",
+            "name": "Mark Knopfler"
+          },
+          "name": "Mark Knopfler"
+        }
+      ],
+      "status": "Official",
+      "title": "Privateering",
+      "packaging-id": null,
+      "release-events": [
+        {
+          "date": "2012-08-31",
+          "area": {
+            "sort-name": "Germany",
+            "disambiguation": "",
+            "iso-3166-1-codes": [
+              "DE"
+            ],
+            "id": "85752fda-13c4-31a3-bee5-0e5cb1f51dad",
+            "name": "Germany"
+          }
+        }
+      ],
+      "cover-art-archive": {
+        "count": 1,
+        "front": true,
+        "darkened": false,
+        "back": false,
+        "artwork": true
+      },
+      "genres": [],
+      "date": "2012-08-31",
+      "media": [
+        {
+          "tracks": [
+            {
+              "id": "4c1d4b87-f3fb-3563-883c-09252226e364",
+              "title": "Redbud Tree",
+              "position": 1,
+              "number": "1",
+              "recording": {
+                "id": "6467ede7-2f33-497a-be68-973f606d2c2d",
+                "genres": [
+                  {
+                    "id": "58e325d5-54fd-4e98-b39a-3aa6bc319273",
+                    "name": "blues rock",
+                    "count": 1,
+                    "disambiguation": ""
+                  }
+                ],
+                "title": "Redbud Tree",
+                "video": false,
+                "disambiguation": "",
+                "length": 199000
+              },
+              "length": 199000
+            },
+            {
+              "id": "41ddfd8d-f219-30fc-9c09-55420744168b",
+              "title": "Haul Away",
+              "position": 2,
+              "number": "2",
+              "recording": {
+                "length": 241000,
+                "disambiguation": "",
+                "video": false,
+                "title": "Haul Away",
+                "genres": [
+                  {
+                    "disambiguation": "",
+                    "id": "58e325d5-54fd-4e98-b39a-3aa6bc319273",
+                    "name": "blues rock",
+                    "count": 1
+                  }
+                ],
+                "id": "7b740203-7599-4229-a266-ffd89dae62f3"
+              },
+              "length": 241000
+            },
+            {
+              "length": 315000,
+              "recording": {
+                "length": 315000,
+                "disambiguation": "",
+                "video": false,
+                "title": "Don’t Forget Your Hat",
+                "genres": [
+                  {
+                    "disambiguation": "",
+                    "name": "blues rock",
+                    "count": 1,
+                    "id": "58e325d5-54fd-4e98-b39a-3aa6bc319273"
+                  }
+                ],
+                "id": "2792fac9-0d23-4720-b243-bb5752c8941e"
+              },
+              "number": "3",
+              "title": "Don’t Forget Your Hat",
+              "position": 3,
+              "id": "c92dc6d5-a64c-3d61-8f44-6ebc8e0462c5"
+            },
+            {
+              "recording": {
+                "title": "Privateering",
+                "id": "3b364d76-5c08-49ce-8ee2-bd8d0aee93e7",
+                "genres": [
+                  {
+                    "id": "58e325d5-54fd-4e98-b39a-3aa6bc319273",
+                    "name": "blues rock",
+                    "count": 1,
+                    "disambiguation": ""
+                  }
+                ],
+                "length": 379000,
+                "disambiguation": "",
+                "video": false
+              },
+              "length": 379000,
+              "title": "Privateering",
+              "number": "4",
+              "position": 4,
+              "id": "6c11d7c7-9d25-3bed-b081-5ff2d6da5f34"
+            },
+            {
+              "title": "Miss You Blues",
+              "number": "5",
+              "position": 5,
+              "id": "7f869a81-ef3f-3deb-9fcb-b7b3803bda82",
+              "length": 258000,
+              "recording": {
+                "id": "ac57c35d-a1ee-4430-8d92-c16352383d9b",
+                "genres": [
+                  {
+                    "count": 1,
+                    "name": "blues rock",
+                    "id": "58e325d5-54fd-4e98-b39a-3aa6bc319273",
+                    "disambiguation": ""
+                  }
+                ],
+                "title": "Miss You Blues",
+                "disambiguation": "",
+                "length": 258000,
+                "video": false
+              }
+            },
+            {
+              "recording": {
+                "title": "Corned Beef City",
+                "id": "745f3dba-2e24-4638-8c2f-50b591b67292",
+                "genres": [
+                  {
+                    "disambiguation": "",
+                    "name": "blues rock",
+                    "id": "58e325d5-54fd-4e98-b39a-3aa6bc319273",
+                    "count": 1
+                  }
+                ],
+                "video": false,
+                "length": 212000,
+                "disambiguation": ""
+              },
+              "length": 212000,
+              "id": "e7b99708-fa02-356d-8254-8b9730841138",
+              "number": "6",
+              "title": "Corned Beef City",
+              "position": 6
+            },
+            {
+              "title": "Go, Love",
+              "number": "7",
+              "position": 7,
+              "id": "365ebdba-5a71-3e1a-a3c2-aa5dbbcd1da9",
+              "recording": {
+                "video": false,
+                "disambiguation": "",
+                "length": 292000,
+                "id": "cbbbe95d-48ef-484c-b7f8-860f7ef75e35",
+                "genres": [
+                  {
+                    "disambiguation": "",
+                    "count": 1,
+                    "name": "blues rock",
+                    "id": "58e325d5-54fd-4e98-b39a-3aa6bc319273"
+                  }
+                ],
+                "title": "Go, Love"
+              },
+              "length": 292000
+            },
+            {
+              "id": "b98de725-0d0a-3a9d-8901-311bbff01825",
+              "title": "Hot or What",
+              "number": "8",
+              "position": 8,
+              "length": 294000,
+              "recording": {
+                "id": "8d26d1dd-0f79-4e2c-a4b2-65f6e71c8dc5",
+                "genres": [
+                  {
+                    "name": "blues rock",
+                    "count": 1,
+                    "id": "58e325d5-54fd-4e98-b39a-3aa6bc319273",
+                    "disambiguation": ""
+                  }
+                ],
+                "title": "Hot or What",
+                "disambiguation": "",
+                "length": 294000,
+                "video": false
+              }
+            },
+            {
+              "title": "Yon Two Crows",
+              "position": 9,
+              "number": "9",
+              "id": "40f44cd4-fa64-325f-bc6f-b4c044b1879f",
+              "recording": {
+                "title": "Yon Two Crows",
+                "genres": [
+                  {
+                    "name": "blues rock",
+                    "id": "58e325d5-54fd-4e98-b39a-3aa6bc319273",
+                    "count": 1,
+                    "disambiguation": ""
+                  }
+                ],
+                "id": "a1baefa8-3263-4f37-a528-bea692312fef",
+                "length": 266000,
+                "disambiguation": "",
+                "video": false
+              },
+              "length": 266000
+            },
+            {
+              "number": "10",
+              "title": "Seattle",
+              "position": 10,
+              "id": "eafa1dc2-da36-3424-8ecc-89b7b1e28dd2",
+              "length": 259000,
+              "recording": {
+                "title": "Seattle",
+                "genres": [
+                  {
+                    "disambiguation": "",
+                    "count": 1,
+                    "name": "blues rock",
+                    "id": "58e325d5-54fd-4e98-b39a-3aa6bc319273"
+                  }
+                ],
+                "id": "df8c8c60-3213-405a-9d77-484ddcb853f5",
+                "length": 259000,
+                "disambiguation": "",
+                "video": false
+              }
+            }
+          ],
+          "format": "CD",
+          "position": 1,
+          "format-id": "9712d52a-4509-3d4b-a1a2-67c88c643e31",
+          "track-offset": 0,
+          "discs": [
+            {
+              "offset-count": 10,
+              "sectors": 203826,
+              "id": "77diLBmOzvdQyy.JKG10eMh2STU-",
+              "offsets": [
+                150,
+                15103,
+                33211,
+                56815,
+                85230,
+                104576,
+                120450,
+                142378,
+                164415,
+                184395
+              ]
+            }
+          ],
+          "track-count": 10,
+          "title": ""
+        },
+        {
+          "tracks": [
+            {
+              "length": 323000,
+              "recording": {
+                "video": false,
+                "length": 323000,
+                "disambiguation": "",
+                "title": "Kingdom of Gold",
+                "genres": [
+                  {
+                    "name": "blues rock",
+                    "id": "58e325d5-54fd-4e98-b39a-3aa6bc319273",
+                    "count": 1,
+                    "disambiguation": ""
+                  }
+                ],
+                "id": "2c14839f-c16e-4cf9-98a6-3068746675f1"
+              },
+              "title": "Kingdom of Gold",
+              "number": "1",
+              "position": 1,
+              "id": "d4f0b28e-214a-3124-b608-c90e9e9d1f26"
+            },
+            {
+              "recording": {
+                "video": false,
+                "disambiguation": "",
+                "length": 241000,
+                "id": "de9fd29d-bce3-4415-90ec-1f081375a40e",
+                "genres": [
+                  {
+                    "count": 1,
+                    "name": "blues rock",
+                    "id": "58e325d5-54fd-4e98-b39a-3aa6bc319273",
+                    "disambiguation": ""
+                  }
+                ],
+                "title": "Got to Have Something"
+              },
+              "length": 241000,
+              "title": "Got to Have Something",
+              "position": 2,
+              "number": "2",
+              "id": "df587ea8-471b-3d1b-942b-67916e2c8e15"
+            },
+            {
+              "length": 313000,
+              "recording": {
+                "title": "Radio City Serenade",
+                "genres": [
+                  {
+                    "name": "blues rock",
+                    "count": 1,
+                    "id": "58e325d5-54fd-4e98-b39a-3aa6bc319273",
+                    "disambiguation": ""
+                  }
+                ],
+                "id": "bbf83813-e7eb-48d0-b7f0-64d817f2fc27",
+                "video": false,
+                "length": 313000,
+                "disambiguation": ""
+              },
+              "position": 3,
+              "title": "Radio City Serenade",
+              "number": "3",
+              "id": "504db53c-d2d9-3409-afcd-89f149d66172"
+            },
+            {
+              "id": "a4520ea9-8426-34e7-a8e7-fa025a4b4c97",
+              "title": "I Used to Could",
+              "number": "4",
+              "position": 4,
+              "recording": {
+                "genres": [
+                  {
+                    "disambiguation": "",
+                    "count": 1,
+                    "name": "blues rock",
+                    "id": "58e325d5-54fd-4e98-b39a-3aa6bc319273"
+                  }
+                ],
+                "id": "e9280584-ccc7-432a-b358-177fd86044ee",
+                "title": "I Used to Could",
+                "video": false,
+                "disambiguation": "",
+                "length": 216000
+              },
+              "length": 216000
+            },
+            {
+              "position": 5,
+              "title": "Gator Blood",
+              "number": "5",
+              "id": "5dbc6f83-a890-354b-b359-c81c55217bdf",
+              "recording": {
+                "video": false,
+                "disambiguation": "",
+                "length": 255000,
+                "genres": [
+                  {
+                    "disambiguation": "",
+                    "name": "blues rock",
+                    "id": "58e325d5-54fd-4e98-b39a-3aa6bc319273",
+                    "count": 1
+                  }
+                ],
+                "id": "03c343d4-aa4d-4cb7-a96b-5c239fb62e99",
+                "title": "Gator Blood"
+              },
+              "length": 255000
+            },
+            {
+              "length": 207000,
+              "recording": {
+                "disambiguation": "",
+                "length": 207000,
+                "video": false,
+                "genres": [
+                  {
+                    "name": "blues rock",
+                    "count": 1,
+                    "id": "58e325d5-54fd-4e98-b39a-3aa6bc319273",
+                    "disambiguation": ""
+                  }
+                ],
+                "id": "f8af3a71-df14-4226-8ebd-f265700997ab",
+                "title": "Bluebird"
+              },
+              "id": "84086583-95f0-3df0-b516-f1f30318fb8e",
+              "position": 6,
+              "title": "Bluebird",
+              "number": "6"
+            },
+            {
+              "title": "Dream of the Drowned Submariner",
+              "number": "7",
+              "position": 7,
+              "id": "cc886af2-3ed1-3716-a823-66e120b5e4d2",
+              "recording": {
+                "title": "Dream of the Drowned Submariner",
+                "id": "a4253515-e2e8-470d-9aa5-a3edf332782f",
+                "genres": [
+                  {
+                    "name": "blues rock",
+                    "count": 1,
+                    "id": "58e325d5-54fd-4e98-b39a-3aa6bc319273",
+                    "disambiguation": ""
+                  }
+                ],
+                "length": 297000,
+                "disambiguation": "",
+                "video": false
+              },
+              "length": 297000
+            },
+            {
+              "id": "080d8d5e-6964-395a-afe5-8d03a0eaa744",
+              "title": "Blood and Water",
+              "position": 8,
+              "number": "8",
+              "length": 319000,
+              "recording": {
+                "video": false,
+                "length": 319000,
+                "disambiguation": "",
+                "title": "Blood and Water",
+                "id": "a8c53290-b9e5-439e-9842-aef3ab03ed33",
+                "genres": [
+                  {
+                    "disambiguation": "",
+                    "name": "blues rock",
+                    "count": 1,
+                    "id": "58e325d5-54fd-4e98-b39a-3aa6bc319273"
+                  }
+                ]
+              }
+            },
+            {
+              "length": 285000,
+              "recording": {
+                "video": false,
+                "length": 285000,
+                "disambiguation": "",
+                "title": "Today Is Okay",
+                "genres": [
+                  {
+                    "name": "blues rock",
+                    "id": "58e325d5-54fd-4e98-b39a-3aa6bc319273",
+                    "count": 1,
+                    "disambiguation": ""
+                  }
+                ],
+                "id": "2fc478ba-a68d-4870-8560-3228c02d9d63"
+              },
+              "number": "9",
+              "title": "Today Is Okay",
+              "position": 9,
+              "id": "2ddab13b-4057-35a2-a21d-feecbc0f0b18"
+            },
+            {
+              "title": "After the Beanstalk",
+              "number": "10",
+              "position": 10,
+              "id": "d595ac47-778d-3a83-8d9d-254879822e18",
+              "length": 236000,
+              "recording": {
+                "title": "After the Beanstalk",
+                "id": "3941184e-4a3c-4abc-ab9a-e256f331559c",
+                "genres": [
+                  {
+                    "disambiguation": "",
+                    "id": "58e325d5-54fd-4e98-b39a-3aa6bc319273",
+                    "name": "blues rock",
+                    "count": 1
+                  }
+                ],
+                "video": false,
+                "length": 236000,
+                "disambiguation": ""
+              }
+            }
+          ],
+          "format": "CD",
+          "position": 2,
+          "track-offset": 0,
+          "format-id": "9712d52a-4509-3d4b-a1a2-67c88c643e31",
+          "discs": [
+            {
+              "offset-count": 10,
+              "sectors": 202001,
+              "offsets": [
+                150,
+                24396,
+                42447,
+                65922,
+                82134,
+                101226,
+                116734,
+                139014,
+                162924,
+                184302
+              ],
+              "id": "wMr.cvfMuhfUKZQ4cTUL48rPo1Y-"
+            }
+          ],
+          "track-count": 10,
+          "title": ""
+        },
+        {
+          "position": 3,
+          "tracks": [
+            {
+              "length": 429000,
+              "recording": {
+                "title": "Why Aye Man (live)",
+                "genres": [],
+                "id": "7a9bed60-f0c5-4e19-9a1a-bb18559ba842",
+                "length": 429000,
+                "disambiguation": "",
+                "video": false
+              },
+              "id": "d553f453-5188-3276-a2ae-f5e20cddabd0",
+              "position": 1,
+              "title": "Why Aye Man (live)",
+              "number": "1"
+            },
+            {
+              "recording": {
+                "title": "Cleaning My Gun (unmixed 2–track)",
+                "genres": [],
+                "id": "51a54c49-b9ce-4716-955b-d52e65f4f6c2",
+                "video": false,
+                "length": 284000,
+                "disambiguation": ""
+              },
+              "length": 284000,
+              "number": "2",
+              "title": "Cleaning My Gun (unmixed 2–track)",
+              "position": 2,
+              "id": "ff19623d-59e0-340c-a000-2993eb35a69b"
+            },
+            {
+              "number": "3",
+              "title": "Corned Beef City (unmixed 2–track)",
+              "position": 3,
+              "id": "c638c766-31da-3a37-9950-4276cda78272",
+              "recording": {
+                "video": false,
+                "length": 266000,
+                "disambiguation": "",
+                "title": "Corned Beef City (unmixed 2–track)",
+                "genres": [],
+                "id": "3fc2a4d9-21f9-4816-829b-8f0ba6e73ee2"
+              },
+              "length": 266000
+            },
+            {
+              "number": "4",
+              "title": "Sailing to Philadelphia (live)",
+              "position": 4,
+              "id": "67c92f03-a473-3913-b946-32eaa8761cfa",
+              "length": 433000,
+              "recording": {
+                "title": "Sailing to Philadelphia (live)",
+                "id": "0c4c9ac5-1a12-4955-b93c-91f99ec89743",
+                "genres": [],
+                "length": 433000,
+                "disambiguation": "",
+                "video": false
+              }
+            },
+            {
+              "recording": {
+                "title": "Hill Farmer’s Blues (unmixed 2–track)",
+                "id": "d7925095-1521-43ad-8786-93d2ceaf491c",
+                "genres": [],
+                "length": 316000,
+                "disambiguation": "",
+                "video": false
+              },
+              "length": 316000,
+              "title": "Hill Farmer’s Blues (unmixed 2–track)",
+              "position": 5,
+              "number": "5",
+              "id": "6375f0b9-b9f5-3f9b-9ab5-67b998bf5424"
+            }
+          ],
+          "format": "CD",
+          "title": "",
+          "track-offset": 0,
+          "format-id": "9712d52a-4509-3d4b-a1a2-67c88c643e31",
+          "discs": [
+            {
+              "id": "0r3DPbEib9LyymmnZxFNGyauzN0-",
+              "offsets": [
+                150,
+                32579,
+                53839,
+                73788,
+                106178
+              ],
+              "offset-count": 5,
+              "sectors": 130039
+            }
+          ],
+          "track-count": 5
+        }
+      ]
+    },
+    {
+      "quality": "normal",
+      "packaging": "Jewel Case",
+      "id": "f7ebe768-d0e8-4f8b-92e9-71d86e9a4e99",
+      "text-representation": {
+        "language": "eng",
+        "script": "Latn"
+      },
+      "artist-credit": [
+        {
+          "artist": {
+            "genres": [
+              {
+                "name": "blues rock",
+                "count": 2,
+                "id": "58e325d5-54fd-4e98-b39a-3aa6bc319273",
+                "disambiguation": ""
+              },
+              {
+                "name": "classic rock",
+                "id": "93244085-20e5-4f16-9067-1d19143b3810",
+                "count": 2,
+                "disambiguation": ""
+              },
+              {
+                "count": 1,
+                "name": "folk",
+                "id": "a91eed3a-fdd0-494e-ade0-95ea4117f6eb",
+                "disambiguation": ""
+              },
+              {
+                "name": "rock",
+                "count": 2,
+                "id": "0e3fc579-2d24-4f20-9dae-736e1ec78798",
+                "disambiguation": ""
+              },
+              {
+                "disambiguation": "",
+                "id": "455f264b-db00-4716-991d-fbd32dc24523",
+                "name": "singer-songwriter",
+                "count": 2
+              },
+              {
+                "id": "7d0c6a6b-5d56-4b1e-a8c7-e32194f246b9",
+                "name": "soft rock",
+                "count": 2,
+                "disambiguation": ""
+              }
+            ],
+            "id": "e49f69da-17d5-4c5c-bac0-dadcb0e588f5",
+            "name": "Mark Knopfler",
+            "disambiguation": "",
+            "sort-name": "Knopfler, Mark"
+          },
+          "joinphrase": "",
+          "name": "Mark Knopfler"
+        }
+      ],
+      "disambiguation": "Limited Edition",
+      "barcode": null,
+      "country": "GB",
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "asin": null,
+      "release-events": [
+        {
+          "date": "2012-09-11",
+          "area": {
+            "iso-3166-1-codes": [
+              "GB"
+            ],
+            "id": "8a754a16-0027-3a29-b6d7-2b40ea0481ed",
+            "name": "United Kingdom",
+            "sort-name": "United Kingdom",
+            "disambiguation": ""
+          }
+        }
+      ],
+      "cover-art-archive": {
+        "front": true,
+        "darkened": false,
+        "count": 1,
+        "back": false,
+        "artwork": true
+      },
+      "genres": [],
+      "media": [
+        {
+          "position": 1,
+          "tracks": [
+            {
+              "recording": {
+                "title": "Redbud Tree",
+                "id": "6467ede7-2f33-497a-be68-973f606d2c2d",
+                "genres": [
+                  {
+                    "count": 1,
+                    "name": "blues rock",
+                    "id": "58e325d5-54fd-4e98-b39a-3aa6bc319273",
+                    "disambiguation": ""
+                  }
+                ],
+                "length": 199000,
+                "disambiguation": "",
+                "video": false
+              },
+              "length": 199000,
+              "position": 1,
+              "title": "Redbud Tree",
+              "number": "1",
+              "id": "848b0487-0d6a-47c5-848b-d3827a20d117"
+            },
+            {
+              "length": 241000,
+              "recording": {
+                "id": "7b740203-7599-4229-a266-ffd89dae62f3",
+                "genres": [
+                  {
+                    "count": 1,
+                    "name": "blues rock",
+                    "id": "58e325d5-54fd-4e98-b39a-3aa6bc319273",
+                    "disambiguation": ""
+                  }
+                ],
+                "title": "Haul Away",
+                "disambiguation": "",
+                "length": 241000,
+                "video": false
+              },
+              "number": "2",
+              "title": "Haul Away",
+              "position": 2,
+              "id": "2ce87cf0-0691-488f-90d7-f7a403af5e96"
+            },
+            {
+              "title": "Don’t Forget Your Hat",
+              "position": 3,
+              "number": "3",
+              "id": "d35ae1d3-f825-4fda-92f7-dc2d763974c5",
+              "recording": {
+                "id": "2792fac9-0d23-4720-b243-bb5752c8941e",
+                "genres": [
+                  {
+                    "id": "58e325d5-54fd-4e98-b39a-3aa6bc319273",
+                    "name": "blues rock",
+                    "count": 1,
+                    "disambiguation": ""
+                  }
+                ],
+                "title": "Don’t Forget Your Hat",
+                "video": false,
+                "disambiguation": "",
+                "length": 315000
+              },
+              "length": 315000
+            },
+            {
+              "id": "c1a4ffbd-02be-48a9-8a3f-1550a2dcbb89",
+              "position": 4,
+              "title": "Privateering",
+              "number": "4",
+              "recording": {
+                "id": "3b364d76-5c08-49ce-8ee2-bd8d0aee93e7",
+                "genres": [
+                  {
+                    "name": "blues rock",
+                    "id": "58e325d5-54fd-4e98-b39a-3aa6bc319273",
+                    "count": 1,
+                    "disambiguation": ""
+                  }
+                ],
+                "title": "Privateering",
+                "video": false,
+                "disambiguation": "",
+                "length": 379000
+              },
+              "length": 379000
+            },
+            {
+              "recording": {
+                "video": false,
+                "disambiguation": "",
+                "length": 258000,
+                "genres": [
+                  {
+                    "disambiguation": "",
+                    "name": "blues rock",
+                    "id": "58e325d5-54fd-4e98-b39a-3aa6bc319273",
+                    "count": 1
+                  }
+                ],
+                "id": "ac57c35d-a1ee-4430-8d92-c16352383d9b",
+                "title": "Miss You Blues"
+              },
+              "length": 258000,
+              "id": "e429ce4d-8e65-4bd4-80a4-4902628c39fd",
+              "position": 5,
+              "title": "Miss You Blues",
+              "number": "5"
+            },
+            {
+              "id": "1ce72044-8991-4f37-9a85-a4420315beeb",
+              "position": 6,
+              "title": "Corned Beef City",
+              "number": "6",
+              "length": 212000,
+              "recording": {
+                "length": 212000,
+                "disambiguation": "",
+                "video": false,
+                "title": "Corned Beef City",
+                "genres": [
+                  {
+                    "disambiguation": "",
+                    "name": "blues rock",
+                    "count": 1,
+                    "id": "58e325d5-54fd-4e98-b39a-3aa6bc319273"
+                  }
+                ],
+                "id": "745f3dba-2e24-4638-8c2f-50b591b67292"
+              }
+            },
+            {
+              "id": "9d3f66f1-995d-41c5-b435-ec2fbfcd9eb9",
+              "number": "7",
+              "title": "Go, Love",
+              "position": 7,
+              "length": 292000,
+              "recording": {
+                "genres": [
+                  {
+                    "count": 1,
+                    "name": "blues rock",
+                    "id": "58e325d5-54fd-4e98-b39a-3aa6bc319273",
+                    "disambiguation": ""
+                  }
+                ],
+                "id": "cbbbe95d-48ef-484c-b7f8-860f7ef75e35",
+                "title": "Go, Love",
+                "disambiguation": "",
+                "length": 292000,
+                "video": false
+              }
+            },
+            {
+              "id": "a3b902ac-6d21-41fc-877b-dafa2b5dd39c",
+              "position": 8,
+              "title": "Hot Or What",
+              "number": "8",
+              "recording": {
+                "genres": [
+                  {
+                    "disambiguation": "",
+                    "id": "58e325d5-54fd-4e98-b39a-3aa6bc319273",
+                    "name": "blues rock",
+                    "count": 1
+                  }
+                ],
+                "id": "8d26d1dd-0f79-4e2c-a4b2-65f6e71c8dc5",
+                "title": "Hot or What",
+                "disambiguation": "",
+                "length": 294000,
+                "video": false
+              },
+              "length": 294000
+            },
+            {
+              "position": 9,
+              "title": "Yon Two Crows",
+              "number": "9",
+              "id": "0591616f-0d1e-4fb9-a965-254bacaf6ec8",
+              "recording": {
+                "video": false,
+                "length": 266000,
+                "disambiguation": "",
+                "title": "Yon Two Crows",
+                "genres": [
+                  {
+                    "count": 1,
+                    "name": "blues rock",
+                    "id": "58e325d5-54fd-4e98-b39a-3aa6bc319273",
+                    "disambiguation": ""
+                  }
+                ],
+                "id": "a1baefa8-3263-4f37-a528-bea692312fef"
+              },
+              "length": 266000
+            },
+            {
+              "length": 259000,
+              "recording": {
+                "id": "df8c8c60-3213-405a-9d77-484ddcb853f5",
+                "genres": [
+                  {
+                    "disambiguation": "",
+                    "name": "blues rock",
+                    "count": 1,
+                    "id": "58e325d5-54fd-4e98-b39a-3aa6bc319273"
+                  }
+                ],
+                "title": "Seattle",
+                "disambiguation": "",
+                "length": 259000,
+                "video": false
+              },
+              "title": "Seattle",
+              "number": "10",
+              "position": 10,
+              "id": "b288850c-0092-4795-a532-a67582a6996b"
+            }
+          ],
+          "format": "CD",
+          "title": "",
+          "format-id": "9712d52a-4509-3d4b-a1a2-67c88c643e31",
+          "track-offset": 0,
+          "discs": [],
+          "track-count": 10
+        },
+        {
+          "position": 2,
+          "format": "CD",
+          "tracks": [
+            {
+              "id": "11ee4b9d-77d5-41b9-8f48-ca0650a13982",
+              "position": 1,
+              "title": "Kingdom Of Gold",
+              "number": "1",
+              "length": 323000,
+              "recording": {
+                "video": false,
+                "length": 323000,
+                "disambiguation": "",
+                "title": "Kingdom of Gold",
+                "id": "2c14839f-c16e-4cf9-98a6-3068746675f1",
+                "genres": [
+                  {
+                    "count": 1,
+                    "name": "blues rock",
+                    "id": "58e325d5-54fd-4e98-b39a-3aa6bc319273",
+                    "disambiguation": ""
+                  }
+                ]
+              }
+            },
+            {
+              "id": "f6a7604e-84c3-4f22-be54-f11dc09b29dd",
+              "title": "Got To Have Something",
+              "number": "2",
+              "position": 2,
+              "length": 241000,
+              "recording": {
+                "video": false,
+                "disambiguation": "",
+                "length": 241000,
+                "id": "de9fd29d-bce3-4415-90ec-1f081375a40e",
+                "genres": [
+                  {
+                    "name": "blues rock",
+                    "id": "58e325d5-54fd-4e98-b39a-3aa6bc319273",
+                    "count": 1,
+                    "disambiguation": ""
+                  }
+                ],
+                "title": "Got to Have Something"
+              }
+            },
+            {
+              "id": "bbe40a7e-935d-44a6-98e0-2e758604657a",
+              "title": "Radio City Serenade",
+              "position": 3,
+              "number": "3",
+              "length": 313000,
+              "recording": {
+                "title": "Radio City Serenade",
+                "genres": [
+                  {
+                    "name": "blues rock",
+                    "count": 1,
+                    "id": "58e325d5-54fd-4e98-b39a-3aa6bc319273",
+                    "disambiguation": ""
+                  }
+                ],
+                "id": "bbf83813-e7eb-48d0-b7f0-64d817f2fc27",
+                "length": 313000,
+                "disambiguation": "",
+                "video": false
+              }
+            },
+            {
+              "title": "I Used To Could",
+              "position": 4,
+              "number": "4",
+              "id": "07f486bc-cf98-465d-9cb2-8f876f319a19",
+              "recording": {
+                "genres": [
+                  {
+                    "name": "blues rock",
+                    "count": 1,
+                    "id": "58e325d5-54fd-4e98-b39a-3aa6bc319273",
+                    "disambiguation": ""
+                  }
+                ],
+                "id": "e9280584-ccc7-432a-b358-177fd86044ee",
+                "title": "I Used to Could",
+                "video": false,
+                "disambiguation": "",
+                "length": 216000
+              },
+              "length": 216000
+            },
+            {
+              "number": "5",
+              "title": "Gator Blood",
+              "position": 5,
+              "id": "a80a6249-6c8e-420c-a692-d38ef75e8d47",
+              "recording": {
+                "video": false,
+                "length": 255000,
+                "disambiguation": "",
+                "title": "Gator Blood",
+                "genres": [
+                  {
+                    "disambiguation": "",
+                    "name": "blues rock",
+                    "count": 1,
+                    "id": "58e325d5-54fd-4e98-b39a-3aa6bc319273"
+                  }
+                ],
+                "id": "03c343d4-aa4d-4cb7-a96b-5c239fb62e99"
+              },
+              "length": 255000
+            },
+            {
+              "number": "6",
+              "title": "Bluebird",
+              "position": 6,
+              "id": "79243c97-183a-421d-8df5-7f5b372d2c60",
+              "recording": {
+                "disambiguation": "",
+                "length": 207000,
+                "video": false,
+                "id": "f8af3a71-df14-4226-8ebd-f265700997ab",
+                "genres": [
+                  {
+                    "count": 1,
+                    "name": "blues rock",
+                    "id": "58e325d5-54fd-4e98-b39a-3aa6bc319273",
+                    "disambiguation": ""
+                  }
+                ],
+                "title": "Bluebird"
+              },
+              "length": 207000
+            },
+            {
+              "recording": {
+                "video": false,
+                "disambiguation": "",
+                "length": 297000,
+                "id": "a4253515-e2e8-470d-9aa5-a3edf332782f",
+                "genres": [
+                  {
+                    "disambiguation": "",
+                    "id": "58e325d5-54fd-4e98-b39a-3aa6bc319273",
+                    "name": "blues rock",
+                    "count": 1
+                  }
+                ],
+                "title": "Dream of the Drowned Submariner"
+              },
+              "length": 297000,
+              "id": "3d28d300-6afa-4ba7-be81-5e84a754d96c",
+              "position": 7,
+              "title": "Dream Of The Drowned Submariner",
+              "number": "7"
+            },
+            {
+              "id": "557432ba-bc6d-40a0-b877-c9c6e969cfdf",
+              "position": 8,
+              "title": "Blood And Water",
+              "number": "8",
+              "length": 319000,
+              "recording": {
+                "id": "a8c53290-b9e5-439e-9842-aef3ab03ed33",
+                "genres": [
+                  {
+                    "name": "blues rock",
+                    "id": "58e325d5-54fd-4e98-b39a-3aa6bc319273",
+                    "count": 1,
+                    "disambiguation": ""
+                  }
+                ],
+                "title": "Blood and Water",
+                "video": false,
+                "disambiguation": "",
+                "length": 319000
+              }
+            },
+            {
+              "length": 285000,
+              "recording": {
+                "genres": [
+                  {
+                    "disambiguation": "",
+                    "count": 1,
+                    "name": "blues rock",
+                    "id": "58e325d5-54fd-4e98-b39a-3aa6bc319273"
+                  }
+                ],
+                "id": "2fc478ba-a68d-4870-8560-3228c02d9d63",
+                "title": "Today Is Okay",
+                "video": false,
+                "disambiguation": "",
+                "length": 285000
+              },
+              "id": "eb6bd103-2398-4562-9962-55f6c8cbadb1",
+              "title": "Today Is Okay",
+              "number": "9",
+              "position": 9
+            },
+            {
+              "id": "435f14fd-aa7e-4be3-b4af-67fb3c4b300b",
+              "number": "10",
+              "title": "After The Beanstalk",
+              "position": 10,
+              "recording": {
+                "id": "3941184e-4a3c-4abc-ab9a-e256f331559c",
+                "genres": [
+                  {
+                    "disambiguation": "",
+                    "name": "blues rock",
+                    "count": 1,
+                    "id": "58e325d5-54fd-4e98-b39a-3aa6bc319273"
+                  }
+                ],
+                "title": "After the Beanstalk",
+                "disambiguation": "",
+                "length": 236000,
+                "video": false
+              },
+              "length": 236000
+            }
+          ],
+          "title": "",
+          "track-offset": 0,
+          "format-id": "9712d52a-4509-3d4b-a1a2-67c88c643e31",
+          "track-count": 10,
+          "discs": []
+        },
+        {
+          "title": "",
+          "track-count": 3,
+          "discs": [
+            {
+              "id": "7Nz4XI2avmjJkZno9SlDJY7s36E-",
+              "offsets": [
+                150,
+                19804,
+                36537
+              ],
+              "sectors": 73170,
+              "offset-count": 3
+            }
+          ],
+          "format-id": "9712d52a-4509-3d4b-a1a2-67c88c643e31",
+          "track-offset": 0,
+          "position": 3,
+          "tracks": [
+            {
+              "recording": {
+                "title": "Occupation Blues",
+                "id": "0591c557-8634-4fa3-957f-b07ce377e886",
+                "genres": [],
+                "length": 262053,
+                "disambiguation": "",
+                "video": false
+              },
+              "length": 262053,
+              "id": "098b251d-ee72-4770-a236-75a5a927a5d0",
+              "number": "1",
+              "title": "Occupation Blues",
+              "position": 1
+            },
+            {
+              "title": "River Of Grog",
+              "position": 2,
+              "number": "2",
+              "id": "b8174476-6a7e-4bfd-bd46-22b5e886c286",
+              "recording": {
+                "title": "River Of Grog",
+                "id": "46820f20-a17c-4180-81ea-d234dd164b4b",
+                "genres": [],
+                "length": 223106,
+                "disambiguation": "",
+                "video": false
+              },
+              "length": 223106
+            },
+            {
+              "id": "b37ca054-b31b-41f0-ba96-2d24b95db4b2",
+              "position": 3,
+              "title": "Follow The Ribbon",
+              "number": "3",
+              "length": 488440,
+              "recording": {
+                "length": 488440,
+                "disambiguation": "",
+                "video": false,
+                "title": "Follow The Ribbon",
+                "genres": [],
+                "id": "9a311f60-84c6-49a7-83e0-4b675cf9d021"
+              }
+            }
+          ],
+          "format": "CD"
+        }
+      ],
+      "date": "2012-09-11",
+      "status": "Official",
+      "title": "Privateering",
+      "packaging-id": "ec27701a-4a22-37f4-bfac-6616e0f9750a"
+    }
+  ]
+}

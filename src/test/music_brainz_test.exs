@@ -57,6 +57,17 @@ defmodule MusicBrainzTest do
     assert MusicBrainz.release_to_disc("940aac0d", release) == expectation
   end
 
+  test "release_to_disc/2 works when genre is present" do
+    release =
+      "test/fixtures/music_brainz/disc_with_genre.json"
+      |> File.read!()
+      |> Jason.decode!()
+      |> Map.get("releases")
+      |> Enum.at(0)
+
+    assert %Disc{genre: "blues"} = MusicBrainz.release_to_disc("860a9b0a", release)
+  end
+
   @tag capture_log: true
   test "find_by_length_and_toc/2 when there are multiple disc layouts for the album" do
     length = 4223
