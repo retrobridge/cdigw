@@ -16,9 +16,10 @@ defmodule MusicBrainz do
   @sectors_per_second 75
   @default_inc ["artists", "recordings", "genres"]
 
-  plug(Tesla.Middleware.BaseUrl, "http://musicbrainz.org/ws/2")
-  plug(Tesla.Middleware.JSON)
-  plug(Tesla.Middleware.Headers, [{"user-agent", @user_agent}])
+  plug Tesla.Middleware.Logger
+  plug Tesla.Middleware.BaseUrl, "http://musicbrainz.org/ws/2"
+  plug Tesla.Middleware.JSON
+  plug Tesla.Middleware.Headers, [{"user-agent", @user_agent}]
 
   @doc """
   Find a disc by its length in seconds and track LBA TOC

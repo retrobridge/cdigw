@@ -1,10 +1,9 @@
 defmodule CdigwWeb.Endpoint do
   use Plug.Router
 
-  plug(Plug.Logger)
-  plug(:match)
-  plug(:dispatch)
-
+  plug Plug.Logger
+  plug :match
+  plug :dispatch
 
   match "/~cddb/cddb.cgi" do
     CdigwWeb.CddbPlug.call(conn, %{})
