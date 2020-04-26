@@ -1,6 +1,6 @@
 .PHONY: build-base push-release release shell
 
-HTTP_PORT = 8333
+HTTP_PORT = 8880
 ELIXIR_VER = 1.10
 APP = cdigw
 TAG = $(APP)_elixir_$(ELIXIR_VER)
