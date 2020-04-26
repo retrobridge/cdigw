@@ -11,7 +11,7 @@ defmodule CdigwWeb.CddbPlug do
     proto = conn.query_params |> Map.get("proto", "1") |> String.to_integer()
     hello = conn.query_params |> Map.get("hello") |> Cddb.HelloParser.parse()
 
-    Logger.debug("cmd=#{cmd} data=#{inspect(data)} hello=#{inspect(hello)}")
+    Logger.info("proto=#{proto} cmd=#{cmd} data=#{inspect(data)} hello=#{inspect(hello)}")
 
     handle_command(conn, cmd, data, proto)
   end
@@ -34,9 +34,7 @@ defmodule CdigwWeb.CddbPlug do
       |> Enum.map(fn rel -> MusicBrainz.release_to_disc(data.disc_id, rel) end)
       |> Cddb.QueryResponse.render(proto)
 
-    conn
-    |> put_resp_content_type("text/plain")
-    |> send_resp(200, response)
+    send_encoded_response(conn, response, proto)
   end
 
   def handle_command(conn, :read, data, proto) do
@@ -53,16 +51,20 @@ defmodule CdigwWeb.CddbPlug do
           |> Cddb.ReadResponse.render(proto)
       end
 
-    conn
-    |> put_resp_content_type("text/plain")
-    |> send_resp(200, response_text)
+    send_encoded_response(conn, response_text, proto)
   end
 
-  def handle_command(conn, cmd, data, _proto) do
-    Logger.debug("unsupported command cmd=#{cmd} data=#{inspect(data)}")
+  def handle_command(conn, _cmd, _data, proto) do
+    send_encoded_response(conn, "500 Unrecognized command.", proto)
+  end
+
+  defp send_encoded_response(conn, response, proto) do
+    {charset, encoded} = Cddb.encode_response(response, proto)
+
+    Logger.debug("response enc=#{charset} body=<<<EOF\n#{encoded}\nEOF")
 
     conn
-    |> put_resp_content_type("text/plain")
-    |> send_resp(400, "unsupported command")
+    |> put_resp_content_type("text/plain", charset)
+    |> send_resp(200, encoded)
   end
 end

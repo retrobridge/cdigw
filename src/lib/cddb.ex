@@ -30,4 +30,25 @@ defmodule Cddb do
   Default list of known genres as specified in the CDDB protocol.
   """
   def genres, do: @genres
+
+  @doc """
+  Get the encoding name and encoded response appropriate for the `proto` level.
+
+  When encoding for ISO-8859-1, invalid chars are replaced with `"?"`
+
+      iex> Cddb.encode_response("Łódźstraße", 6)
+      {"utf-8", "Łódźstraße"}
+
+      iex> Cddb.encode_response("Łódźstraße", 5)
+      {"iso-8859-1", "?\\xF3d?stra\\xDFe"}
+  """
+  def encode_response(response, proto) do
+    case proto do
+      6 ->
+        {"utf-8", response}
+
+      _ ->
+        {"iso-8859-1", Encoding.to_latin1(response)}
+    end
+  end
 end

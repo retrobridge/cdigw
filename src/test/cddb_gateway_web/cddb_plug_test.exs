@@ -42,6 +42,9 @@ defmodule CdigwWeb.CddbPlugTest do
     read_req = conn(:get, "?cmd=cddb+read+data+940aac0d&proto=#{proto}")
     read_resp = CddbPlug.call(read_req, %{})
 
+    # Notice TTITLE4 having an asterisk instead of an apostrophe
+    # The actual disc data has the apostrophe encoded as an angled one which
+    # is not supported by ISO-8859-1 so gets replaced with a question mark
     expected_read = ~S"""
     210 misc 940aac0d CD database entry follows (until terminating `.')
     DISCID=940aac0d
@@ -52,7 +55,7 @@ defmodule CdigwWeb.CddbPlugTest do
     TTITLE1=Shampain
     TTITLE2=I Am Not a Robot
     TTITLE3=Girls
-    TTITLE4=Mowgli’s Road
+    TTITLE4=Mowgli?s Road
     TTITLE5=Obsessions
     TTITLE6=Hollywood
     TTITLE7=The Outsider

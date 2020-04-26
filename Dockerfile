@@ -4,13 +4,23 @@ FROM elixir:${elixir_ver}-alpine AS base
 
 RUN mix do local.hex --force, local.rebar --force
 
-RUN apk --no-cache add bash inotify-tools git
+# bash          required for mix test watcher, and a nicer shell
+# inotify-tools for test watching
+# build-base    building NIFs
+# git           pulling dependencies from GitHub that aren't in hex.pm
+RUN apk --no-cache add \
+      bash \
+      inotify-tools \
+      build-base \
+      git
 
 # read in mix.exs to set the paths for dependencies and build output.
 # for local development on non-Linux hosts, this circumvents an I/O bottleneck
 # and allows for easily testing against multiple versions of Elixir.
-ENV MIX_DEPS_PATH=/opt/mix/deps
-ENV MIX_BUILD_PATH=/opt/mix/build
+ENV MIX_DEPS_PATH=/opt/mix/deps \
+    MIX_BUILD_PATH=/opt/mix/build \
+    MIX_ENV=dev \
+    PS1="\u@\h:\w \$ "
 
 WORKDIR /opt/app
 VOLUME /opt/app
