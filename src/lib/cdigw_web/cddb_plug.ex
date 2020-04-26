@@ -1,4 +1,8 @@
 defmodule CdigwWeb.CddbPlug do
+  @moduledoc """
+  Handles `cddb query` and `cddb read` commands of /~cddb/cddb.cgi
+  """
+
   import Plug.Conn
   require Logger
   alias Cdigw.Cache

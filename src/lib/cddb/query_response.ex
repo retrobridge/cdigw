@@ -1,4 +1,8 @@
 defmodule Cddb.QueryResponse do
+  @moduledoc """
+  Formats responses to `cddb query` requests.
+  """
+
   alias Cddb.Disc
 
   @default_proto Cddb.default_proto()

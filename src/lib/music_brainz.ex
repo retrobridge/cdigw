@@ -49,10 +49,7 @@ defmodule MusicBrainz do
         matches =
           body
           |> Map.get("releases")
-          |> Enum.filter(fn rel ->
-            discs = dig(rel, ["media", 0, "discs"])
-            Enum.any?(discs, fn disc -> disc["offsets"] == toc end)
-          end)
+          |> Enum.filter(fn rel -> toc_matches?(rel, toc) end)
 
         {:ok, matches}
 
@@ -116,10 +113,16 @@ defmodule MusicBrainz do
 
   defp genre([]), do: "misc"
   defp genre(nil), do: "misc"
+
   defp genre(genres) do
     genres
     |> Enum.map(fn %{"name" => name} -> name |> String.split() |> hd() end)
     |> Enum.find("misc", fn name -> Enum.member?(Cddb.genres(), name) end)
+  end
+
+  defp toc_matches?(release, toc) do
+    discs = dig(release, ["media", 0, "discs"]) || []
+    Enum.any?(discs, fn disc -> disc["offsets"] == toc end)
   end
 
   defp ensure_int_list(items) do

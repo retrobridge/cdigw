@@ -1,4 +1,8 @@
 defmodule Cddb.HelloParser do
+  @moduledoc """
+  Parses the `hello` from a CDDB request
+  """
+
   @doc """
   Parse the `hello` from a CDDB request
 
