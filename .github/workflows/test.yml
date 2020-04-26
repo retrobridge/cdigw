@@ -1,0 +1,26 @@
+name: Tests
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Build test image
+        run: make build-test
+
+      - name: Unit tests
+        run: make test
+
+      - name: Check code formatting
+        run: make test-format
+
+      - name: Credo
+        run: make test-credo

@@ -36,6 +36,18 @@ ENTRYPOINT ["/opt/bin/entrypoint"]
 
 
 ################################################################################
+FROM base AS test
+
+ENV MIX_ENV=test
+
+COPY src /opt/app
+
+RUN mix do deps.get, deps.compile, compile
+
+CMD ["mix", "test"]
+
+
+################################################################################
 FROM base AS builder
 
 COPY src /opt/app
