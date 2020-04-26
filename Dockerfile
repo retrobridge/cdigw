@@ -50,6 +50,12 @@ RUN mix do deps.get --only $MIX_ENV, release
 ################################################################################
 FROM alpine AS release
 
+ARG git_commit=unknown
+ARG app_version=unknown
+
+LABEL git.commit=${git_commit} \
+      app.version=${app_version}
+
 RUN apk --no-cache add bash openssl
 
 EXPOSE 80
@@ -59,9 +65,10 @@ ENV PS1="\u@\h:\w \$ "
 
 WORKDIR /opt/app
 
-RUN date > .built_at
+RUN date > .BUILD_DATE
 COPY --from=builder /opt/mix/build/prod/rel/cdigw ./
 
+# add static assets
 RUN mkdir priv
 COPY src/priv/. ./priv/
 

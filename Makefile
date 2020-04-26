@@ -4,7 +4,8 @@ HTTP_PORT = 8880
 ELIXIR_VER = 1.10
 APP = cdigw
 TAG = $(APP)_elixir_$(ELIXIR_VER)
-VERSION = `cat VERSION`
+VERSION = $(shell cat VERSION)
+GIT_COMMIT = $(shell git rev-parse --verify HEAD)
 
 build-base:
 	docker build --build-arg elixir_ver=$(ELIXIR_VER) --target base -t $(TAG) .
@@ -17,7 +18,10 @@ shell: build-base
 
 release:
 	@echo Building version $(VERSION)
-	docker build --build-arg elixir_ver=$(ELIXIR_VER) \
+	docker build \
+		--build-arg elixir_ver=$(ELIXIR_VER) \
+		--build-arg git_commit=$(GIT_COMMIT) \
+		--build-arg app_version=$(VERSION) \
 		--target release \
 		--tag mfroach/$(APP):$(VERSION) .
 	docker tag mfroach/$(APP):$(VERSION) mfroach/$(APP):latest
