@@ -1,10 +1,24 @@
 defmodule CdigwWeb.CddbPlugTest do
-  use ExUnit.Case, async: true
+  use ExUnit.Case
   use Plug.Test
 
   alias CdigwWeb.CddbPlug
 
-  # TODO: Mock-out the calls to MusicBrainz
+  defp mock_response(:fuzzy) do
+    "test/fixtures/music_brainz/fuzzy_response.json"
+    |> File.read!()
+    |> Jason.decode!()
+  end
+
+  setup do
+    Tesla.Mock.mock(fn
+      %{method: :get, url: "http://musicbrainz.org/ws/2/discid/-" <> _} ->
+        Tesla.Mock.json(mock_response(:fuzzy))
+    end)
+
+    :ok
+  end
+
   @tag capture_log: true
   test "query and read cycle" do
     proto = 5
