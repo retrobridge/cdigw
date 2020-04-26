@@ -49,7 +49,8 @@ defmodule MusicBrainz do
           body
           |> Map.get("releases")
           |> Enum.filter(fn rel ->
-            toc == dig(rel, ["media", 0, "discs", 0, "offsets"])
+            discs = dig(rel, ["media", 0, "discs"])
+            Enum.any?(discs, fn disc -> disc["offsets"] == toc end)
           end)
 
         {:ok, matches}

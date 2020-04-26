@@ -1,0 +1,1260 @@
+{
+  "release-count": 3,
+  "releases": [
+    {
+      "date": "1998-04-28",
+      "packaging-id": "ec27701a-4a22-37f4-bfac-6616e0f9750a",
+      "cover-art-archive": {
+        "artwork": true,
+        "front": true,
+        "count": 13,
+        "darkened": false,
+        "back": true
+      },
+      "media": [
+        {
+          "title": "",
+          "format": "CD",
+          "position": 1,
+          "tracks": [
+            {
+              "length": 40400,
+              "number": "1",
+              "title": "Pantala Naga Pampa",
+              "id": "255186e1-aa26-3b9a-8e91-3f1e04ff4a38",
+              "position": 1,
+              "recording": {
+                "disambiguation": "",
+                "length": 40400,
+                "id": "d3129fc6-9fb4-4e20-87b8-7253bcac2f50",
+                "genres": [
+                  {
+                    "disambiguation": "",
+                    "count": 1,
+                    "id": "0e3fc579-2d24-4f20-9dae-736e1ec78798",
+                    "name": "rock"
+                  }
+                ],
+                "title": "Pantala Naga Pampa",
+                "video": false
+              }
+            },
+            {
+              "length": 360293,
+              "number": "2",
+              "title": "Rapunzel",
+              "id": "95de2a81-750a-3a21-844d-1fee9d470349",
+              "position": 2,
+              "recording": {
+                "disambiguation": "",
+                "length": 360293,
+                "genres": [
+                  {
+                    "id": "ceeaa283-5d7b-4202-8d1d-e25d116b2a18",
+                    "name": "alternative rock",
+                    "disambiguation": "",
+                    "count": 1
+                  },
+                  {
+                    "id": "0e3fc579-2d24-4f20-9dae-736e1ec78798",
+                    "name": "rock",
+                    "count": 2,
+                    "disambiguation": ""
+                  }
+                ],
+                "id": "76a874d4-7e13-4d29-8761-f8cf0ab0abac",
+                "title": "Rapunzel",
+                "video": false
+              }
+            },
+            {
+              "title": "The Last Stop",
+              "position": 3,
+              "id": "2485974f-b88c-3e7e-a441-cdfc3d49651b",
+              "recording": {
+                "length": 417800,
+                "disambiguation": "",
+                "title": "The Last Stop",
+                "genres": [
+                  {
+                    "count": 2,
+                    "disambiguation": "",
+                    "name": "rock",
+                    "id": "0e3fc579-2d24-4f20-9dae-736e1ec78798"
+                  }
+                ],
+                "id": "7c27ed4c-3d32-4648-9aa0-28af082d9d14",
+                "video": false
+              },
+              "length": 417800,
+              "number": "3"
+            },
+            {
+              "length": 421440,
+              "number": "4",
+              "title": "Don’t Drink the Water",
+              "position": 4,
+              "id": "75ba4942-5541-30e7-8830-440806e2c265",
+              "recording": {
+                "id": "f977d4c8-3222-4048-9f23-4948a919dea4",
+                "genres": [
+                  {
+                    "count": 1,
+                    "disambiguation": "",
+                    "id": "ceeaa283-5d7b-4202-8d1d-e25d116b2a18",
+                    "name": "alternative rock"
+                  },
+                  {
+                    "disambiguation": "",
+                    "count": 3,
+                    "id": "0e3fc579-2d24-4f20-9dae-736e1ec78798",
+                    "name": "rock"
+                  }
+                ],
+                "title": "Don’t Drink the Water",
+                "video": false,
+                "disambiguation": "",
+                "length": 421440
+              }
+            },
+            {
+              "recording": {
+                "length": 335226,
+                "disambiguation": "",
+                "title": "Stay (Wasting Time)",
+                "genres": [
+                  {
+                    "count": 2,
+                    "disambiguation": "",
+                    "name": "rock",
+                    "id": "0e3fc579-2d24-4f20-9dae-736e1ec78798"
+                  }
+                ],
+                "id": "6c1679b6-a451-4fef-9c1f-850542fe8f33",
+                "video": false
+              },
+              "id": "ea6097b8-99bc-3adb-bac2-5aff18777f85",
+              "position": 5,
+              "title": "Stay (Wasting Time)",
+              "number": "5",
+              "length": 335226
+            },
+            {
+              "title": "Halloween",
+              "position": 6,
+              "id": "4c340032-e4fe-379d-8e34-aa66b9424920",
+              "recording": {
+                "title": "Halloween",
+                "id": "dddfe41c-2cc1-478d-85da-b88bec2d858a",
+                "genres": [
+                  {
+                    "count": 1,
+                    "disambiguation": "",
+                    "id": "0e3fc579-2d24-4f20-9dae-736e1ec78798",
+                    "name": "rock"
+                  }
+                ],
+                "video": false,
+                "length": 307933,
+                "disambiguation": ""
+              },
+              "length": 307933,
+              "number": "6"
+            },
+            {
+              "number": "7",
+              "length": 448706,
+              "recording": {
+                "video": false,
+                "genres": [
+                  {
+                    "count": 1,
+                    "disambiguation": "",
+                    "name": "alternative rock",
+                    "id": "ceeaa283-5d7b-4202-8d1d-e25d116b2a18"
+                  },
+                  {
+                    "count": 1,
+                    "disambiguation": "",
+                    "id": "0e3fc579-2d24-4f20-9dae-736e1ec78798",
+                    "name": "rock"
+                  }
+                ],
+                "id": "5328ecd1-6afa-4931-a341-bbca5de2f5e8",
+                "title": "The Stone",
+                "disambiguation": "",
+                "length": 448706
+              },
+              "position": 7,
+              "id": "6b613aeb-bf70-33b8-8996-affa1203d69b",
+              "title": "The Stone"
+            },
+            {
+              "length": 489333,
+              "number": "8",
+              "recording": {
+                "video": false,
+                "id": "d9e3497b-66c9-4d96-82a0-12a8c46db537",
+                "genres": [
+                  {
+                    "name": "alternative rock",
+                    "id": "ceeaa283-5d7b-4202-8d1d-e25d116b2a18",
+                    "count": 1,
+                    "disambiguation": ""
+                  },
+                  {
+                    "disambiguation": "",
+                    "count": 2,
+                    "id": "0e3fc579-2d24-4f20-9dae-736e1ec78798",
+                    "name": "rock"
+                  }
+                ],
+                "title": "Crush",
+                "disambiguation": "",
+                "length": 489293
+              },
+              "title": "Crush",
+              "id": "6a458f2e-b427-3bc6-a3f8-9e5047cb79ae",
+              "position": 8
+            },
+            {
+              "recording": {
+                "disambiguation": "",
+                "length": 528133,
+                "video": false,
+                "genres": [
+                  {
+                    "count": 1,
+                    "disambiguation": "",
+                    "name": "rock",
+                    "id": "0e3fc579-2d24-4f20-9dae-736e1ec78798"
+                  }
+                ],
+                "id": "dffa7689-4370-4f73-a0de-b4bf6703aed5",
+                "title": "The Dreaming Tree"
+              },
+              "title": "The Dreaming Tree",
+              "position": 9,
+              "id": "e265a103-23ac-38dc-94dc-9bc8ec6fd413",
+              "length": 528133,
+              "number": "9"
+            },
+            {
+              "title": "Pig",
+              "position": 10,
+              "id": "73bd12c5-ba78-3e24-9d76-83dc0fda96e4",
+              "recording": {
+                "length": 417666,
+                "disambiguation": "",
+                "video": false,
+                "title": "Pig",
+                "genres": [
+                  {
+                    "count": 1,
+                    "disambiguation": "",
+                    "id": "1fbd6e82-0d33-4d78-a9b1-7d145a8eefa6",
+                    "name": "funk soul"
+                  },
+                  {
+                    "count": 1,
+                    "disambiguation": "",
+                    "id": "0e3fc579-2d24-4f20-9dae-736e1ec78798",
+                    "name": "rock"
+                  }
+                ],
+                "id": "d72ba4e6-3808-4ad5-b944-3e48747ca3ab"
+              },
+              "length": 417666,
+              "number": "10"
+            },
+            {
+              "number": "11",
+              "length": 452866,
+              "recording": {
+                "length": 452866,
+                "disambiguation": "",
+                "title": "Spoon",
+                "genres": [
+                  {
+                    "count": 1,
+                    "disambiguation": "",
+                    "id": "ceeaa283-5d7b-4202-8d1d-e25d116b2a18",
+                    "name": "alternative rock"
+                  },
+                  {
+                    "id": "0e3fc579-2d24-4f20-9dae-736e1ec78798",
+                    "name": "rock",
+                    "count": 2,
+                    "disambiguation": ""
+                  }
+                ],
+                "id": "603706e5-7166-4bdb-bfc9-af87e8aa26a0",
+                "video": false
+              },
+              "position": 11,
+              "id": "6217c761-fd3f-3630-899a-ba996f9f6099",
+              "title": "Spoon"
+            }
+          ],
+          "format-id": "9712d52a-4509-3d4b-a1a2-67c88c643e31",
+          "track-count": 11,
+          "track-offset": 0,
+          "discs": [
+            {
+              "offset-count": 11,
+              "sectors": 316678,
+              "id": "8azb6eNzc6zWfFlt5CGj9NcJeUg-",
+              "offsets": [
+                150,
+                3184,
+                30210,
+                61548,
+                93160,
+                118305,
+                141405,
+                175063,
+                211767,
+                251381,
+                282709
+              ]
+            },
+            {
+              "id": "cjHcIwcM.pqRzRTSyWWyG_49t70-",
+              "offsets": [
+                182,
+                3250,
+                30272,
+                61607,
+                93215,
+                118357,
+                141452,
+                175105,
+                211805,
+                251415,
+                282740
+              ],
+              "offset-count": 11,
+              "sectors": 316732
+            },
+            {
+              "id": "gFYHaPUQVkGUwvP5waPzrTNeQSY-",
+              "offsets": [
+                150,
+                3152,
+                30169,
+                61479,
+                91211,
+                118167,
+                141146,
+                172692,
+                211484,
+                248818,
+                279691
+              ],
+              "offset-count": 11,
+              "sectors": 306686
+            },
+            {
+              "id": "h_V.jBfcSt6S2x_8ThOxqfGw5Nc-",
+              "offsets": [
+                150,
+                3180,
+                30202,
+                61537,
+                93145,
+                118287,
+                141382,
+                175035,
+                211735,
+                251345,
+                282670
+              ],
+              "sectors": 316635,
+              "offset-count": 11
+            },
+            {
+              "offsets": [
+                150,
+                3157,
+                30180,
+                61517,
+                93127,
+                118267,
+                141292,
+                175009,
+                211715,
+                251322,
+                282647
+              ],
+              "id": "x9pqLXoVpKKCJlmhUCqgBH0lcEA-",
+              "offset-count": 11,
+              "sectors": 316607
+            },
+            {
+              "sectors": 316700,
+              "offset-count": 11,
+              "offsets": [
+                150,
+                3218,
+                30240,
+                61575,
+                93183,
+                118325,
+                141420,
+                175073,
+                211773,
+                251383,
+                282708
+              ],
+              "id": "zbTiNGuFlo69h1N6ojHaYxUvZJk-"
+            }
+          ]
+        }
+      ],
+      "quality": "normal",
+      "id": "0a8835e4-ecb6-4441-bd4c-7571732b9993",
+      "text-representation": {
+        "script": "Latn",
+        "language": "eng"
+      },
+      "title": "Before These Crowded Streets",
+      "country": "US",
+      "status": "Official",
+      "barcode": "078636766027",
+      "asin": "B00000638Q",
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "release-events": [
+        {
+          "area": {
+            "id": "489ce91b-6658-3307-9877-795b68554c98",
+            "name": "United States",
+            "iso-3166-1-codes": [
+              "US"
+            ],
+            "disambiguation": "",
+            "sort-name": "United States"
+          },
+          "date": "1998-04-28"
+        }
+      ],
+      "artist-credit": [
+        {
+          "joinphrase": "",
+          "artist": {
+            "name": "Dave Matthews Band",
+            "id": "07e748f1-075e-428d-85dc-ce3be434e906",
+            "genres": [
+              {
+                "disambiguation": "",
+                "count": 1,
+                "name": "acoustic rock",
+                "id": "00055e8b-b951-46e2-af1e-58b5624e7952"
+              },
+              {
+                "id": "ceeaa283-5d7b-4202-8d1d-e25d116b2a18",
+                "name": "alternative rock",
+                "disambiguation": "",
+                "count": 4
+              },
+              {
+                "name": "pop rock",
+                "id": "797e2e85-5ffd-495c-a757-8b4079052f0e",
+                "disambiguation": "",
+                "count": 1
+              },
+              {
+                "name": "rock",
+                "id": "0e3fc579-2d24-4f20-9dae-736e1ec78798",
+                "count": 4,
+                "disambiguation": ""
+              }
+            ],
+            "sort-name": "Matthews, Dave, Band",
+            "disambiguation": ""
+          },
+          "name": "Dave Matthews Band"
+        }
+      ],
+      "disambiguation": "",
+      "packaging": "Jewel Case",
+      "genres": []
+    },
+    {
+      "country": "CA",
+      "status": "Official",
+      "date": "",
+      "packaging-id": "ec27701a-4a22-37f4-bfac-6616e0f9750a",
+      "cover-art-archive": {
+        "count": 0,
+        "artwork": false,
+        "front": false,
+        "darkened": false,
+        "back": false
+      },
+      "media": [
+        {
+          "tracks": [
+            {
+              "number": "1",
+              "length": 40400,
+              "position": 1,
+              "id": "c26b769e-1c3e-47f1-92a7-ee070cae319c",
+              "title": "Pantala Naga Pampa",
+              "recording": {
+                "disambiguation": "",
+                "length": 40400,
+                "id": "d3129fc6-9fb4-4e20-87b8-7253bcac2f50",
+                "genres": [
+                  {
+                    "id": "0e3fc579-2d24-4f20-9dae-736e1ec78798",
+                    "name": "rock",
+                    "disambiguation": "",
+                    "count": 1
+                  }
+                ],
+                "title": "Pantala Naga Pampa",
+                "video": false
+              }
+            },
+            {
+              "recording": {
+                "length": 360293,
+                "disambiguation": "",
+                "video": false,
+                "title": "Rapunzel",
+                "id": "76a874d4-7e13-4d29-8761-f8cf0ab0abac",
+                "genres": [
+                  {
+                    "disambiguation": "",
+                    "count": 1,
+                    "id": "ceeaa283-5d7b-4202-8d1d-e25d116b2a18",
+                    "name": "alternative rock"
+                  },
+                  {
+                    "disambiguation": "",
+                    "count": 2,
+                    "id": "0e3fc579-2d24-4f20-9dae-736e1ec78798",
+                    "name": "rock"
+                  }
+                ]
+              },
+              "title": "Rapunzel",
+              "position": 2,
+              "id": "e7bd5aac-d162-4701-9b84-c13e518bb9e8",
+              "length": 360293,
+              "number": "2"
+            },
+            {
+              "number": "3",
+              "length": 417800,
+              "recording": {
+                "disambiguation": "",
+                "length": 417800,
+                "video": false,
+                "genres": [
+                  {
+                    "id": "0e3fc579-2d24-4f20-9dae-736e1ec78798",
+                    "name": "rock",
+                    "disambiguation": "",
+                    "count": 2
+                  }
+                ],
+                "id": "7c27ed4c-3d32-4648-9aa0-28af082d9d14",
+                "title": "The Last Stop"
+              },
+              "id": "3cf55218-656f-4203-a77a-d1359ecffabf",
+              "position": 3,
+              "title": "The Last Stop"
+            },
+            {
+              "length": 421440,
+              "number": "4",
+              "recording": {
+                "video": false,
+                "title": "Don’t Drink the Water",
+                "genres": [
+                  {
+                    "id": "ceeaa283-5d7b-4202-8d1d-e25d116b2a18",
+                    "name": "alternative rock",
+                    "disambiguation": "",
+                    "count": 1
+                  },
+                  {
+                    "count": 3,
+                    "disambiguation": "",
+                    "name": "rock",
+                    "id": "0e3fc579-2d24-4f20-9dae-736e1ec78798"
+                  }
+                ],
+                "id": "f977d4c8-3222-4048-9f23-4948a919dea4",
+                "length": 421440,
+                "disambiguation": ""
+              },
+              "title": "Don’t Drink the Water",
+              "id": "525e3572-9c57-473a-b670-7743f61ed770",
+              "position": 4
+            },
+            {
+              "length": 335226,
+              "number": "5",
+              "title": "Stay (Wasting Time)",
+              "position": 5,
+              "id": "385a8550-367a-4176-9aec-29c4c9f3f891",
+              "recording": {
+                "length": 335226,
+                "disambiguation": "",
+                "title": "Stay (Wasting Time)",
+                "genres": [
+                  {
+                    "name": "rock",
+                    "id": "0e3fc579-2d24-4f20-9dae-736e1ec78798",
+                    "count": 2,
+                    "disambiguation": ""
+                  }
+                ],
+                "id": "6c1679b6-a451-4fef-9c1f-850542fe8f33",
+                "video": false
+              }
+            },
+            {
+              "length": 307933,
+              "number": "6",
+              "recording": {
+                "id": "dddfe41c-2cc1-478d-85da-b88bec2d858a",
+                "genres": [
+                  {
+                    "id": "0e3fc579-2d24-4f20-9dae-736e1ec78798",
+                    "name": "rock",
+                    "count": 1,
+                    "disambiguation": ""
+                  }
+                ],
+                "title": "Halloween",
+                "video": false,
+                "disambiguation": "",
+                "length": 307933
+              },
+              "title": "Halloween",
+              "id": "95a4eb47-71fb-4316-96c1-ecbd43eb5f6f",
+              "position": 6
+            },
+            {
+              "number": "7",
+              "length": 448706,
+              "recording": {
+                "disambiguation": "",
+                "length": 448706,
+                "video": false,
+                "genres": [
+                  {
+                    "name": "alternative rock",
+                    "id": "ceeaa283-5d7b-4202-8d1d-e25d116b2a18",
+                    "count": 1,
+                    "disambiguation": ""
+                  },
+                  {
+                    "name": "rock",
+                    "id": "0e3fc579-2d24-4f20-9dae-736e1ec78798",
+                    "count": 1,
+                    "disambiguation": ""
+                  }
+                ],
+                "id": "5328ecd1-6afa-4931-a341-bbca5de2f5e8",
+                "title": "The Stone"
+              },
+              "id": "08c86a1a-d302-402f-9cd8-17a48a38aedd",
+              "position": 7,
+              "title": "The Stone"
+            },
+            {
+              "length": 489333,
+              "number": "8",
+              "title": "Crush",
+              "id": "02eeffc1-4761-4c85-a0f3-85885632b79c",
+              "position": 8,
+              "recording": {
+                "disambiguation": "",
+                "length": 489293,
+                "video": false,
+                "genres": [
+                  {
+                    "count": 1,
+                    "disambiguation": "",
+                    "name": "alternative rock",
+                    "id": "ceeaa283-5d7b-4202-8d1d-e25d116b2a18"
+                  },
+                  {
+                    "count": 2,
+                    "disambiguation": "",
+                    "id": "0e3fc579-2d24-4f20-9dae-736e1ec78798",
+                    "name": "rock"
+                  }
+                ],
+                "id": "d9e3497b-66c9-4d96-82a0-12a8c46db537",
+                "title": "Crush"
+              }
+            },
+            {
+              "recording": {
+                "disambiguation": "",
+                "length": 528133,
+                "video": false,
+                "genres": [
+                  {
+                    "disambiguation": "",
+                    "count": 1,
+                    "id": "0e3fc579-2d24-4f20-9dae-736e1ec78798",
+                    "name": "rock"
+                  }
+                ],
+                "id": "dffa7689-4370-4f73-a0de-b4bf6703aed5",
+                "title": "The Dreaming Tree"
+              },
+              "id": "55b7cae3-97d6-4e51-ae32-dd9b1926be7c",
+              "position": 9,
+              "title": "The Dreaming Tree",
+              "number": "9",
+              "length": 528133
+            },
+            {
+              "length": 417666,
+              "number": "10",
+              "recording": {
+                "video": false,
+                "genres": [
+                  {
+                    "count": 1,
+                    "disambiguation": "",
+                    "name": "funk soul",
+                    "id": "1fbd6e82-0d33-4d78-a9b1-7d145a8eefa6"
+                  },
+                  {
+                    "id": "0e3fc579-2d24-4f20-9dae-736e1ec78798",
+                    "name": "rock",
+                    "count": 1,
+                    "disambiguation": ""
+                  }
+                ],
+                "id": "d72ba4e6-3808-4ad5-b944-3e48747ca3ab",
+                "title": "Pig",
+                "disambiguation": "",
+                "length": 417666
+              },
+              "title": "Pig",
+              "id": "ff0dc49a-2351-470b-94dd-aebea93bdb1c",
+              "position": 10
+            },
+            {
+              "number": "11",
+              "length": 452866,
+              "position": 11,
+              "id": "3c6593d4-b193-4981-a520-9718ee42e777",
+              "title": "Spoon",
+              "recording": {
+                "disambiguation": "",
+                "length": 452866,
+                "video": false,
+                "id": "603706e5-7166-4bdb-bfc9-af87e8aa26a0",
+                "genres": [
+                  {
+                    "name": "alternative rock",
+                    "id": "ceeaa283-5d7b-4202-8d1d-e25d116b2a18",
+                    "disambiguation": "",
+                    "count": 1
+                  },
+                  {
+                    "id": "0e3fc579-2d24-4f20-9dae-736e1ec78798",
+                    "name": "rock",
+                    "count": 2,
+                    "disambiguation": ""
+                  }
+                ],
+                "title": "Spoon"
+              }
+            }
+          ],
+          "position": 1,
+          "discs": [
+            {
+              "offsets": [
+                150,
+                3180,
+                30202,
+                61537,
+                93145,
+                118287,
+                141382,
+                175035,
+                211735,
+                251345,
+                282670
+              ],
+              "id": "h_V.jBfcSt6S2x_8ThOxqfGw5Nc-",
+              "offset-count": 11,
+              "sectors": 316635
+            }
+          ],
+          "track-count": 11,
+          "track-offset": 0,
+          "format-id": "9712d52a-4509-3d4b-a1a2-67c88c643e31",
+          "title": "",
+          "format": "CD"
+        }
+      ],
+      "quality": "normal",
+      "id": "1622f412-8c88-40d4-9556-d5f52f9de0ff",
+      "text-representation": {
+        "language": "eng",
+        "script": "Latn"
+      },
+      "title": "Before These Crowded Streets",
+      "artist-credit": [
+        {
+          "artist": {
+            "id": "07e748f1-075e-428d-85dc-ce3be434e906",
+            "genres": [
+              {
+                "disambiguation": "",
+                "count": 1,
+                "name": "acoustic rock",
+                "id": "00055e8b-b951-46e2-af1e-58b5624e7952"
+              },
+              {
+                "name": "alternative rock",
+                "id": "ceeaa283-5d7b-4202-8d1d-e25d116b2a18",
+                "count": 4,
+                "disambiguation": ""
+              },
+              {
+                "count": 1,
+                "disambiguation": "",
+                "name": "pop rock",
+                "id": "797e2e85-5ffd-495c-a757-8b4079052f0e"
+              },
+              {
+                "name": "rock",
+                "id": "0e3fc579-2d24-4f20-9dae-736e1ec78798",
+                "disambiguation": "",
+                "count": 4
+              }
+            ],
+            "name": "Dave Matthews Band",
+            "disambiguation": "",
+            "sort-name": "Matthews, Dave, Band"
+          },
+          "joinphrase": "",
+          "name": "Dave Matthews Band"
+        }
+      ],
+      "disambiguation": "",
+      "packaging": "Jewel Case",
+      "genres": [],
+      "barcode": "078636766027",
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "asin": null,
+      "release-events": [
+        {
+          "area": {
+            "sort-name": "Canada",
+            "disambiguation": "",
+            "id": "71bbafaa-e825-3e15-8ca9-017dcad1748b",
+            "name": "Canada",
+            "iso-3166-1-codes": [
+              "CA"
+            ]
+          },
+          "date": ""
+        }
+      ]
+    },
+    {
+      "asin": "B00000638Q",
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "release-events": [
+        {
+          "area": {
+            "disambiguation": "",
+            "sort-name": "Europe",
+            "iso-3166-1-codes": [
+              "XE"
+            ],
+            "name": "Europe",
+            "id": "89a675c2-3e37-3518-b83c-418bad59a85a"
+          },
+          "date": "1998"
+        }
+      ],
+      "barcode": "078636766027",
+      "artist-credit": [
+        {
+          "name": "Dave Matthews Band",
+          "joinphrase": "",
+          "artist": {
+            "name": "Dave Matthews Band",
+            "genres": [
+              {
+                "count": 1,
+                "disambiguation": "",
+                "name": "acoustic rock",
+                "id": "00055e8b-b951-46e2-af1e-58b5624e7952"
+              },
+              {
+                "disambiguation": "",
+                "count": 4,
+                "name": "alternative rock",
+                "id": "ceeaa283-5d7b-4202-8d1d-e25d116b2a18"
+              },
+              {
+                "id": "797e2e85-5ffd-495c-a757-8b4079052f0e",
+                "name": "pop rock",
+                "disambiguation": "",
+                "count": 1
+              },
+              {
+                "id": "0e3fc579-2d24-4f20-9dae-736e1ec78798",
+                "name": "rock",
+                "disambiguation": "",
+                "count": 4
+              }
+            ],
+            "id": "07e748f1-075e-428d-85dc-ce3be434e906",
+            "disambiguation": "",
+            "sort-name": "Matthews, Dave, Band"
+          }
+        }
+      ],
+      "packaging": "Jewel Case",
+      "disambiguation": "",
+      "genres": [],
+      "cover-art-archive": {
+        "darkened": false,
+        "back": true,
+        "count": 3,
+        "artwork": true,
+        "front": true
+      },
+      "packaging-id": "ec27701a-4a22-37f4-bfac-6616e0f9750a",
+      "date": "1998",
+      "quality": "normal",
+      "media": [
+        {
+          "title": "",
+          "format": "CD",
+          "tracks": [
+            {
+              "length": 40400,
+              "number": "1",
+              "title": "Pantala Naga Pampa",
+              "position": 1,
+              "id": "b02a89c7-73be-4ba5-aa78-285023272b2c",
+              "recording": {
+                "length": 40400,
+                "disambiguation": "",
+                "video": false,
+                "title": "Pantala Naga Pampa",
+                "id": "d3129fc6-9fb4-4e20-87b8-7253bcac2f50",
+                "genres": [
+                  {
+                    "count": 1,
+                    "disambiguation": "",
+                    "id": "0e3fc579-2d24-4f20-9dae-736e1ec78798",
+                    "name": "rock"
+                  }
+                ]
+              }
+            },
+            {
+              "number": "2",
+              "length": 360293,
+              "position": 2,
+              "id": "db2ef842-cdde-4224-acdb-1ff2af257367",
+              "title": "Rapunzel",
+              "recording": {
+                "length": 360293,
+                "disambiguation": "",
+                "title": "Rapunzel",
+                "genres": [
+                  {
+                    "count": 1,
+                    "disambiguation": "",
+                    "name": "alternative rock",
+                    "id": "ceeaa283-5d7b-4202-8d1d-e25d116b2a18"
+                  },
+                  {
+                    "id": "0e3fc579-2d24-4f20-9dae-736e1ec78798",
+                    "name": "rock",
+                    "count": 2,
+                    "disambiguation": ""
+                  }
+                ],
+                "id": "76a874d4-7e13-4d29-8761-f8cf0ab0abac",
+                "video": false
+              }
+            },
+            {
+              "length": 417800,
+              "number": "3",
+              "title": "The Last Stop",
+              "position": 3,
+              "id": "b10ddf06-9443-41a2-9883-191cd5afef95",
+              "recording": {
+                "disambiguation": "",
+                "length": 417800,
+                "video": false,
+                "id": "7c27ed4c-3d32-4648-9aa0-28af082d9d14",
+                "genres": [
+                  {
+                    "id": "0e3fc579-2d24-4f20-9dae-736e1ec78798",
+                    "name": "rock",
+                    "disambiguation": "",
+                    "count": 2
+                  }
+                ],
+                "title": "The Last Stop"
+              }
+            },
+            {
+              "recording": {
+                "disambiguation": "",
+                "length": 421440,
+                "id": "f977d4c8-3222-4048-9f23-4948a919dea4",
+                "genres": [
+                  {
+                    "count": 1,
+                    "disambiguation": "",
+                    "id": "ceeaa283-5d7b-4202-8d1d-e25d116b2a18",
+                    "name": "alternative rock"
+                  },
+                  {
+                    "id": "0e3fc579-2d24-4f20-9dae-736e1ec78798",
+                    "name": "rock",
+                    "count": 3,
+                    "disambiguation": ""
+                  }
+                ],
+                "title": "Don’t Drink the Water",
+                "video": false
+              },
+              "title": "Don't Drink the Water",
+              "position": 4,
+              "id": "d4bf91c2-82fe-4a06-92df-9391cb043880",
+              "length": 421440,
+              "number": "4"
+            },
+            {
+              "position": 5,
+              "id": "d232c775-7c36-4c03-bec5-fa5ad9ad85d7",
+              "title": "Stay (Wasting Time)",
+              "recording": {
+                "length": 335226,
+                "disambiguation": "",
+                "title": "Stay (Wasting Time)",
+                "genres": [
+                  {
+                    "count": 2,
+                    "disambiguation": "",
+                    "name": "rock",
+                    "id": "0e3fc579-2d24-4f20-9dae-736e1ec78798"
+                  }
+                ],
+                "id": "6c1679b6-a451-4fef-9c1f-850542fe8f33",
+                "video": false
+              },
+              "number": "5",
+              "length": 335226
+            },
+            {
+              "recording": {
+                "video": false,
+                "id": "dddfe41c-2cc1-478d-85da-b88bec2d858a",
+                "genres": [
+                  {
+                    "id": "0e3fc579-2d24-4f20-9dae-736e1ec78798",
+                    "name": "rock",
+                    "count": 1,
+                    "disambiguation": ""
+                  }
+                ],
+                "title": "Halloween",
+                "disambiguation": "",
+                "length": 307933
+              },
+              "title": "Halloween",
+              "position": 6,
+              "id": "38560516-438c-4b3c-bdeb-f5f68f6bb342",
+              "length": 307933,
+              "number": "6"
+            },
+            {
+              "title": "The Stone",
+              "id": "6cff5447-14c6-4b32-aa93-f661c6c2b22b",
+              "position": 7,
+              "recording": {
+                "disambiguation": "",
+                "length": 448706,
+                "genres": [
+                  {
+                    "count": 1,
+                    "disambiguation": "",
+                    "id": "ceeaa283-5d7b-4202-8d1d-e25d116b2a18",
+                    "name": "alternative rock"
+                  },
+                  {
+                    "id": "0e3fc579-2d24-4f20-9dae-736e1ec78798",
+                    "name": "rock",
+                    "disambiguation": "",
+                    "count": 1
+                  }
+                ],
+                "id": "5328ecd1-6afa-4931-a341-bbca5de2f5e8",
+                "title": "The Stone",
+                "video": false
+              },
+              "length": 448706,
+              "number": "7"
+            },
+            {
+              "recording": {
+                "video": false,
+                "title": "Crush",
+                "id": "d9e3497b-66c9-4d96-82a0-12a8c46db537",
+                "genres": [
+                  {
+                    "disambiguation": "",
+                    "count": 1,
+                    "id": "ceeaa283-5d7b-4202-8d1d-e25d116b2a18",
+                    "name": "alternative rock"
+                  },
+                  {
+                    "disambiguation": "",
+                    "count": 2,
+                    "id": "0e3fc579-2d24-4f20-9dae-736e1ec78798",
+                    "name": "rock"
+                  }
+                ],
+                "length": 489293,
+                "disambiguation": ""
+              },
+              "id": "3584f050-5d1f-4b2b-a72e-43ce9d1374f0",
+              "position": 8,
+              "title": "Crush",
+              "number": "8",
+              "length": 489333
+            },
+            {
+              "number": "9",
+              "length": 528133,
+              "id": "0a189f01-a8ca-4e95-a5b1-51dc3d737419",
+              "position": 9,
+              "title": "The Dreaming Tree",
+              "recording": {
+                "video": false,
+                "title": "The Dreaming Tree",
+                "id": "dffa7689-4370-4f73-a0de-b4bf6703aed5",
+                "genres": [
+                  {
+                    "id": "0e3fc579-2d24-4f20-9dae-736e1ec78798",
+                    "name": "rock",
+                    "count": 1,
+                    "disambiguation": ""
+                  }
+                ],
+                "length": 528133,
+                "disambiguation": ""
+              }
+            },
+            {
+              "length": 417666,
+              "number": "10",
+              "recording": {
+                "title": "Pig",
+                "id": "d72ba4e6-3808-4ad5-b944-3e48747ca3ab",
+                "genres": [
+                  {
+                    "id": "1fbd6e82-0d33-4d78-a9b1-7d145a8eefa6",
+                    "name": "funk soul",
+                    "count": 1,
+                    "disambiguation": ""
+                  },
+                  {
+                    "name": "rock",
+                    "id": "0e3fc579-2d24-4f20-9dae-736e1ec78798",
+                    "disambiguation": "",
+                    "count": 1
+                  }
+                ],
+                "video": false,
+                "length": 417666,
+                "disambiguation": ""
+              },
+              "title": "Pig",
+              "position": 10,
+              "id": "c085b273-2385-4e89-b69a-dce4530f2f5f"
+            },
+            {
+              "number": "11",
+              "length": 452866,
+              "position": 11,
+              "id": "3e831d99-1125-49f1-ad61-0bfbbd19e5c1",
+              "title": "Spoon",
+              "recording": {
+                "length": 452866,
+                "disambiguation": "",
+                "video": false,
+                "title": "Spoon",
+                "genres": [
+                  {
+                    "id": "ceeaa283-5d7b-4202-8d1d-e25d116b2a18",
+                    "name": "alternative rock",
+                    "count": 1,
+                    "disambiguation": ""
+                  },
+                  {
+                    "name": "rock",
+                    "id": "0e3fc579-2d24-4f20-9dae-736e1ec78798",
+                    "disambiguation": "",
+                    "count": 2
+                  }
+                ],
+                "id": "603706e5-7166-4bdb-bfc9-af87e8aa26a0"
+              }
+            }
+          ],
+          "position": 1,
+          "discs": [
+            {
+              "offsets": [
+                150,
+                3180,
+                30202,
+                61537,
+                93145,
+                118287,
+                141382,
+                175035,
+                211735,
+                251345,
+                282670
+              ],
+              "id": "h_V.jBfcSt6S2x_8ThOxqfGw5Nc-",
+              "offset-count": 11,
+              "sectors": 316635
+            }
+          ],
+          "format-id": "9712d52a-4509-3d4b-a1a2-67c88c643e31",
+          "track-offset": 0,
+          "track-count": 11
+        }
+      ],
+      "title": "Before These Crowded Streets",
+      "text-representation": {
+        "language": "eng",
+        "script": "Latn"
+      },
+      "id": "30d81ee4-2e6b-4332-bbce-b3ea8811da5b",
+      "country": "XE",
+      "status": "Official"
+    }
+  ],
+  "release-offset": 0
+}
