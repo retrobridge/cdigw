@@ -41,7 +41,8 @@ FROM base AS builder
 COPY src /opt/app
 COPY VERSION /opt/app
 
-ENV MIX_ENV=prod
+ENV MIX_ENV=prod \
+    MIX_BUILD_PATH=/opt/mix/build/prod
 
 RUN mix do deps.get --only $MIX_ENV, release
 
@@ -54,8 +55,14 @@ RUN apk --no-cache add bash openssl
 EXPOSE 80
 EXPOSE 888
 
+ENV PS1="\u@\h:\w \$ "
+
 WORKDIR /opt/app
 
-COPY --from=builder /opt/mix/build/rel/cdigw ./
+RUN date > .built_at
+COPY --from=builder /opt/mix/build/prod/rel/cdigw ./
+
+RUN mkdir priv
+COPY src/priv/. ./priv/
 
 CMD ["bin/cdigw", "start"]
