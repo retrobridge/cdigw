@@ -11,7 +11,9 @@ defmodule CdigwWeb.Endpoint do
   end
 
   match "/" do
-    send_file(conn, 200, "priv/static/index.html")
+    conn
+    |> put_resp_content_type("text/html")
+    |> send_file(200, "priv/static/index.html")
   end
 
   match _ do
