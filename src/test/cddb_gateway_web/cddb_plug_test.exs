@@ -39,7 +39,7 @@ defmodule CdigwWeb.CddbPlugTest do
 
     assert query_resp.resp_body == expected
 
-    read_req = conn(:get, "?cmd=cddb+read+data+940aac0d&proto=#{proto}")
+    read_req = conn(:get, "?cmd=cddb+read+misc+940aac0d&proto=#{proto}")
     read_resp = CddbPlug.call(read_req, %{})
 
     # Notice TTITLE4 having an asterisk instead of an apostrophe
