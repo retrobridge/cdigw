@@ -16,6 +16,11 @@ shell: build-base
 		-p $(HTTP_PORT):80 \
 		$(TAG) bash
 
+test: build-base
+	docker run --rm \
+		-v $(PWD)/src:/opt/app $(TAG) \
+		mix do test, format --check-formatted, credo --strict
+
 release:
 	@echo Building version $(VERSION)
 	docker build \
