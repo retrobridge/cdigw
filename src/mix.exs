@@ -31,7 +31,7 @@ defmodule Cdigw.MixProject do
 
   defp version do
     if File.exists?("VERSION") do
-      "VERSION" |> File.read! |> String.trim
+      "VERSION" |> File.read!() |> String.trim()
     else
       "0.0.1"
     end
