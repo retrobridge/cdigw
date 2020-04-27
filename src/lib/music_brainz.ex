@@ -111,13 +111,13 @@ defmodule MusicBrainz do
     get("/discid/-?fmt=json&inc=#{inc_list}&toc=" <> Enum.join(toc, "+"))
   end
 
-  defp genre([]), do: "misc"
-  defp genre(nil), do: "misc"
+  defp genre([]), do: @default_genre
+  defp genre(nil), do: @default_genre
 
   defp genre(genres) do
     genres
     |> Enum.map(fn %{"name" => name} -> name |> String.split() |> hd() end)
-    |> Enum.find("misc", fn name -> Enum.member?(Cddb.genres(), name) end)
+    |> Enum.find(@default_genre, fn name -> Enum.member?(Cddb.genres(), name) end)
   end
 
   defp toc_matches?(release, toc) do

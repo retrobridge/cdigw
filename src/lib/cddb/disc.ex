@@ -9,7 +9,7 @@ defmodule Cddb.Disc do
             artist: nil,
             title: nil,
             year: nil,
-            genre: "misc",
+            genre: Cddb.default_genre(),
             tracks: [],
             extended_data: nil,
             play_order: []

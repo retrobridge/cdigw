@@ -32,6 +32,11 @@ defmodule Cddb do
   def genres, do: @genres
 
   @doc """
+  All discs need a genre. Use this as the default.
+  """
+  def default_genre, do: "misc"
+
+  @doc """
   Get the encoding name and encoded response appropriate for the `proto` level.
 
   When encoding for ISO-8859-1, invalid chars are replaced with `"?"`
