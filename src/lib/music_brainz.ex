@@ -100,10 +100,10 @@ defmodule MusicBrainz do
     end
   end
 
-  def get_release(id, inc \\ @default_inc) do
+  def get_releases_by_disc_id(id, inc \\ @default_inc) do
     inc_list = Enum.join(inc, "+")
 
-    case get("/release/#{id}/?fmt=json&inc=#{inc_list}") do
+    case get("/discid/#{id}/?fmt=json&inc=#{inc_list}") do
       {:ok, %{status: 200, body: body}} ->
         {:ok, body}
 
