@@ -36,7 +36,7 @@
       width: 100%; /* Needed for Netscape 4.8 */
     }
 
-    h3 { font-size: 16px; color: rgb(60, 96,118); }
+    h3 { font-size: 18px; color: rgb(60, 96,118); margin: 1.5em 0; }
 
     #main { width: 750px; margin: 0 auto; padding-bottom: 2em }
     a > img { border: 0; }
@@ -91,6 +91,8 @@
     @media only screen and (max-width: 600px) {
       #main { padding: 1em; }
     }
+    pre { background-color: #ccc; color: #222; padding: 0.2em }
+    code { background-color: #eee; color: #222; padding: 0 0.1em; }
   </style>
 </head>
 <body>
@@ -172,6 +174,39 @@
         <img src="images/irix_cdplayer.gif" alt="The most beautiful CD player">
       </p>
 
+      <h3>Windows 2000 CD Player</h3>
+      <p class="success">Working!</p>
+      <p>
+        The CD player in Windows 2000 doesn't use CDDB, but it follows a similar
+        approach of sending disc data over HTTP to get a track listing response.
+        A catch is that the player requires a "certificate" value in the response.
+        This appears to be static per provider and changing any aspect of the
+        provider configuration in the registry breaks it. It must be a hash of
+        the provider config.
+      </p>
+
+      <p>
+        Thanks to cached responses on archive.org, we know what "certificate"
+        to send for the Tunes.com provider.
+        All you have to do is add a HOSTS file entry to point www.tunes.com
+        at the IP of this website.
+      <p>
+
+      <p>
+        <strong>Start</strong> &gt; <strong>Run</strong> and
+        <code>notepad %systemroot%\system32\drivers\etc\hosts</code>.
+      </p>
+      <p>
+        Add this entry, save, and it should start working right away.
+<pre>
+188.166.117.156 www.tunes.com
+</pre>
+      </p>
+
+      <p>
+        <img src="images/cdplayer.bmp" alt="Windows 2000 CD Player">
+      </p>
+
       <h3>cdrdao v1.2.4</h3>
       <p class="success">Working!</p>
       <p>
@@ -188,6 +223,7 @@
       </p>
 
       <h3>Exact Audio Copy 0.99</h3>
+      <p class="success">Working!</p>
       <p>Lets you set the full HTTP URL so it's easy to configure.</p>
       <ol>
         <li><b>EAC > freeDB / Database Options</b></li>
