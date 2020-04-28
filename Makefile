@@ -3,6 +3,7 @@
 HTTP_PORT = 8880
 ELIXIR_VER = 1.10
 APP = cdigw
+DOCKER_ORG = retrobridge
 TAG = $(APP)_elixir_$(ELIXIR_VER)
 TAG_TEST = $(TAG)_test
 VERSION = $(shell cat VERSION)
@@ -36,9 +37,9 @@ release:
 		--build-arg git_commit=$(GIT_COMMIT) \
 		--build-arg app_version=$(VERSION) \
 		--target release \
-		--tag mfroach/$(APP):$(VERSION) .
-	docker tag mfroach/$(APP):$(VERSION) mfroach/$(APP):latest
+		--tag $(DOCKER_ORG)/$(APP):$(VERSION) .
+	docker tag $(DOCKER_ORG)/$(APP):$(VERSION) $(DOCKER_ORG)/$(APP):latest
 
 push-release: release
-	docker push mfroach/$(APP):$(VERSION)
-	docker push mfroach/$(APP):latest
+	docker push $(DOCKER_ORG)/$(APP):$(VERSION)
+	docker push $(DOCKER_ORG)/$(APP):latest
