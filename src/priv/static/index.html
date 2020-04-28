@@ -1,8 +1,12 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
-   "http://www.w3.org/TR/html4/strict.dtd">
+<!DOCTYPE html>
 <html>
 <head>
   <title>CD Info Gateway</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:title" content="CD Info Gateway">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="http://cddb.retrobridge.org/images/cdrom.gif">
+  <meta property="og:description" content="A FreeDB/CDDB to MusicBrainz gateway to provide continued CD metadata support for software CD players">
   <style type="text/css">
     body {
       background-color: rgb(255,247,231);
@@ -31,7 +35,6 @@
 </head>
 <body>
   <div id="main">
-
     <h1>
       <img src="/images/cdrom.gif" alt="IRIX CD Icon" style="vertical-align: middle">
       <span>CD Info Gateway</span>
@@ -40,6 +43,7 @@
     <p>
       <a href="https://github.com/mroach/cdigw">GitHub</a>
     </p>
+    <hr>
 
     <p>
       freedb.org announced its services would shutdown entirely on 2020-03-31.
@@ -60,22 +64,22 @@
     <table>
       <tr>
         <td>Hostname</td>
-        <td><b><tt>cddb.mroach.com</tt></b></td>
+        <td><b><code>cddb.retrobridge.org</code></b></td>
       </tr>
       <tr>
         <td>Ports</td>
-        <td><b><tt>80</tt>, <tt>8880</tt></b></td>
+        <td><b><code>80</code>, <code>8880</code></b></td>
       </tr>
       <tr>
         <td>Path</td>
-        <td><b><tt>/~cddb/cddb.cgi</tt></b></td>
+        <td><b><code>/~cddb/cddb.cgi</code></b></td>
       </tr>
     </table>
 
     <h3>Full URLs for access over HTTP</h3>
     <ul>
-      <li><b><tt>http://cddb.mroach.com:80/~cddb/cddb.cgi</tt></b></li>
-      <li><b><tt>http://cddb.mroach.com:8880/~cddb/cddb.cgi</tt></b></li>
+      <li><b><code>http://cddb.retrobridge.org:80/~cddb/cddb.cgi</code></b></li>
+      <li><b><code>http://cddb.retrobridge.org:8880/~cddb/cddb.cgi</code></b></li>
     </ul>
 
     <h2>Tested Applications</h2>
@@ -84,8 +88,8 @@
     <p style="color: darkgreen">Working!</p>
     <p>
       The IRIX CDplayer lets you set the CDDB server host and port.
-      It has the <tt>/~cddb/cddb.cgi</tt> path hardcoded in the application.
-      It does not send the HTTP <tt>host</tt> header, so virtual hosts will
+      It has the <code>/~cddb/cddb.cgi</code> path hardcoded in the application.
+      It does not send the HTTP <code>host</code> header, so virtual hosts will
       not work with this CD player.
     </p>
 
@@ -118,11 +122,6 @@
       <li>Under <b>Show settings</b> select <b>All</b></li>
       <li><b>Input / Codecs > Access modules > Audio CD</b></li>
     </ol>
-
-    <hr>
-    <p>
-      <a href="http://validator.w3.org/check?uri=referer"><img src="http://www.w3.org/Icons/valid-html401" alt="Valid HTML 4.01 Strict" height="31" width="88"></a>
-    </p>
   </div>
 </body>
 </html>
