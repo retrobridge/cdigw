@@ -25,7 +25,8 @@ defmodule Cdigw.Application do
     Logger.info("Starting the HTTP gateway on :#{port}...")
 
     [
-      {Plug.Cowboy, scheme: :http, plug: CdigwWeb.Endpoint, options: [port: port]}
+      {Plug.Cowboy, scheme: :http, plug: CdigwWeb.Endpoint, options: [port: port]},
+      {Cddbp.Server, []}
     ]
   end
 end
