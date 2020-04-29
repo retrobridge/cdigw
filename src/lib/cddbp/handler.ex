@@ -23,9 +23,10 @@ defmodule Cddbp.Handler do
     Logger.info("new connection from #{peername}")
 
     :ok = :ranch.accept_ack(ref)
-    :ok = transport.setopts(socket, [active: true])
+    :ok = transport.setopts(socket, active: true)
 
     now = DateTime.utc_now() |> DateTime.to_iso8601()
+
     state = %{
       socket: socket,
       transport: transport,
@@ -36,7 +37,10 @@ defmodule Cddbp.Handler do
       last_command_at: DateTime.utc_now()
     }
 
-    send_line(state, "201 #{server_config(:hostname)} CDDBP server v#{@app_version} ready at #{now}")
+    send_line(
+      state,
+      "201 #{server_config(:hostname)} CDDBP server v#{@app_version} ready at #{now}"
+    )
 
     :gen_server.enter_loop(__MODULE__, [], state)
   end
@@ -70,6 +74,7 @@ defmodule Cddbp.Handler do
 
   def handle_cmd("help", [], state) do
     send_line(state, "210 OK, help information follows (until terminating `.')")
+
     send_line(state, ~s"""
     The following commands are supported:
 
@@ -89,8 +94,10 @@ defmodule Cddbp.Handler do
     If you have questions or comments, visit #{server_config(:hostname)}.
     .
     """)
+
     {:noreply, state}
   end
+
   def handle_cmd("help", _, state), do: cmd_syntax_error(state)
 
   def handle_cmd("motd", [], state) do
@@ -99,12 +106,14 @@ defmodule Cddbp.Handler do
     send_line(state, ".")
     {:noreply, state}
   end
+
   def handle_cmd("motd", _, state), do: cmd_syntax_error(state)
 
   def handle_cmd("proto", [], %{proto: proto} = state) do
     send_line(state, "200 CDDB protocol level: current #{proto}, supported 6")
     {:noreply, state}
   end
+
   def handle_cmd("proto", [new_proto], state) do
     case Integer.parse(new_proto) do
       :error ->
@@ -119,6 +128,7 @@ defmodule Cddbp.Handler do
         {:noreply, state}
     end
   end
+
   def handle_cmd("proto", _, state), do: cmd_syntax_error(state)
 
   def handle_cmd("quit", [], state) do
@@ -126,25 +136,34 @@ defmodule Cddbp.Handler do
 
     {:stop, :normal, state}
   end
+
   def handle_cmd("quit", _, state), do: cmd_syntax_error(state)
 
   def handle_cmd("sites", [], state) do
     send_line(state, "210 OK, site information follows (until terminating `.')")
-    send_line(state, "#{server_config(:hostname)} #{server_config(:cddb_http_port)} N000.00 W000.00 Primary CDDB HTTP Server")
+
+    send_line(
+      state,
+      "#{server_config(:hostname)} #{server_config(:cddb_http_port)} N000.00 W000.00 Primary CDDB HTTP Server"
+    )
+
     {:noreply, state}
   end
+
   def handle_cmd("sites", _, state), do: cmd_syntax_error(state)
 
   def handle_cmd("ver", [], state) do
     send_line(state, "200 cddbd v#{@app_version} #{server_config(:hostname)}")
     {:noreply, state}
   end
+
   def handle_cmd("ver", _, state), do: cmd_syntax_error(state)
 
   def handle_cmd("whom", [], state) do
     send_line(state, "401 No user information available.")
     {:noreply, state}
   end
+
   def handle_cmd("whom", _, state), do: cmd_syntax_error(state)
 
   def handle_cmd(cmd, args, state) do
@@ -198,6 +217,7 @@ defmodule Cddbp.Handler do
   end
 
   defp server_config, do: Cdigw.server_config()
+
   defp server_config(param, default \\ nil) do
     server_config() |> Map.get(param, default)
   end
