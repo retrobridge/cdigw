@@ -56,4 +56,51 @@ defmodule Cddb do
         {"iso-8859-1", Encoding.to_latin1(response)}
     end
   end
+
+  @doc """
+  Lookup a disc by an unparsed query or disc info list.
+
+  This is a higher level interface to the CDDB request parser, MusicBrainz,
+  and the cache.
+
+  Found discs are written to the cache.
+  """
+  def lookup_disc(query) when is_list(query) do
+    with {:ok, disc_info} <- Cddb.RequestParser.parse_query(query),
+         do: lookup_disc(disc_info)
+  end
+
+  def lookup_disc(disc_info) when is_map(disc_info) do
+    case MusicBrainz.find_release(disc_info.length_seconds, disc_info.track_lbas) do
+      {:ok, releases} ->
+        discs =
+          releases
+          |> Enum.map(&MusicBrainz.release_to_disc(disc_info.disc_id, &1))
+          |> maybe_cache_discs()
+
+        {:ok, discs}
+
+      {:error, reason} ->
+        {:error, reason}
+    end
+  end
+
+  @doc "Read a disc from the cache by `genre` and `disc_id`"
+  def get_cached_disc(genre, disc_id) do
+    case Cdigw.Cache.get(cache_key(disc_id, genre)) do
+      nil -> {:error, :not_found}
+      disc -> {:ok, disc}
+    end
+  end
+
+  defp maybe_cache_discs([]), do: []
+
+  defp maybe_cache_discs(discs) do
+    for disc <- discs, do: Cdigw.Cache.put(cache_key(disc.id, disc.genre), disc)
+    discs
+  end
+
+  defp cache_key(disc_id, genre) do
+    String.downcase("#{disc_id}-#{genre}")
+  end
 end

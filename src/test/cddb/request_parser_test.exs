@@ -14,7 +14,7 @@ defmodule Cddb.RequestParserTest do
        %{
          disc_id: "940aac0d",
          track_count: 13,
-         disc_length: 2734,
+         length_seconds: 2734,
          track_lbas: [
            150,
            15239,
