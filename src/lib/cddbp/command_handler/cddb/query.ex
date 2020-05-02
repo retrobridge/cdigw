@@ -1,4 +1,6 @@
 defmodule Cddbp.CommandHandler.Cddb.Query do
+  @moduledoc false
+
   use Cddbp.CommandHandler
 
   def usage, do: "QUERY <discid> <ntrks> <off_1> <off_2> <...> <off_n> <nsecs>"

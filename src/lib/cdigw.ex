@@ -11,7 +11,7 @@ defmodule Cdigw do
   Only returns this server and its HTTP and CDDBP configuration.
   Config comes from `Cdigw.server_config/1`
   """
-  def sites() do
+  def sites do
     server_config = server_config()
 
     [

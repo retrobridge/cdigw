@@ -1,4 +1,6 @@
 defmodule Cddbp.CommandHandler.Cddb.Hello do
+  @moduledoc false
+
   use Cddbp.CommandHandler
 
   def usage, do: "HELLO <username> <hostname> <clientname> <version>"

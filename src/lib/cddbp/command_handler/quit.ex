@@ -1,7 +1,5 @@
 defmodule Cddbp.CommandHandler.Quit do
-  @moduledoc """
-  End the session and disconnect the TCP socket
-  """
+  @moduledoc false
 
   use Cddbp.CommandHandler, usage: "QUIT"
 

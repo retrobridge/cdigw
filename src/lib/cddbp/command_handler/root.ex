@@ -1,4 +1,8 @@
 defmodule Cddbp.CommandHandler.Root do
+  @moduledoc """
+  Root/main entrypoint for command handling.
+  """
+
   use Cddbp.CommandHandler
 
   def usage, do: ""

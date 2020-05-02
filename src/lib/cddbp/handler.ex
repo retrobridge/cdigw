@@ -7,6 +7,8 @@ defmodule Cddbp.Handler do
   import Cddbp.Helpers
   require Logger
 
+  @root_handler Cddbp.CommandHandler.Root
+
   def start_link(ref, socket, transport, _opts) do
     pid = :proc_lib.spawn_link(__MODULE__, :init, [ref, socket, transport])
     {:ok, pid}
@@ -43,7 +45,7 @@ defmodule Cddbp.Handler do
 
     state
     |> Map.put(:last_command_at, DateTime.utc_now())
-    |> Cddbp.CommandHandler.Root.handle(args)
+    |> @root_handler.handle(args)
   end
 
   def handle_info({:tcp_closed, _}, state) do

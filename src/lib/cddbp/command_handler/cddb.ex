@@ -1,4 +1,8 @@
 defmodule Cddbp.CommandHandler.Cddb do
+  @moduledoc """
+  Top-level command handler for the CDDB commands, such as CDDB QUERY
+  """
+
   use Cddbp.CommandHandler
 
   alias __MODULE__, as: Handlers

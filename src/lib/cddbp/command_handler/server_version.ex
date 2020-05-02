@@ -1,7 +1,5 @@
 defmodule Cddbp.CommandHandler.ServerVersion do
-  @moduledoc """
-  Send the server software and version
-  """
+  @moduledoc false
 
   use Cddbp.CommandHandler, usage: "VER"
 

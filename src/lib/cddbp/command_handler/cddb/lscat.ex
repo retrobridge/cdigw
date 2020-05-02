@@ -1,4 +1,6 @@
 defmodule Cddbp.CommandHandler.Cddb.Lscat do
+  @moduledoc false
+
   use Cddbp.CommandHandler, usage: "LSCAT"
 
   def help, do: "List all database categories."

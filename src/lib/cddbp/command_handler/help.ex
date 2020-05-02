@@ -1,5 +1,9 @@
 defmodule Cddbp.CommandHandler.Help do
+  @moduledoc false
+
   use Cddbp.CommandHandler
+
+  @root_handler Cddbp.CommandHandler.Root
 
   @ok_header "210 OK, help information follows (until terminating `.')"
 
@@ -19,7 +23,7 @@ defmodule Cddbp.CommandHandler.Help do
     puts_line(state, @ok_header)
     puts_line(state)
 
-    Cddbp.CommandHandler.Root.command_handlers()
+    @root_handler.command_handlers()
     |> Enum.map(fn {_prefix, handler} -> handler.usage() end)
     |> Enum.each(&puts_line(state, &1))
 
@@ -29,7 +33,7 @@ defmodule Cddbp.CommandHandler.Help do
   end
 
   def handle(state, command_path) do
-    tree = Cddbp.CommandHandler.Root.command_tree()
+    tree = @root_handler.command_tree()
     command_path = Enum.map(command_path, &String.downcase/1)
 
     {prefix, _} = Enum.split(command_path, length(command_path) - 1)

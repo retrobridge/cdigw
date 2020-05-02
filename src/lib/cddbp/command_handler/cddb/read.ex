@@ -1,4 +1,6 @@
 defmodule Cddbp.CommandHandler.Cddb.Read do
+  @moduledoc false
+
   use Cddbp.CommandHandler
 
   def usage, do: "READ <category> <discid>"

@@ -1,7 +1,5 @@
 defmodule Cddbp.CommandHandler.Motd do
-  @moduledoc """
-  Message of the day
-  """
+  @moduledoc false
 
   use Cddbp.CommandHandler, usage: "MOTD"
 

@@ -1,4 +1,11 @@
 defmodule Cddbp.CommandHandler do
+  @moduledoc """
+  Behaviour and macro for all command handler modules.
+
+  Creates a tiny DSL for registering subcommands and generating the appropriate
+  subcommand handler functions.
+  """
+
   @doc """
   Get the usage string for this command
   """
