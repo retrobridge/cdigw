@@ -5,7 +5,6 @@ defmodule CdigwWeb.CddbPlug do
 
   import Plug.Conn
   require Logger
-  alias Cdigw.Cache
 
   def init(options), do: options
 
@@ -30,28 +29,22 @@ defmodule CdigwWeb.CddbPlug do
   # 150 ... 188495  sector start lba for each track
   # 2734            CD play time in seconds
   def handle_command(conn, :query, data, proto) do
-    {:ok, releases} = MusicBrainz.find_by_length_and_toc(data.disc_length, data.track_lbas)
+    {:ok, discs} = Cddb.lookup_disc(data)
+    response_text = Cddb.QueryResponse.render(discs, proto)
 
-    Logger.debug("music brainz response=#{inspect(releases)}")
-
-    discs = Enum.map(releases, &MusicBrainz.release_to_disc(data.disc_id, &1))
-    maybe_cache_discs(discs)
-
-    response = Cddb.QueryResponse.render(discs, proto)
-
-    send_encoded_response(conn, response, proto)
+    send_encoded_response(conn, response_text, proto)
   end
 
   def handle_command(conn, :read, data, proto) do
     Logger.info("fetching cached disc: genre=#{data.genre} disc_id=#{data.disc_id}")
 
     response_text =
-      case Cache.get(cache_key(data.disc_id, data.genre)) do
-        nil ->
+      case Cddb.get_cached_disc(data.genre, data.disc_id) do
+        {:error, :not_found} ->
           "401 #{data.genre} #{data.disc_id} No such CD entry in database"
 
-        release ->
-          Cddb.ReadResponse.render(release, proto)
+        {:ok, disc} ->
+          Cddb.ReadResponse.render(disc, proto)
       end
 
     send_encoded_response(conn, response_text, proto)
@@ -69,16 +62,5 @@ defmodule CdigwWeb.CddbPlug do
     conn
     |> put_resp_content_type("text/plain", charset)
     |> send_resp(200, encoded)
-  end
-
-  defp maybe_cache_discs([]), do: []
-
-  defp maybe_cache_discs(discs) do
-    for disc <- discs, do: Cache.put(cache_key(disc.id, disc.genre), disc)
-    discs
-  end
-
-  defp cache_key(disc_id, genre) do
-    String.downcase("#{disc_id}-#{genre}")
   end
 end

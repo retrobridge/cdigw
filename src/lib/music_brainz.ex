@@ -80,7 +80,7 @@ defmodule MusicBrainz do
   Since we know what the audio track TOC is though, we can match on it exactly
   to find our disc amongst the multiple results.
   """
-  def find_by_length_and_toc(length_seconds, toc) do
+  def find_release(length_seconds, toc) when is_integer(length_seconds) and is_list(toc) do
     toc = ensure_int_list(toc)
     guessed_leadout_lba = length_seconds * @sectors_per_second
     track_count = length(toc)
