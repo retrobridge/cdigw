@@ -16,11 +16,11 @@ defmodule Cddbp.Helpers do
 
   Needed by some commands that tell the client about the server
   """
-  def server_config, do: Cdigw.server_config()
+  def server_config, do: Cdigw.cddbp_config()
 
   @doc "Get a specific server configuration attribute."
   def server_config(param, default \\ nil) do
-    server_config() |> Map.get(param, default)
+    server_config() |> Keyword.get(param, default)
   end
 
   @doc "Get server software version"
@@ -35,14 +35,14 @@ defmodule Cddbp.Helpers do
   def cmd_syntax_error(state) do
     state
     |> State.increment_errors()
-    |> puts_line("500 Command syntax error.")
+    |> puts("500 Command syntax error.")
     |> finish_response()
   end
 
   def unrecognized_command(state) do
     state
     |> State.increment_errors()
-    |> puts_line("500 Unrecognized command.")
+    |> puts("500 Unrecognized command.")
     |> finish_response()
   end
 
@@ -53,13 +53,18 @@ defmodule Cddbp.Helpers do
   def end_session(state), do: {:stop, :normal, state}
 
   @doc "Send text to the client, no newline."
-  def puts(%{transport: transport, socket: socket} = state, text) do
+  def write(%{transport: transport, socket: socket} = state, text) do
     transport.send(socket, text)
     state
   end
 
   @doc "Send a response string followed by a newline"
-  def puts_line(state, text \\ "") do
-    puts(state, text <> @newline)
+  def puts(state, text) when is_binary(text) do
+    write(state, text <> @newline)
+  end
+
+  def puts(state, lines) when is_list(lines) do
+    Enum.each(lines, &puts(state, &1))
+    state
   end
 end

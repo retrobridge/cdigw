@@ -17,13 +17,16 @@ defmodule Cddbp.CommandHandler.Cddb.Read do
   def handle(state, [category, disc_id]) do
     case Cddb.get_cached_disc(category, disc_id) do
       {:ok, disc} ->
+        text = Cddb.ReadResponse.render(disc, state.proto)
+        {_encoding, text} = Cddb.encode_response(text, state.proto)
+
         state
-        |> puts(Cddb.ReadResponse.render(disc, state.proto))
+        |> write(text)
         |> finish_response()
 
       {:error, :not_found} ->
         state
-        |> puts_line("401 #{category} #{disc_id} No such CD entry in database")
+        |> puts("401 #{category} #{disc_id} No such CD entry in database")
         |> finish_response()
     end
   end

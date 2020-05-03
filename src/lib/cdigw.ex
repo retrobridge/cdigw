@@ -9,29 +9,30 @@ defmodule Cdigw do
   Get list of sites serving CDDB information
 
   Only returns this server and its HTTP and CDDBP configuration.
-  Config comes from `Cdigw.server_config/1`
   """
   def sites do
-    server_config = server_config()
-
     [
       %{
-        hostname: server_config[:hostname],
+        hostname: http_config()[:hostname],
         protocol: :http,
-        port: server_config[:cddb_http_port],
+        port: http_config()[:cddb_http_port],
         path: "~/cddb/cddb.cgi"
       },
       %{
-        hostname: server_config[:hostname],
+        hostname: cddbp_config()[:hostname],
         protocol: :cddbp,
-        port: server_config[:cddbp_port],
+        port: cddbp_config()[:port],
         path: "-"
       }
     ]
   end
 
-  def server_config do
-    Map.new(Application.get_env(:cdigw, :server))
+  def http_config do
+    Application.get_env(:cdigw, :http_server)
+  end
+
+  def cddbp_config do
+    Application.get_env(:cdigw, :cddbp_server)
   end
 
   def version, do: @version

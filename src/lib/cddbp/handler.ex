@@ -30,7 +30,7 @@ defmodule Cddbp.Handler do
 
     state = Cddbp.State.new(socket, transport, peername)
 
-    puts_line(
+    puts(
       state,
       "201 #{server_config(:hostname)} CDDBP server v#{server_version()} ready at #{now}"
     )

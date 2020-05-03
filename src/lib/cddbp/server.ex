@@ -13,14 +13,9 @@ defmodule Cddbp.Server do
     GenServer.start_link(__MODULE__, args, name: __MODULE__)
   end
 
-  def init(_opts) do
-    port = Cdigw.server_config() |> Map.get(:cddbp_port)
-    opts = [port: port]
-
-    {:ok, pid} = :ranch.start_listener(:cddbp, :ranch_tcp, opts, Cddbp.Handler, [])
-
+  def init(opts) do
     Logger.info("Starting the CDDBP server on :#{opts[:port]}")
 
-    {:ok, pid}
+    {:ok, pid} = :ranch.start_listener(:cddbp, :ranch_tcp, opts, Cddbp.Handler, [])
   end
 end

@@ -1,8 +1,11 @@
 use Mix.Config
 
-config :cdigw, :server,
+config :cdigw, :http_server,
   hostname: "localhost",
-  cddbp_port: 888,
-  cddb_http_port: 8880
+  port: 80
+
+config :cdigw, :cddbp_server,
+  hostname: "localhost",
+  port: 888
 
 import_config "#{Mix.env()}.exs"

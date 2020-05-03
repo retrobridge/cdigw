@@ -12,6 +12,8 @@ defmodule Cddbp.CommandHandler.Cddb do
   command("query", Handlers.Query)
   command("read", Handlers.Read)
 
+  def handle_command(state, _, _), do: unrecognized_command(state)
+
   @cmds Enum.map(@__commands__, fn {prefix, _} -> String.upcase(prefix) end)
   @cmds_str Enum.join(@cmds, " ")
 

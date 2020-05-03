@@ -14,21 +14,21 @@ defmodule Cddbp.CommandHandler.Sites do
     site = Enum.find(sites(), fn site -> site.protocol == :cddbp end)
 
     state
-    |> puts_line("210 OK, site information follows (until terminating `.')")
-    |> puts_line("#{site.hostname} #{site.port} N000.00 W000.00 Primary CDDB Server")
-    |> puts_line(".")
+    |> puts("210 OK, site information follows (until terminating `.')")
+    |> puts("#{site.hostname} #{site.port} N000.00 W000.00 Primary CDDB Server")
+    |> puts(".")
     |> finish_response()
   end
 
   def handle(%{proto: proto} = state, []) when proto <= 6 do
-    puts_line(state, "210 OK, site information follows (until terminating `.')")
+    puts(state, "210 OK, site information follows (until terminating `.')")
 
     for %{hostname: host, protocol: protocol, port: port, path: path} <- sites() do
-      puts_line(state, "#{host} #{protocol} #{port} #{path} N000.00 W000.00 Primary server")
+      puts(state, "#{host} #{protocol} #{port} #{path} N000.00 W000.00 Primary server")
     end
 
     state
-    |> puts_line(".")
+    |> puts(".")
     |> finish_response()
   end
 

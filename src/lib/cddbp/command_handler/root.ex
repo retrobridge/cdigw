@@ -17,6 +17,8 @@ defmodule Cddbp.CommandHandler.Root do
   command("sites", Cddbp.CommandHandler.Sites)
   command("ver", Cddbp.CommandHandler.ServerVersion)
 
+  def handle_command(state, _, _), do: unrecognized_command(state)
+
   def handle(state, [cmd | args]) do
     cmd = String.downcase(cmd)
     handle_command(state, cmd, args)

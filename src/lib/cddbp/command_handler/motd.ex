@@ -7,9 +7,9 @@ defmodule Cddbp.CommandHandler.Motd do
 
   def handle(state, []) do
     state
-    |> puts_line("210 MOTD follows (until terminating `.')")
-    |> puts_line("Welcome to this CDDBP server.")
-    |> puts_line(".")
+    |> puts("210 MOTD follows (until terminating `.')")
+    |> puts("Welcome to this CDDB server.")
+    |> puts(".")
     |> finish_response()
   end
 

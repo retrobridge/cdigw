@@ -2,31 +2,24 @@ defmodule Cdigw.Application do
   @moduledoc false
 
   use Application
-  require Logger
-
-  @env Mix.env()
 
   def start(_type, _args) do
-    children =
-      apps(@env) ++
-        [
-          {Cdigw.Cache, []}
-        ]
+    children = [
+      {Cdigw.Cache, []},
+      {Plug.Cowboy, scheme: :http, plug: CdigwWeb.Endpoint, options: http_config()},
+      {Cddbp.Server, cddbp_config()}
+    ]
 
     opts = [strategy: :one_for_one, name: Cdigw.Supervisor]
 
     Supervisor.start_link(children, opts)
   end
 
-  def apps(:test), do: []
+  defp http_config do
+    Cdigw.http_config() |> Keyword.take([:port])
+  end
 
-  def apps(_) do
-    port = System.get_env("HTTP_PORT", "80") |> String.to_integer()
-    Logger.info("Starting the HTTP gateway on :#{port}...")
-
-    [
-      {Plug.Cowboy, scheme: :http, plug: CdigwWeb.Endpoint, options: [port: port]},
-      {Cddbp.Server, []}
-    ]
+  defp cddbp_config do
+    Cdigw.cddbp_config() |> Keyword.take([:port])
   end
 end

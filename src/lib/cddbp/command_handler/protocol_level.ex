@@ -19,7 +19,7 @@ defmodule Cddbp.CommandHandler.ProtocolLevel do
 
   def handle(%{proto: proto} = state, []) do
     state
-    |> puts_line("200 CDDB protocol level: current #{proto}, supported 6")
+    |> puts("200 CDDB protocol level: current #{proto}, supported 6")
     |> finish_response()
   end
 
@@ -34,12 +34,12 @@ defmodule Cddbp.CommandHandler.ProtocolLevel do
     case State.set_protocol_level(state, level) do
       {:ok, new_state} ->
         new_state
-        |> send("201 OK, CDDB protocol level now #{new_state.proto}")
+        |> puts("201 OK, CDDB protocol level now: #{new_state.proto}")
         |> finish_response()
 
       {:error, :invalid_level} ->
         state
-        |> send("500 Illegal CDDB protocol level.")
+        |> puts("500 Illegal CDDB protocol level.")
         |> finish_response()
 
       _ ->

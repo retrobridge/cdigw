@@ -20,12 +20,12 @@ defmodule Cddbp.CommandHandler.Cddb.Hello do
     case State.set_hello(state, args) do
       {:ok, new_state} ->
         new_state
-        |> puts_line("200 Hello and welcome #{format_hello(new_state.hello)}")
+        |> puts("200 Hello and welcome #{format_hello(new_state.hello)}")
         |> finish_response()
 
       {:error, :already_set} ->
         state
-        |> puts_line("402 Already shook hands.")
+        |> puts("402 Already shook hands.")
         |> finish_response()
 
       _ ->

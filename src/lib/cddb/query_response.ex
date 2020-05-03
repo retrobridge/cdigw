@@ -20,7 +20,7 @@ defmodule Cddb.QueryResponse do
   Render a disc query response in the correct protocol version.
   """
   def render([disc | _], proto) when proto <= 3 do
-    "200 #{disc.genre} #{disc.id} #{Disc.cddb_title(disc)}"
+    "200 #{disc.genre} #{disc.id} #{Disc.cddb_title(disc)}#{@line_separator}"
   end
 
   def render(discs, proto) when proto >= 4 do

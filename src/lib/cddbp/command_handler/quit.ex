@@ -7,7 +7,7 @@ defmodule Cddbp.CommandHandler.Quit do
 
   def handle(state, []) do
     state
-    |> puts_line("230 #{server_config(:hostname)} Closing connection. Goodbye.")
+    |> puts("230 #{server_config(:hostname)} Closing connection. Goodbye.")
     |> end_session()
   end
 

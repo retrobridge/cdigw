@@ -20,15 +20,17 @@ defmodule Cddbp.CommandHandler.Help do
   end
 
   def handle(state, []) do
-    puts_line(state, @ok_header)
-    puts_line(state)
-
-    @root_handler.command_handlers()
-    |> Enum.map(fn {_prefix, handler} -> handler.usage() end)
-    |> Enum.each(&puts_line(state, &1))
+    lines =
+      @root_handler.command_handlers()
+      |> Enum.map(fn {_prefix, handler} -> handler.usage() end)
 
     state
-    |> puts_line(".")
+    |> puts(@ok_header)
+    |> puts("The following commands are supported:")
+    |> puts("")
+    |> puts(lines)
+    |> puts("")
+    |> puts(".")
     |> finish_response()
   end
 
@@ -45,7 +47,7 @@ defmodule Cddbp.CommandHandler.Help do
 
         state
         |> State.increment_errors()
-        |> puts_line("500 Unknown #{cmd_path} subcommand")
+        |> puts("500 Unknown #{cmd_path} subcommand")
         |> finish_response()
 
       handler ->
@@ -58,11 +60,16 @@ defmodule Cddbp.CommandHandler.Help do
   defp maybe_prefix(prefix, other), do: "#{prefix} #{other}"
 
   defp send_help_response(state, usage, body) do
+    body =
+      body
+      |> String.trim()
+      |> String.replace(~r/^/m, "    ")
+
     state
-    |> puts_line(@ok_header)
-    |> puts_line(usage)
-    |> puts_line(String.replace(body, ~r/^/m, "    "))
-    |> puts_line(".")
+    |> puts(@ok_header)
+    |> puts(usage)
+    |> puts(body)
+    |> puts(".")
     |> finish_response()
   end
 

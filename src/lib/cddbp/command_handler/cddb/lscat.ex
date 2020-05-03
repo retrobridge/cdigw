@@ -6,11 +6,11 @@ defmodule Cddbp.CommandHandler.Cddb.Lscat do
   def help, do: "List all database categories."
 
   def handle(state, []) do
-    puts_line(state, "210 OK, category list follows (until terminating `.')")
-    Enum.each(Cddb.genres(), &puts_line(state, &1))
+    puts(state, "210 OK, category list follows (until terminating `.')")
+    Enum.each(Cddb.genres(), &puts(state, &1))
 
     state
-    |> puts_line(".")
+    |> puts(".")
     |> finish_response()
   end
 

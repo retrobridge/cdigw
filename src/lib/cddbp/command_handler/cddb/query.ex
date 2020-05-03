@@ -19,13 +19,16 @@ defmodule Cddbp.CommandHandler.Cddb.Query do
   def handle(state, query) when is_list(query) do
     case Cddb.lookup_disc(query) do
       {:ok, discs} ->
+        text = Cddb.QueryResponse.render(discs, state.proto)
+        {_encoding, text} = Cddb.encode_response(text, state.proto)
+
         state
-        |> puts_line(Cddb.QueryResponse.render(discs, state.proto))
+        |> write(text)
         |> finish_response()
 
       {:error, _reason} ->
         state
-        |> puts_line("403 Server error.")
+        |> puts("403 Server error.")
         |> finish_response()
     end
   end

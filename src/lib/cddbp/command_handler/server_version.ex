@@ -7,7 +7,7 @@ defmodule Cddbp.CommandHandler.ServerVersion do
 
   def handle(state, []) do
     state
-    |> puts_line("200 #{server_software()} v#{server_version()} #{server_config(:hostname)}")
+    |> puts("200 #{server_software()} v#{server_version()} #{server_config(:hostname)}")
     |> finish_response()
   end
 end
