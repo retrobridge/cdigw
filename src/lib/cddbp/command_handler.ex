@@ -39,8 +39,10 @@ defmodule Cddbp.CommandHandler do
   end
 
   defmacro __before_compile__(_env) do
+    # accumulated attributes accumulate with [ new | existing ]
+    # so they're backwards. reverse the list for the public accessor
     quote do
-      def command_handlers, do: @__commands__
+      def command_handlers, do: Enum.reverse(@__commands__)
     end
   end
 

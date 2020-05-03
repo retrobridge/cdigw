@@ -72,13 +72,13 @@ defmodule CddbpTest do
            210 OK, help information follows (until terminating `.')
            The following commands are supported:
 
-           VER
-           SITES
-           QUIT
-           PROTO [level]
-           MOTD
+           CDDB <subcmd> (valid subcmds: HELLO LSCAT QUERY READ)
            HELP [command [subcmd]]
-           CDDB <subcmd> (valid subcmds: READ QUERY LSCAT HELLO)
+           MOTD
+           PROTO [level]
+           QUIT
+           SITES
+           VER
 
            .
            """
@@ -89,6 +89,21 @@ defmodule CddbpTest do
            210 OK, help information follows (until terminating `.')
            VER
                Print cddbp version information.
+           .
+           """
+
+    assert send_recv(socket, "help cddb") == ~S"""
+           210 OK, help information follows (until terminating `.')
+           CDDB <subcmd> (valid subcmds: HELLO LSCAT QUERY READ)
+               Performs a CD database operation.
+               Arguments are:
+                   subcmd:  CDDB subcommand to print help for.
+               Subcommands are:
+
+               HELLO <username> <hostname> <clientname> <version>
+               LSCAT
+               QUERY <discid> <ntrks> <off_1> <off_2> <...> <off_n> <nsecs>
+               READ <category> <discid>
            .
            """
 

@@ -63,7 +63,7 @@ defmodule Cddbp.CommandHandler.Help do
     body =
       body
       |> String.trim()
-      |> String.replace(~r/^/m, "    ")
+      |> String.replace(~r/^(?=.*\S)/m, "    ")
 
     state
     |> puts(@ok_header)

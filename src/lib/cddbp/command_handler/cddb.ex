@@ -14,19 +14,27 @@ defmodule Cddbp.CommandHandler.Cddb do
 
   def handle_command(state, _, _), do: unrecognized_command(state)
 
-  @cmds Enum.map(@__commands__, fn {prefix, _} -> String.upcase(prefix) end)
+  @cmds @__commands__
+        |> Enum.reverse()
+        |> Enum.map(fn {prefix, _} -> String.upcase(prefix) end)
+
   @cmds_str Enum.join(@cmds, " ")
 
   def usage, do: "CDDB <subcmd> (valid subcmds: #{@cmds_str})"
 
   def help do
+    lines =
+      command_handlers()
+      |> Enum.map(fn {_prefix, handler} -> handler.usage() end)
+      |> Enum.join("\n")
+
     ~s"""
-    CDDB <subcmd> (valid subcmds: #{@cmds_str})
     Performs a CD database operation.
     Arguments are:
         subcmd:  CDDB subcommand to print help for.
     Subcommands are:
-    .
+
+    #{lines}
     """
   end
 
