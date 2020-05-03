@@ -69,11 +69,11 @@ defmodule MusicBrainzTest do
   end
 
   @tag capture_log: true
-  test "find_by_length_and_toc/2 when there are multiple disc layouts for the album" do
+  test "find_release/2 when there are multiple disc layouts for the album" do
     length = 4223
     toc = ~w[182 3250 30272 61607 93215 118357 141452 175105 211805 251415 282740]
 
-    {:ok, results} = MusicBrainz.find_by_length_and_toc(length, toc)
+    {:ok, results} = MusicBrainz.find_release(length, toc)
     assert length(results) == 1
   end
 end
