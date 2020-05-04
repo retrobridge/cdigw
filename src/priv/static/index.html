@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <title>CD Info Gateway</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -18,7 +18,9 @@
       font-family: Helvetica, Arial, sans-serif;
       font-size: 14px;
     }
+
     h1 { font-size: 44px; }
+
     h2 {
       font-size: 22px;
       background-color: rgb(187,87,133);
@@ -33,102 +35,232 @@
       padding: 0.1em;
       width: 100%; /* Needed for Netscape 4.8 */
     }
+
     h3 { font-size: 16px; color: rgb(60, 96,118); }
-    #main { width: 750px; margin: 0 auto; }
+
+    #main { width: 750px; margin: 0 auto; padding-bottom: 2em }
     a > img { border: 0; }
+
+    .success { color: darkgreen; }
+    .error { color: maroon; }
+
+    #container {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      width: 100%;
+    }
+
+    canvas#stars {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+
+      /* disable smoothing/scaling. we want sharp pixels */
+      image-rendering: -moz-crisp-edges;
+      image-rendering: -webkit-optimize-contrast;
+      image-rendering: pixelated;
+    }
+
+    body.dark {
+      background: linear-gradient(
+        180deg,
+        rgba(2,0,36,1) 0%,
+        rgba(10,128,180,1) 66%,
+        rgba(255,74,0,1) 100%
+      ) fixed;
+    }
+
+    body.dark #stars {
+      display: block;
+    }
+    body.dark {
+      color: rgb(240, 240, 240);
+    }
+    body.dark a {
+      color: rgb(150,150,255);
+    }
+    body.dark h3 {
+      color: rgb(200, 215, 226);
+    }
+    body.dark .success { color: rgb(0, 200, 0); }
+    body.dark .error { color: rgb(255, 90, 90); }
+
+    @media only screen and (max-width: 600px) {
+      #main { padding: 1em; }
+    }
   </style>
 </head>
 <body>
-  <div id="main">
-    <h1>
-      <img src="/images/cdrom.gif" alt="IRIX CD Icon" style="vertical-align: middle">
-      <span>CD Info Gateway</span>
-    </h1>
+  <canvas id="stars" style="width: 100%; height: 100%;"></canvas>
+  <div id="container">
+    <div id="main">
+      <h1>
+        <img id="icon" src="images/cdrom.gif" alt="IRIX CD Icon" style="vertical-align: middle">
+        <span>CD Info Gateway</span>
+      </h1>
 
-    <p>
-      <a href="https://github.com/mroach/cdigw">GitHub</a>
-    </p>
-    <hr>
+      <p>
+        <a href="https://github.com/mroach/cdigw">GitHub</a>
+      </p>
+      <hr>
 
-    <p>
-      freedb.org announced its services would shutdown entirely on 2020-03-31.
-      Many legacy software applications have FreeDB/CDDB support built-in for
-      fetching CD metadata such as artist, title, and track names.
-      To keep these apps functioning in their fully glory, this is meant as a
-      drop-in replacement for FreeDB/CDDB.
-    </p>
+      <p>
+        freedb.org announced its services would shutdown entirely on 2020-03-31.
+        Many legacy software applications have FreeDB/CDDB support built-in for
+        fetching CD metadata such as artist, title, and track names.
+        To keep these apps functioning in their fully glory, this is meant as a
+        drop-in replacement for FreeDB/CDDB.
+      </p>
 
-    <p>
-      This application does not use the original CDDB database, but fetches
-      disc information from <a href="https://musicbrainz.org">MusicBrainz</a>
-      which has an open API and excellent up-to-date disc metadata.
-    </p>
+      <p>
+        This application does not use the original CDDB database, but fetches
+        disc information from <a href="https://musicbrainz.org">MusicBrainz</a>
+        which has an open API and excellent up-to-date disc metadata.
+      </p>
 
-    <h2>Usage</h2>
+      <h2>Usage</h2>
 
-    <table>
-      <tr>
-        <td>Hostname</td>
-        <td><b><code>cddb.retrobridge.org</code></b></td>
-      </tr>
-      <tr>
-        <td>Ports</td>
-        <td><b><code>80</code>, <code>8880</code></b></td>
-      </tr>
-      <tr>
-        <td>Path</td>
-        <td><b><code>/~cddb/cddb.cgi</code></b></td>
-      </tr>
-    </table>
+      <table>
+        <tr>
+          <td>Hostname</td>
+          <td><b><code>cddb.retrobridge.org</code></b></td>
+        </tr>
+        <tr>
+          <td>Ports</td>
+          <td><b><code>80</code>, <code>8880</code></b></td>
+        </tr>
+        <tr>
+          <td>Path</td>
+          <td><b><code>/~cddb/cddb.cgi</code></b></td>
+        </tr>
+      </table>
 
-    <h3>Full URLs for access over HTTP</h3>
-    <ul>
-      <li><b><code>http://cddb.retrobridge.org:80/~cddb/cddb.cgi</code></b></li>
-      <li><b><code>http://cddb.retrobridge.org:8880/~cddb/cddb.cgi</code></b></li>
-    </ul>
+      <h3>Full URLs for access over HTTP</h3>
+      <ul>
+        <li><b><code>http://cddb.retrobridge.org:80/~cddb/cddb.cgi</code></b></li>
+        <li><b><code>http://cddb.retrobridge.org:8880/~cddb/cddb.cgi</code></b></li>
+      </ul>
 
-    <h2>Tested Applications</h2>
+      <h2>Tested Applications</h2>
 
-    <h3>SGI CDplayer, IRIX 6.5.30</h3>
-    <p style="color: darkgreen">Working!</p>
-    <p>
-      The IRIX CDplayer lets you set the CDDB server host and port.
-      It has the <code>/~cddb/cddb.cgi</code> path hardcoded in the application.
-      It does not send the HTTP <code>host</code> header, so virtual hosts will
-      not work with this CD player.
-    </p>
+      <h3>SGI CDplayer, IRIX 6.5.30</h3>
+      <p class="success">Working!</p>
+      <p>
+        The IRIX CDplayer lets you set the CDDB server host and port.
+        It has the <code>/~cddb/cddb.cgi</code> path hardcoded in the application.
+        It does not send the HTTP <code>host</code> header, so virtual hosts will
+        not work with this CD player.
+      </p>
 
-    <p>
-      <img src="/images/irix_cdplayer.gif" alt="The most beautiful CD player">
-    </p>
+      <p>
+        <img src="images/irix_cdplayer.gif" alt="The most beautiful CD player">
+      </p>
 
-    <h3>cdrdao v1.2.4</h3>
-    <p style="color: darkgreen">Working!</p>
-    <p>
-      This is a CLI app for Linux. It lets you use HTTP, CDDBP, set hosts, ports,
-      paths, everything you need. So it's easy to get going.
+      <h3>cdrdao v1.2.4</h3>
+      <p class="success">Working!</p>
+      <p>
+        This is a CLI app for Linux. It lets you use HTTP, CDDBP, set hosts, ports,
+        paths, everything you need. So it's easy to get going.
+      </p>
+      <p>
+        <code>
+          cdrdao read-cddb --cddb-servers cddb.retrobridge.org:8880:/~cddb/cddb.cgi -v 3 disc.toc
+        </code>
+      </p>
 
-      <code>cdrdao read-cddb --cddb-servers cddb.retrobridge.org:8880:/~cddb/cddb.cgi -v 3 disc.toc</code></pre>
-    </p>
+      <h3>Exact Audio Copy 0.99</h3>
+      <p>Lets you set the full HTTP URL so it's easy to configure.</p>
+      <ol>
+        <li><b>EAC > freeDB / Database Options</b></li>
+      </ol>
 
-    <h3>Exact Audio Copy 0.99</h3>
-    <p>Lets you set the full HTTP URL so it's easy to configure.</p>
-    <ol>
-      <li><b>EAC > freeDB / Database Options</b></li>
-    </ol>
+      <h3>VLC 1.1.9</h3>
+      <p class="error">
+        <b>Not working</b>.
+        This doesn't seem to ever fetch metadata, even from the live FreeDB servers.
+      </p>
 
-    <h3>VLC 1.1.9</h3>
-    <p style="color: red">
-      <b>Not working</b>.
-      This doesn't seem to ever fetch metadata, even from the live FreeDB servers.
-    </p>
-
-    <p>This was the last version to work on Windows 2000.</p>
-    <ol>
-      <li><b>Tools > Preferences</b></li>
-      <li>Under <b>Show settings</b> select <b>All</b></li>
-      <li><b>Input / Codecs > Access modules > Audio CD</b></li>
-    </ol>
+      <p>This was the last version to work on Windows 2000.</p>
+      <ol>
+        <li><b>Tools > Preferences</b></li>
+        <li>Under <b>Show settings</b> select <b>All</b>.</li>
+        <li><b>Input / Codecs > Access modules > Audio CD</b></li>
+      </ol>
+    </div>
   </div>
+  <script type="text/javascript">
+    // density is stars per 10,000 pixels (i.e. 100x100 tile)
+    var starDensity = 9;
+
+    function randomInt(max) {
+      return Math.floor(Math.random() * Math.floor(max));
+    }
+
+    function drawStars(canvas) {
+      var starCount = Math.floor(((canvas.width * canvas.height) / 10000) * starDensity);
+
+      var ctx = canvas.getContext("2d");
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      // sets the start colour and opacity
+      ctx.fillStyle = "rgba(255, 255, 255, 0.6)";
+
+      for (var i = 0; i < starCount; i++) {
+        x = randomInt(canvas.width);
+        y = randomInt(canvas.height);
+        ctx.fillRect(x, y, 1, 1);
+      }
+    }
+
+    function maybeRenderStars(force = false) {
+      var canvas = document.getElementById("stars");
+
+      // do nothing if the canvas isn't visible
+      var isHidden = canvas.offsetWidth == 0 && canvas.offsetHeight == 0;
+      if (isHidden && !force) { return; }
+
+      var newWidth = document.documentElement.clientWidth;
+      var newHeight = document.documentElement.clientHeight;
+      var didNotChange = (canvas.width == newWidth && canvas.height == newHeight);
+
+      // don't re-paint when the size didn't actually change
+      if (didNotChange && !force) { return; }
+
+      canvas.width = newWidth;
+      canvas.height = newHeight;
+
+      drawStars(canvas);
+    }
+
+    // trigger the resize event immediately at load
+    var resizeTimer = setTimeout(maybeRenderStars, 0);
+
+    function windowResized() {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(maybeRenderStars, 100);
+    }
+
+    function toggleDarkMode() {
+      var body = document.getElementsByTagName("body")[0];
+      if (body.className == "dark") {
+        body.className = "";
+      } else {
+        body.className = "dark";
+
+        // for fun, every time you toggle, increase the star density.
+        // more stars in more places.
+        starDensity++;
+        maybeRenderStars(true);
+      }
+    }
+
+    window.addEventListener('resize', windowResized);
+
+    var icon = document.getElementById("icon");
+    icon.addEventListener('click', toggleDarkMode);
+  </script>
 </body>
 </html>
