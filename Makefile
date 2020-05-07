@@ -1,6 +1,7 @@
 .PHONY: build-base build-test push-release release shell test test-credo test-format
 
 HTTP_PORT = 8880
+CDDBP_PORT = 8888
 ELIXIR_VER = 1.10
 APP = cdigw
 DOCKER_ORG = retrobridge
@@ -15,6 +16,7 @@ shell: build-base
 	docker run --rm -it \
 		-v $(PWD)/src:/opt/app \
 		-p $(HTTP_PORT):80 \
+		-p $(CDDBP_PORT):888 \
 		$(TAG) bash
 
 test: build-base

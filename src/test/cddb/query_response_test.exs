@@ -29,7 +29,7 @@ defmodule Cddb.QueryResponseTest do
   @discs [@disc1, @disc2, @disc3]
 
   test "render/2 proto=1" do
-    expected = "200 data 940aac0d Marina & The Diamonds / The Family Jewels"
+    expected = "200 data 940aac0d Marina & The Diamonds / The Family Jewels\n"
     assert QueryResponse.render(@discs, 1) == expected
   end
 

@@ -26,6 +26,7 @@ WORKDIR /opt/app
 VOLUME /opt/app
 
 EXPOSE 80/tcp
+EXPOSE 888/tcp
 
 RUN mkdir /opt/bin
 COPY docker/entrypoint.sh /opt/bin/entrypoint
