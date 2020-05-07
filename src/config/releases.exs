@@ -1,4 +1,4 @@
-use Mix.Config
+import Config
 
 config :cdigw, :http_server,
   hostname: System.get_env("HOSTNAME", "cddb.retrobridge.org"),
