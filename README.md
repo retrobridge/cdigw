@@ -1,6 +1,6 @@
 # CDIGW: CD Info Gateway
 
-![Tests](https://github.com/mroach/cdigw/workflows/Tests/badge.svg)
+![Tests](https://github.com/retrobridge/cdigw/workflows/Tests/badge.svg)
 
 On 31 March 2020, [FreeDB] shut down its service.
 
