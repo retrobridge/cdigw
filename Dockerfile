@@ -32,8 +32,10 @@ COPY docker/entrypoint.sh /opt/bin/entrypoint
 
 ENV PATH=${PATH}:/opt/bin
 
-COPY src /opt/app
-RUN mix do deps.get, deps.compile, compile
+COPY src/mix.* /opt/app/
+
+RUN mix do deps.get, deps.compile
+RUN env MIX_ENV=test mix do deps.compile
 
 ENTRYPOINT ["/opt/bin/entrypoint"]
 
