@@ -47,7 +47,7 @@ defmodule Cddbp.Helpers do
   end
 
   @doc "Finish event handling and return the new state"
-  def finish_response(state), do: {:noreply, state}
+  def finish_response(state), do: {:noreply, state, state.timeout}
 
   @doc "Terminate the user's session using a normal GenServer `stop`"
   def end_session(state), do: {:stop, :normal, state}

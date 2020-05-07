@@ -16,6 +16,6 @@ defmodule Cddbp.Server do
   def init(opts) do
     Logger.info("Starting the CDDBP server on :#{opts[:port]}")
 
-    {:ok, pid} = :ranch.start_listener(:cddbp, :ranch_tcp, opts, Cddbp.Handler, [])
+    {:ok, _pid} = :ranch.start_listener(:cddbp, :ranch_tcp, opts, Cddbp.Handler, [])
   end
 end

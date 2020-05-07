@@ -35,7 +35,7 @@ defmodule Cddbp.Handler do
       "201 #{server_config(:hostname)} CDDBP server v#{server_version()} ready at #{now}"
     )
 
-    :gen_server.enter_loop(__MODULE__, [], state)
+    :gen_server.enter_loop(__MODULE__, [], state, state.timeout)
   end
 
   def handle_info({:tcp, _, message}, state) do
@@ -56,6 +56,15 @@ defmodule Cddbp.Handler do
   def handle_info({:tcp_error, _, reason}, state) do
     Logger.info("[#{state.peername}] TCP error: #{inspect(reason)}")
     end_session(state)
+  end
+
+  def handle_info(:timeout, state) do
+    timeout_sec = trunc(state.timeout / 1000)
+    Logger.info("[#{state.peername}] timed-out after #{timeout_sec} seconds")
+
+    state
+    |> puts("530 Inactivity timeout after #{timeout_sec} seconds, closing connection.")
+    |> end_session()
   end
 
   defp socket_to_peername(socket) do

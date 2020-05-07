@@ -10,7 +10,8 @@ defmodule Cddbp.State do
             hello: nil,
             errors: 0,
             started_at: nil,
-            last_command_at: nil
+            last_command_at: nil,
+            timeout: 60 * 1000
 
   @type t :: %{
           socket: Port.t(),
@@ -20,7 +21,8 @@ defmodule Cddbp.State do
           hello: Map.t() | nil,
           errors: non_neg_integer(),
           started_at: DateTime.t(),
-          last_command_at: DateTime.t() | nil
+          last_command_at: DateTime.t() | nil,
+          timeout: non_neg_integer()
         }
 
   defguard is_protocol_level(val) when is_integer(val) and val >= 1 and val <= 6
@@ -64,7 +66,7 @@ defmodule Cddbp.State do
     end
   end
 
-  def set_hello(%State{hello: %{} = state}, args) when is_hello(args) do
+  def set_hello(%State{hello: %{}}, args) when is_hello(args) do
     {:error, :already_set}
   end
 
