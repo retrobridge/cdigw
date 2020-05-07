@@ -66,6 +66,7 @@
 
     <h2>Usage</h2>
 
+    <h3>HTTP Access</h3>
     <table>
       <tr>
         <td>Hostname</td>
@@ -81,11 +82,23 @@
       </tr>
     </table>
 
-    <h3>Full URLs for access over HTTP</h3>
+    <h4>Full URLs for access over HTTP</h4>
     <ul>
       <li><b><code>http://cddb.retrobridge.org:80/~cddb/cddb.cgi</code></b></li>
       <li><b><code>http://cddb.retrobridge.org:8880/~cddb/cddb.cgi</code></b></li>
     </ul>
+
+    <h3>CDDBP Access</h3>
+    <table>
+      <tr>
+        <td>Hostname</td>
+        <td><b><code>cddb.retrobridge.org</code></b></td>
+      </tr>
+      <tr>
+        <td>Port</td>
+        <td><b><code>888</code></b></td>
+      </tr>
+    </table>
 
     <h2>Tested Applications</h2>
 
@@ -107,8 +120,14 @@
     <p>
       This is a CLI app for Linux. It lets you use HTTP, CDDBP, set hosts, ports,
       paths, everything you need. So it's easy to get going.
-
-      <code>cdrdao read-cddb --cddb-servers cddb.retrobridge.org:8880:/~cddb/cddb.cgi -v 3 disc.toc</code></pre>
+    </p>
+    <h4>Via HTTP</h4>
+    <p>
+      <code>cdrdao read-cddb --cddb-servers cddb.retrobridge.org:8880:/~cddb/cddb.cgi -v 3 disc.toc</code>
+    </p>
+    <h4>Via CDDBP</h4>
+    <p>
+      <code>cdrdao read-cddb --cddb-servers cddb.retrobridge.org:888 -v 3 disc.toc</code>
     </p>
 
     <h3>Exact Audio Copy 0.99</h3>
