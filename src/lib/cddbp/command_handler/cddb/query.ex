@@ -9,10 +9,10 @@ defmodule Cddbp.CommandHandler.Cddb.Query do
     ~S"""
     Perform a search for database entries that match parameters.
     Arguments are:
-      discid:  CD disc ID number.
-      ntrks:   total number of tracks on CD.
-      off_X:   frame offset of track X.
-      nsecs:   total playing length of the CD in seconds.
+        discid:  CD disc ID number.
+        ntrks:   total number of tracks on CD.
+        off_X:   frame offset of track X.
+        nsecs:   total playing length of the CD in seconds.
     """
   end
 

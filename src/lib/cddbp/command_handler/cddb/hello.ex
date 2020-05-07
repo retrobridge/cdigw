@@ -9,10 +9,10 @@ defmodule Cddbp.CommandHandler.Cddb.Hello do
     ~s"""
     Register necessary information with CD database server.
     Arguments are:
-      username:    login name of user.
-      hostname:    host name of client system.
-      clientname:  name of client software.
-      version:     version number of client software.
+        username:    login name of user.
+        hostname:    host name of client system.
+        clientname:  name of client software.
+        version:     version number of client software.
     """
   end
 
