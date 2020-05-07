@@ -24,7 +24,7 @@ defmodule Cddbp.Handler do
     Logger.info("new connection from #{peername}")
 
     :ok = :ranch.accept_ack(ref)
-    :ok = transport.setopts(socket, active: true)
+    :ok = transport.setopts(socket, active: true, packet: :line)
 
     now = DateTime.utc_now() |> DateTime.to_iso8601()
 

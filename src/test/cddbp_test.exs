@@ -23,7 +23,7 @@ defmodule CddbpTest do
   end
 
   def send_recv(socket, command) do
-    :ok = :gen_tcp.send(socket, command)
+    :ok = :gen_tcp.send(socket, command <> "\n")
     recv(socket)
   end
 
