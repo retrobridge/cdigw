@@ -57,8 +57,6 @@ defmodule Cddbp.CommandHandler do
   end
 
   def generate_subcommand_help(handlers) do
-    handlers
-    |> Enum.map(fn h -> h.usage() end)
-    |> Enum.join("\n")
+    Enum.map_join(handlers, fn h -> h.usage() end, "\n")
   end
 end
