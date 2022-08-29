@@ -21,11 +21,11 @@ defmodule Cdigw.MixProject do
 
   defp deps do
     [
-      {:plug_cowboy, "~> 2.0"},
-      {:tesla, "~> 1.3"},
-      {:jason, "~> 1.0"},
-      {:mix_test_watch, "~> 1.0", only: :dev},
-      {:credo, "~> 1.0", only: [:dev, :test]}
+      {:plug_cowboy, "~> 2.5"},
+      {:tesla, "~> 1.4"},
+      {:jason, "~> 1.3"},
+      {:mix_test_watch, "~> 1.1", only: :dev},
+      {:credo, "~> 1.6", only: [:dev, :test]}
     ]
   end
 
