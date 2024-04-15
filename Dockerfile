@@ -44,7 +44,6 @@ ENTRYPOINT ["/opt/bin/entrypoint"]
 FROM base AS builder
 
 COPY src /opt/app
-COPY VERSION /opt/app
 
 ENV MIX_ENV=prod \
     MIX_BUILD_PATH=/opt/mix/build/prod
@@ -56,10 +55,8 @@ RUN mix do deps.get --only $MIX_ENV, release
 FROM alpine AS release
 
 ARG git_commit=unknown
-ARG app_version=unknown
 
-LABEL git.commit=${git_commit} \
-      app.version=${app_version}
+LABEL git.commit=${git_commit}
 
 RUN apk --no-cache add bash openssl libstdc++ libgcc
 

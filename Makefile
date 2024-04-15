@@ -6,8 +6,7 @@ ELIXIR_VER = 1.15
 APP = cdigw
 DOCKER_ORG = retrobridge
 TAG = $(APP)_elixir_$(ELIXIR_VER)
-VERSION = $(shell cat VERSION)
-GIT_COMMIT = $(shell git rev-parse --verify HEAD)
+GIT_COMMIT = $(shell git rev-parse --verify --short HEAD)
 
 build-base:
 	docker build --build-arg elixir_ver=$(ELIXIR_VER) --target base -t $(TAG) .
@@ -29,15 +28,14 @@ test-credo: build-base
 	docker run --rm -v $(PWD)/src:/opt/app $(TAG) mix credo --strict
 
 release:
-	@echo Building version $(VERSION)
+	@echo Building version $(GIT_COMMIT)
 	docker build \
 		--build-arg elixir_ver=$(ELIXIR_VER) \
 		--build-arg git_commit=$(GIT_COMMIT) \
-		--build-arg app_version=$(VERSION) \
 		--target release \
-		--tag $(DOCKER_ORG)/$(APP):$(VERSION) .
-	docker tag $(DOCKER_ORG)/$(APP):$(VERSION) $(DOCKER_ORG)/$(APP):latest
+		--tag $(DOCKER_ORG)/$(APP):$(GIT_COMMIT) .
+	docker tag $(DOCKER_ORG)/$(APP):$(GIT_COMMIT) $(DOCKER_ORG)/$(APP):latest
 
 push-release: release
-	docker push $(DOCKER_ORG)/$(APP):$(VERSION)
+	docker push $(DOCKER_ORG)/$(APP):$(GIT_COMMIT)
 	docker push $(DOCKER_ORG)/$(APP):latest
