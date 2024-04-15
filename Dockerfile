@@ -1,4 +1,4 @@
-ARG elixir_ver=1.10
+ARG elixir_ver
 
 FROM elixir:${elixir_ver}-alpine AS base
 
@@ -61,7 +61,7 @@ ARG app_version=unknown
 LABEL git.commit=${git_commit} \
       app.version=${app_version}
 
-RUN apk --no-cache add bash openssl
+RUN apk --no-cache add bash openssl libstdc++ libgcc
 
 EXPOSE 80
 EXPOSE 888

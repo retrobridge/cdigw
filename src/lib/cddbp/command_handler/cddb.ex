@@ -25,7 +25,7 @@ defmodule Cddbp.CommandHandler.Cddb do
   def help do
     lines =
       command_handlers()
-      |> Enum.map_join(fn {_prefix, handler} -> handler.usage() end, "\n")
+      |> Enum.map_join("\n", fn {_prefix, handler} -> handler.usage() end)
 
     ~s"""
     Performs a CD database operation.

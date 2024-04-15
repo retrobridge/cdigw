@@ -2,7 +2,7 @@
 
 HTTP_PORT = 8880
 CDDBP_PORT = 8888
-ELIXIR_VER = 1.10
+ELIXIR_VER = 1.15
 APP = cdigw
 DOCKER_ORG = retrobridge
 TAG = $(APP)_elixir_$(ELIXIR_VER)

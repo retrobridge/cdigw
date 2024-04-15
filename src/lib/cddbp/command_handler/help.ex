@@ -39,7 +39,7 @@ defmodule Cddbp.CommandHandler.Help do
     command_path = Enum.map(command_path, &String.downcase/1)
 
     {prefix, _} = Enum.split(command_path, length(command_path) - 1)
-    prefix = prefix |> Enum.map_join(&String.upcase/1, " ")
+    prefix = prefix |> Enum.map_join(" ", &String.upcase/1)
 
     case find_handler_in(tree, command_path) do
       nil ->
