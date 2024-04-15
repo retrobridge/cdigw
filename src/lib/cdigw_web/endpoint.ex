@@ -15,13 +15,13 @@ defmodule CdigwWeb.Endpoint do
     CdigwWeb.MscdPlug.call(conn, %{cd: cd})
   end
 
-  match "/" do
+  get "/" do
     conn
     |> put_resp_content_type("text/html")
     |> send_file(200, "priv/static/index.html")
   end
 
-  match "/robots.txt" do
+  get "/robots.txt" do
     conn
     |> put_resp_content_type("text/plain")
     |> send_resp(200, ~S"""
