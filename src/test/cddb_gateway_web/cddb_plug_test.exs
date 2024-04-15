@@ -55,7 +55,7 @@ defmodule CdigwWeb.CddbPlugTest do
     TTITLE1=Shampain
     TTITLE2=I Am Not a Robot
     TTITLE3=Girls
-    TTITLE4=Mowgli?s Road
+    TTITLE4=Mowgli's Road
     TTITLE5=Obsessions
     TTITLE6=Hollywood
     TTITLE7=The Outsider

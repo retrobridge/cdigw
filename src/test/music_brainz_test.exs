@@ -42,7 +42,7 @@ defmodule MusicBrainzTest do
         {"Shampain", nil},
         {"I Am Not a Robot", nil},
         {"Girls", nil},
-        {"Mowgli’s Road", nil},
+        {"Mowgli's Road", nil},
         {"Obsessions", nil},
         {"Hollywood", nil},
         {"The Outsider", nil},
