@@ -32,8 +32,6 @@ defmodule CdigwWeb.CddbPlugTest do
     expected = ~S"""
     210 Found exact matches, list follows (until terminating `.')
     misc 940aac0d Marina & the Diamonds / The Family Jewels
-    misc 940aac0d Marina & the Diamonds / The Family Jewels
-    misc 940aac0d Marina & the Diamonds / The Family Jewels
     .
     """
 

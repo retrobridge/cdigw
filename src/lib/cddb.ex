@@ -73,9 +73,12 @@ defmodule Cddb do
   def lookup_disc(disc_info) when is_map(disc_info) do
     case MusicBrainz.find_release(disc_info.length_seconds, disc_info.track_lbas) do
       {:ok, releases} ->
+        # cddb effectively uses genre and disc ID as a composite key, so it
+        # makes no sense to return disc with duplicated values.
         discs =
           releases
           |> Enum.map(&MusicBrainz.release_to_disc(disc_info.disc_id, &1))
+          |> Enum.uniq_by(fn disc -> {disc.genre, disc.id} end)
           |> maybe_cache_discs()
 
         {:ok, discs}
