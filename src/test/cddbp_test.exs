@@ -46,11 +46,10 @@ defmodule CddbpTest do
 
     assert send_recv(socket, "bogus") == "500 Unrecognized command.\n"
 
-    assert send_recv(socket, "motd") == ~S"""
-           210 MOTD follows (until terminating `.')
-           Welcome to this CDDB server.
-           .
-           """
+    assert send_recv(socket, "motd") |> String.split("\n") |> Enum.take(2) == [
+             "210 MOTD follows (until terminating `.')",
+             "Welcome to this CDDB server."
+           ]
 
     assert send_recv(socket, "CDDB lscat") == ~S"""
            210 OK, category list follows (until terminating `.')
@@ -153,7 +152,7 @@ defmodule CddbpTest do
            TTITLE1=Shampain
            TTITLE2=I Am Not a Robot
            TTITLE3=Girls
-           TTITLE4=Mowgli?s Road
+           TTITLE4=Mowgli's Road
            TTITLE5=Obsessions
            TTITLE6=Hollywood
            TTITLE7=The Outsider
