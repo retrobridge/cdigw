@@ -6,7 +6,10 @@ defmodule CdigwWeb.MscdPlug do
   import Plug.Conn
   require Logger
 
-  @content_type "text/plain; charset=utf-8"
+  # The CD player app only seems to process text as ISO-8859-1.
+  # Sending UTF-8 garbles non-ASCII chars. Setting the `charset` has no effect,
+  # but send it anyway to correctly indicate how we've encoded the text.
+  @content_type "text/plain; charset=iso-8859-1"
 
   def init(options), do: options
 
@@ -18,7 +21,11 @@ defmodule CdigwWeb.MscdPlug do
 
     case Mscd.lookup_disc(cd, user) do
       {:ok, disc} ->
-        response = Mscd.Response.render(disc)
+        response = 
+          disc
+          |> Mscd.Response.render()
+          |> String.to_charlist
+          |> :unicode.characters_to_binary(:utf8, :latin1)
 
         conn
         |> put_resp_header("content-type", @content_type)
