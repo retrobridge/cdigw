@@ -30,7 +30,7 @@ defmodule CddbpTest do
   setup do
     # use mock_global since the tcp server runs in a different process
     Tesla.Mock.mock_global(fn
-      %{method: :get, url: "http://musicbrainz.org/ws/2/discid/-" <> _} ->
+      %{method: :get, url: "https://musicbrainz.org/ws/2/discid/-" <> _} ->
         Tesla.Mock.json(mock_response(:fuzzy))
     end)
 

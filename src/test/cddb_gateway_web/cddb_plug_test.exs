@@ -12,7 +12,7 @@ defmodule CdigwWeb.CddbPlugTest do
 
   setup do
     Tesla.Mock.mock(fn
-      %{method: :get, url: "http://musicbrainz.org/ws/2/discid/-" <> _} ->
+      %{method: :get, url: "https://musicbrainz.org/ws/2/discid/-" <> _} ->
         Tesla.Mock.json(mock_response(:fuzzy))
     end)
 

@@ -18,7 +18,7 @@ defmodule MusicBrainz do
   @default_genre Cddb.default_genre()
 
   plug Tesla.Middleware.Logger
-  plug Tesla.Middleware.BaseUrl, "http://musicbrainz.org/ws/2"
+  plug Tesla.Middleware.BaseUrl, "https://musicbrainz.org/ws/2"
   plug Tesla.Middleware.JSON
   plug Tesla.Middleware.Headers, [{"user-agent", @user_agent}]
 
