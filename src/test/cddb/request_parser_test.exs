@@ -12,6 +12,8 @@ defmodule Cddb.RequestParserTest do
     expected =
       {:query,
        %{
+         query:
+           "940aac0d 13 150 15239 29625 45763 61420 75862 91642 108918 123698 139895 153589 169239 188495 2734",
          disc_id: "940aac0d",
          track_count: 13,
          length_seconds: 2734,

@@ -24,6 +24,8 @@ defmodule Cdigw.MixProject do
       {:plug_cowboy, "~> 2.7"},
       {:tesla, "~> 1.9"},
       {:jason, "~> 1.4"},
+      {:ecto, "~> 3.11"},
+      {:ecto_sqlite3, "~> 0.14"},
       {:mix_test_watch, "~> 1.2", only: :dev},
       {:credo, "~> 1.7", only: [:dev, :test]}
     ]

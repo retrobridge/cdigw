@@ -17,7 +17,18 @@ defmodule Cddbp.CommandHandler.Cddb.Query do
   end
 
   def handle(state, query) when is_list(query) do
-    case Cddb.lookup_disc(query) do
+    user_agent =
+      case state.hello do
+        %{app: app, version: version} ->
+          "#{app}/#{version}"
+
+        _ ->
+          nil
+      end
+
+    context = %{host: state.peername, user_agent: user_agent, interface: "cddbp"}
+
+    case Cddb.lookup_disc(query, context) do
       {:ok, discs} ->
         text = Cddb.QueryResponse.render(discs, state.proto)
         {_encoding, text} = Cddb.encode_response(text, state.proto)
