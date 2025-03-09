@@ -27,7 +27,7 @@ defmodule Cddbp.Handler do
 
     :ok = transport.setopts(socket, active: true, packet: :line)
 
-    now = DateTime.utc_now() |> DateTime.to_iso8601()
+    now = DateTime.utc_now() |> Calendar.strftime("%c %Z")
 
     state = Cddbp.State.new(socket, transport, peername)
 

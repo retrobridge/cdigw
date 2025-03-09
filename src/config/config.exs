@@ -6,7 +6,8 @@ config :cdigw, :http_server,
 
 config :cdigw, :cddbp_server,
   hostname: "localhost",
-  port: 888
+  port: 888,
+  max_errors: 3
 
 config :cdigw, Cdigw.Repo, database: "tmp/cdigw.db"
 config :cdigw, ecto_repos: [Cdigw.Repo]

@@ -42,7 +42,10 @@ defmodule CddbpTest do
 
   @tag capture_log: true
   test "full interactive session", %{socket: socket} do
-    assert "201 localhost CDDBP server v0.0.1 ready at " <> _ = recv(socket)
+    assert String.match?(
+             recv(socket),
+             ~r/^201 localhost CDDBP server v#{Cdigw.version()} ready at/
+           )
 
     assert send_recv(socket, "bogus") == "500 Unrecognized command.\n"
 
