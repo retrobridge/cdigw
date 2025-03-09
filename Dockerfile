@@ -48,8 +48,6 @@ ENTRYPOINT ["/opt/bin/entrypoint"]
 ################################################################################
 FROM base AS builder
 
-COPY src /opt/app
-
 ENV MIX_ENV=prod \
     MIX_BUILD_PATH=/opt/mix/build/prod
 
