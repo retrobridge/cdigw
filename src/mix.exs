@@ -22,10 +22,11 @@ defmodule Cdigw.MixProject do
   defp deps do
     [
       {:plug_cowboy, "~> 2.7"},
-      {:tesla, "~> 1.9"},
+      {:tesla, "~> 1.14"},
       {:jason, "~> 1.4"},
-      {:ecto, "~> 3.11"},
-      {:ecto_sqlite3, "~> 0.14"},
+      {:ecto, "~> 3.12"},
+      {:ecto_sqlite3, "~> 0.18"},
+      {:ranch, "~> 2.2"},
       {:mix_test_watch, "~> 1.2", only: :dev},
       {:credo, "~> 1.7", only: [:dev, :test]}
     ]
