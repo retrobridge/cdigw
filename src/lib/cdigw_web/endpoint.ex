@@ -1,4 +1,6 @@
 defmodule CdigwWeb.Endpoint do
+  @template_dir "lib/cdigw_web/templates"
+
   use Plug.Router
 
   plug Plug.Logger
@@ -16,9 +18,11 @@ defmodule CdigwWeb.Endpoint do
   end
 
   get "/" do
+    recent_lookups = Cdigw.Stats.list_recent_albums()
+
     conn
-    |> put_resp_content_type("text/html")
-    |> send_file(200, "priv/static/index.html")
+    |> assign(:recent_lookups, recent_lookups)
+    |> render("index.html")
   end
 
   get "/robots.txt" do
@@ -32,5 +36,17 @@ defmodule CdigwWeb.Endpoint do
 
   match _ do
     send_resp(conn, 404, "not_found")
+  end
+
+  defp render(%{status: status} = conn, template) do
+    body =
+      @template_dir
+      |> Path.join(template)
+      |> String.replace_suffix(".html", ".html.eex")
+      |> EEx.eval_file(assigns: conn.assigns)
+
+    conn
+    |> put_resp_content_type("text/html")
+    |> send_resp(status || 200, body)
   end
 end

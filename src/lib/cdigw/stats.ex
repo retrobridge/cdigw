@@ -8,13 +8,19 @@ defmodule Cdigw.Stats do
   import Ecto.Query, only: [from: 2]
 
   def list_recent_albums(limit \\ 10) do
-    query = from(q in Q,
-      distinct: true,
-      select: {q.artist, q.title},
-      order_by: [desc: q.ts],
-      where: q.success,
-      limit: ^limit
-    )
+    # Explicitly casting to `text` avoids an issue where SQLite returns data
+    # that looks like an integer as an integer, e.g. the album title "1989"
+    query =
+      from(q in Q,
+        distinct: true,
+        select: {
+          fragment("CAST(? AS text)", q.artist),
+          fragment("CAST(? AS text)", q.title)
+        },
+        order_by: [desc: q.ts],
+        where: q.success,
+        limit: ^limit
+      )
 
     Repo.all(query)
   end

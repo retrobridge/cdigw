@@ -36,7 +36,7 @@ defmodule CddbpTest do
 
     port = Cdigw.cddbp_config() |> Keyword.fetch!(:port)
 
-    {:ok, socket} = :gen_tcp.connect('127.0.0.1', port, active: false)
+    {:ok, socket} = :gen_tcp.connect(~c"127.0.0.1", port, active: false)
     {:ok, %{socket: socket}}
   end
 

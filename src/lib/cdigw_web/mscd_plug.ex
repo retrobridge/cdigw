@@ -21,10 +21,10 @@ defmodule CdigwWeb.MscdPlug do
 
     case Mscd.lookup_disc(cd, user) do
       {:ok, disc} ->
-        response = 
+        response =
           disc
           |> Mscd.Response.render()
-          |> String.to_charlist
+          |> String.to_charlist()
           |> :unicode.characters_to_binary(:utf8, :latin1)
 
         conn

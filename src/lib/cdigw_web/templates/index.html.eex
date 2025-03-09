@@ -93,6 +93,16 @@
     }
     pre { background-color: #ccc; color: #222; padding: 0.2em }
     code { background-color: #eee; color: #222; padding: 0 0.1em; }
+
+    #recent-albums {
+      border-collapse: collapse;
+    }
+    #recent-albums th,
+    #recent-albums td {
+      padding: 0.3em 0.5em;
+      border: solid 2px #444;
+      border-style: groove;
+    }
   </style>
 </head>
 <body>
@@ -132,8 +142,8 @@
           <td><b><code>cddb.retrobridge.org</code></b></td>
         </tr>
         <tr>
-          <td>Ports</td>
-          <td><b><code>80</code>, <code>8880</code></b></td>
+          <td>Port</td>
+          <td><b><code>80</code></b></td>
         </tr>
         <tr>
           <td>Path</td>
@@ -141,10 +151,9 @@
         </tr>
       </table>
 
-      <h4>Full URLs for access over HTTP</h4>
+      <h4>Full URL for access over HTTP</h4>
       <ul>
-        <li><b><code>http://cddb.retrobridge.org:80/~cddb/cddb.cgi</code></b></li>
-        <li><b><code>http://cddb.retrobridge.org:8880/~cddb/cddb.cgi</code></b></li>
+        <li><b><code>http://cddb.retrobridge.org/~cddb/cddb.cgi</code></b></li>
       </ul>
 
       <h3>CDDBP Access</h3>
@@ -154,9 +163,29 @@
           <td><b><code>cddb.retrobridge.org</code></b></td>
         </tr>
         <tr>
-          <td>Port</td>
-          <td><b><code>888</code></b></td>
+          <td>Ports</td>
+          <td><b><code>888</code></b>, <b><code>8880</code></b></td>
         </tr>
+      </table>
+
+      <h2>Recent Queries</h2>
+
+      <table id="recent-albums">
+        <thead>
+          <tr>
+            <th>Artist</th>
+            <th>Album</th>
+          </tr>
+        </thead>
+        <tbody>
+          <%= for {artist, title} <- @recent_lookups do %>
+            <tr>
+              <td><%= artist %></td>
+              <td><%= title %></td>
+            </tr>
+
+          <% end %>
+        </tbody>
       </table>
 
       <h2>Tested Applications</h2>
@@ -207,6 +236,20 @@
         <img src="images/cdplayer.bmp" alt="Windows 2000 CD Player">
       </p>
 
+      <h3>Winamp</h3>
+      <p class="success">Working!</p>
+
+      <p>Older versions of Winamp, like for Windows 98, use CDDBP over plain TCP
+      rather than HTTP. It's hardcoded to connect to <code>cddb.cddb.com:8880</code>.
+
+      Add a hosts file entry on your system to point to this server.
+
+      <h4>Windows 98</h4>
+      <p>Edit <code>C:\Windows\Hosts</code> and add the following line:</p>
+<pre>
+188.166.117.156 cddb.cddb.com
+</pre>
+
       <h3>cdrdao v1.2.4</h3>
       <p class="success">Working!</p>
       <p>
@@ -215,7 +258,7 @@
       </p>
       <h4>Via HTTP</h4>
       <p>
-        <code>cdrdao read-cddb --cddb-servers cddb.retrobridge.org:8880:/~cddb/cddb.cgi -v 3 disc.toc</code>
+        <code>cdrdao read-cddb --cddb-servers cddb.retrobridge.org:80:/~cddb/cddb.cgi -v 3 disc.toc</code>
       </p>
       <h4>Via CDDBP</h4>
       <p>
