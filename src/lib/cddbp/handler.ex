@@ -9,8 +9,8 @@ defmodule Cddbp.Handler do
 
   @root_handler Cddbp.CommandHandler.Root
 
-  def start_link(ref, socket, transport, _opts) do
-    pid = :proc_lib.spawn_link(__MODULE__, :init, [ref, socket, transport])
+  def start_link(ref, transport, opts) do
+    pid = :proc_lib.spawn_link(__MODULE__, :init, [ref, transport, opts])
     {:ok, pid}
   end
 
@@ -18,12 +18,13 @@ defmodule Cddbp.Handler do
   def init(opts), do: {:ok, opts}
 
   @doc false
-  def init(ref, socket, transport) do
+  def init(ref, transport, _opts) do
+    {:ok, socket} = :ranch.handshake(ref)
+
     peername = socket_to_peername(socket)
 
     Logger.info("new connection from #{peername}")
 
-    :ok = :ranch.accept_ack(ref)
     :ok = transport.setopts(socket, active: true, packet: :line)
 
     now = DateTime.utc_now() |> DateTime.to_iso8601()

@@ -26,6 +26,7 @@ defmodule Cdigw.MixProject do
       {:jason, "~> 1.4"},
       {:ecto, "~> 3.11"},
       {:ecto_sqlite3, "~> 0.14"},
+      {:ranch, "~> 2.2"},
       {:mix_test_watch, "~> 1.2", only: :dev},
       {:credo, "~> 1.7", only: [:dev, :test]}
     ]
