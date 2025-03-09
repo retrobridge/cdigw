@@ -2,14 +2,13 @@
 
 HTTP_PORT = 8880
 CDDBP_PORT = 8888
-ELIXIR_VER = 1.15
 APP = cdigw
 DOCKER_ORG = retrobridge
-TAG = $(APP)_elixir_$(ELIXIR_VER)
+TAG = $(APP)
 GIT_COMMIT = $(shell git rev-parse --verify --short HEAD)
 
 build-dev:
-	docker build --build-arg elixir_ver=$(ELIXIR_VER) --target dev -t $(TAG) .
+	docker build --target dev -t $(TAG) .
 
 shell: build-dev
 	docker run --rm -it \
@@ -30,8 +29,6 @@ test-credo: build-dev
 release:
 	@echo Building version $(GIT_COMMIT)
 	docker build \
-		--build-arg elixir_ver=$(ELIXIR_VER) \
-		--build-arg git_commit=$(GIT_COMMIT) \
 		--label "org.opencontainers.image.created=$(shell date --utc --rfc-3339=seconds)" \
 		--label "org.opencontainers.image.revision=$(GIT_COMMIT)" \
 		--target release \

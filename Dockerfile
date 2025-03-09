@@ -1,4 +1,4 @@
-ARG elixir_ver
+ARG elixir_ver=1.18
 
 FROM elixir:${elixir_ver}-alpine AS base
 
