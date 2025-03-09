@@ -33,10 +33,9 @@ defmodule Cdigw.MixProject do
   end
 
   defp version do
-    if File.exists?("VERSION") do
-      "VERSION" |> File.read!() |> String.trim()
-    else
-      "0.0.1"
+    case File.read("VERSION") do
+      {:ok, version} -> version
+      {:error, _} -> "0.0.1-alpha"
     end
   end
 
