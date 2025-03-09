@@ -28,14 +28,19 @@ defmodule CdigwWeb.CddbPlug do
   # 13              track count
   # 150 ... 188495  sector start lba for each track
   # 2734            CD play time in seconds
-  def handle_command(conn, :query, data, proto) do
-    {:ok, discs} = Cddb.lookup_disc(data)
+  defp handle_command(conn, :query, data, proto) do
+    context = %{
+      host: conn |> get_req_header("x-forwarded-for") |> Enum.at(0),
+      agent: conn |> get_req_header("user-agent") |> Enum.at(0)
+    }
+
+    {:ok, discs} = Cddb.lookup_disc(data, context)
     response_text = Cddb.QueryResponse.render(discs, proto)
 
     send_encoded_response(conn, response_text, proto)
   end
 
-  def handle_command(conn, :read, data, proto) do
+  defp handle_command(conn, :read, data, proto) do
     Logger.info("fetching cached disc: genre=#{data.genre} disc_id=#{data.disc_id}")
 
     response_text =
@@ -50,7 +55,7 @@ defmodule CdigwWeb.CddbPlug do
     send_encoded_response(conn, response_text, proto)
   end
 
-  def handle_command(conn, _cmd, _data, proto) do
+  defp handle_command(conn, _cmd, _data, proto) do
     send_encoded_response(conn, "500 Unrecognized command.", proto)
   end
 

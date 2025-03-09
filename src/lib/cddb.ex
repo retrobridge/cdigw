@@ -65,22 +65,39 @@ defmodule Cddb do
 
   Found discs are written to the cache.
   """
-  def lookup_disc(query) when is_list(query) do
+  def lookup_disc(query, context) when is_list(query) do
     with {:ok, disc_info} <- Cddb.RequestParser.parse_query(query),
-         do: lookup_disc(disc_info)
+         do: lookup_disc(disc_info, context)
   end
 
-  def lookup_disc(disc_info) when is_map(disc_info) do
+  def lookup_disc(disc_info, context) when is_map(disc_info) do
+    context =
+      context
+      |> Map.put(:query, disc_info.query)
+      |> Map.put_new(:interface, "cddb")
+
     case MusicBrainz.find_release(disc_info.length_seconds, disc_info.track_lbas) do
       {:ok, releases} ->
+        # cddb effectively uses genre and disc ID as a composite key, so it
+        # makes no sense to return disc with duplicated values.
         discs =
           releases
           |> Enum.map(&MusicBrainz.release_to_disc(disc_info.disc_id, &1))
+          |> Enum.uniq_by(fn disc -> {disc.genre, disc.id} end)
           |> maybe_cache_discs()
+
+        [disc | _] = discs
+
+        context
+        |> Map.put(:title, disc.title)
+        |> Map.put(:artist, disc.artist)
+        |> Cdigw.Stats.log_successful_query()
 
         {:ok, discs}
 
       {:error, reason} ->
+        Cdigw.Stats.log_unsuccessful_query(context)
+
         {:error, reason}
     end
   end

@@ -19,7 +19,7 @@ shell: build-base
 		$(TAG) bash
 
 test: build-base
-	docker run --rm -v $(PWD)/src:/opt/app -e MIX_ENV=test $(TAG) mix test
+	docker run --rm -v $(PWD)/src:/opt/app -e MIX_ENV=test $(TAG) mix do ecto.migrate, test
 
 test-format: build-base
 	docker run --rm -v $(PWD)/src:/opt/app $(TAG) mix format --check-formatted

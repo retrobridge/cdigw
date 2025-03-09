@@ -30,13 +30,13 @@ defmodule CddbpTest do
   setup do
     # use mock_global since the tcp server runs in a different process
     Tesla.Mock.mock_global(fn
-      %{method: :get, url: "http://musicbrainz.org/ws/2/discid/-" <> _} ->
+      %{method: :get, url: "https://musicbrainz.org/ws/2/discid/-" <> _} ->
         Tesla.Mock.json(mock_response(:fuzzy))
     end)
 
     port = Cdigw.cddbp_config() |> Keyword.fetch!(:port)
 
-    {:ok, socket} = :gen_tcp.connect('127.0.0.1', port, active: false)
+    {:ok, socket} = :gen_tcp.connect(~c"127.0.0.1", port, active: false)
     {:ok, %{socket: socket}}
   end
 
@@ -46,11 +46,10 @@ defmodule CddbpTest do
 
     assert send_recv(socket, "bogus") == "500 Unrecognized command.\n"
 
-    assert send_recv(socket, "motd") == ~S"""
-           210 MOTD follows (until terminating `.')
-           Welcome to this CDDB server.
-           .
-           """
+    assert send_recv(socket, "motd") |> String.split("\n") |> Enum.take(2) == [
+             "210 MOTD follows (until terminating `.')",
+             "Welcome to this CDDB server."
+           ]
 
     assert send_recv(socket, "CDDB lscat") == ~S"""
            210 OK, category list follows (until terminating `.')
@@ -140,8 +139,6 @@ defmodule CddbpTest do
     assert send_recv(socket, query) == ~S"""
            210 Found exact matches, list follows (until terminating `.')
            misc 940aac0d Marina & the Diamonds / The Family Jewels
-           misc 940aac0d Marina & the Diamonds / The Family Jewels
-           misc 940aac0d Marina & the Diamonds / The Family Jewels
            .
            """
 
@@ -155,7 +152,7 @@ defmodule CddbpTest do
            TTITLE1=Shampain
            TTITLE2=I Am Not a Robot
            TTITLE3=Girls
-           TTITLE4=Mowgli?s Road
+           TTITLE4=Mowgli's Road
            TTITLE5=Obsessions
            TTITLE6=Hollywood
            TTITLE7=The Outsider

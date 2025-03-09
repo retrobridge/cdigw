@@ -18,7 +18,7 @@ defmodule MusicBrainz do
   @default_genre Cddb.default_genre()
 
   plug Tesla.Middleware.Logger
-  plug Tesla.Middleware.BaseUrl, "http://musicbrainz.org/ws/2"
+  plug Tesla.Middleware.BaseUrl, "https://musicbrainz.org/ws/2"
   plug Tesla.Middleware.JSON
   plug Tesla.Middleware.Headers, [{"user-agent", @user_agent}]
 
@@ -100,10 +100,10 @@ defmodule MusicBrainz do
     end
   end
 
-  def get_release(id, inc \\ @default_inc) do
+  def get_releases_by_disc_id(id, inc \\ @default_inc) do
     inc_list = Enum.join(inc, "+")
 
-    case get("/release/#{id}/?fmt=json&inc=#{inc_list}") do
+    case get("/discid/#{id}/?fmt=json&inc=#{inc_list}") do
       {:ok, %{status: 200, body: body}} ->
         {:ok, body}
 
@@ -118,8 +118,8 @@ defmodule MusicBrainz do
   def release_to_disc(cddb_disc_id, release) do
     disc = %Disc{
       id: cddb_disc_id,
-      artist: dig(release, ["artist-credit", 0, "name"]),
-      title: release["title"],
+      artist: groom_text(dig(release, ["artist-credit", 0, "name"])),
+      title: groom_text(release["title"]),
       year: String.slice(release["date"], 0..3),
       genre: genre(release["genres"])
     }
@@ -127,7 +127,7 @@ defmodule MusicBrainz do
     release
     |> dig(["media", 0, "tracks"])
     |> Enum.reduce(disc, fn track, disc ->
-      title = dig(track, ["recording", "title"])
+      title = groom_text(dig(track, ["recording", "title"]))
       Disc.add_track(disc, title)
     end)
   end
@@ -151,6 +151,16 @@ defmodule MusicBrainz do
   def fuzzy_search_by_toc(toc, inc \\ @default_inc) do
     inc_list = Enum.join(inc, "+")
     get("/discid/-?fmt=json&inc=#{inc_list}&toc=" <> Enum.join(toc, "+"))
+  end
+
+  # Some chars cause display issues on older systems and can easily be substituted
+  defp groom_text(txt) do
+    txt
+    |> String.replace("’", "'")
+    |> String.replace("…", "...")
+    |> String.replace("‐", "-")
+    |> String.replace("“", "\"")
+    |> String.replace("”", "\"")
   end
 
   defp genre([]), do: @default_genre

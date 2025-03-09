@@ -39,6 +39,7 @@ defmodule Cddb.RequestParser do
          ^track_count <- length(tracks) do
       {:ok,
        %{
+         query: Enum.join(query, " "),
          disc_id: disc_id,
          track_count: track_count,
          track_lbas: tracks,

@@ -13,7 +13,7 @@ defmodule MusicBrainzTest do
       %{
         method: :get,
         url:
-          "http://musicbrainz.org/ws/2/discid/-?fmt=json&inc=artists+recordings+genres&toc=1+11+316725+182+3250+30272+61607+93215+118357+141452+175105+211805+251415+282740"
+          "https://musicbrainz.org/ws/2/discid/-?fmt=json&inc=artists+recordings+genres&toc=1+11+316725+182+3250+30272+61607+93215+118357+141452+175105+211805+251415+282740"
       } ->
         Tesla.Mock.json(load_mock("fuzzy_response_2"))
     end)
@@ -42,7 +42,7 @@ defmodule MusicBrainzTest do
         {"Shampain", nil},
         {"I Am Not a Robot", nil},
         {"Girls", nil},
-        {"Mowgli’s Road", nil},
+        {"Mowgli's Road", nil},
         {"Obsessions", nil},
         {"Hollywood", nil},
         {"The Outsider", nil},

@@ -12,7 +12,7 @@ defmodule CdigwWeb.CddbPlugTest do
 
   setup do
     Tesla.Mock.mock(fn
-      %{method: :get, url: "http://musicbrainz.org/ws/2/discid/-" <> _} ->
+      %{method: :get, url: "https://musicbrainz.org/ws/2/discid/-" <> _} ->
         Tesla.Mock.json(mock_response(:fuzzy))
     end)
 
@@ -31,8 +31,6 @@ defmodule CdigwWeb.CddbPlugTest do
 
     expected = ~S"""
     210 Found exact matches, list follows (until terminating `.')
-    misc 940aac0d Marina & the Diamonds / The Family Jewels
-    misc 940aac0d Marina & the Diamonds / The Family Jewels
     misc 940aac0d Marina & the Diamonds / The Family Jewels
     .
     """
@@ -55,7 +53,7 @@ defmodule CdigwWeb.CddbPlugTest do
     TTITLE1=Shampain
     TTITLE2=I Am Not a Robot
     TTITLE3=Girls
-    TTITLE4=Mowgli?s Road
+    TTITLE4=Mowgli's Road
     TTITLE5=Obsessions
     TTITLE6=Hollywood
     TTITLE7=The Outsider
