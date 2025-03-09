@@ -1,4 +1,6 @@
 defmodule CdigwWeb.Endpoint do
+  require EEx
+
   @template_dir "lib/cdigw_web/templates"
 
   use Plug.Router
@@ -22,7 +24,7 @@ defmodule CdigwWeb.Endpoint do
 
     conn
     |> assign(:recent_lookups, recent_lookups)
-    |> render("index.html")
+    |> render("index")
   end
 
   get "/robots.txt" do
@@ -39,14 +41,14 @@ defmodule CdigwWeb.Endpoint do
   end
 
   defp render(%{status: status} = conn, template) do
-    body =
-      @template_dir
-      |> Path.join(template)
-      |> String.replace_suffix(".html", ".html.eex")
-      |> EEx.eval_file(assigns: conn.assigns)
+    body = apply(__MODULE__, String.to_atom("render_#{template}"), [conn.assigns])
 
     conn
     |> put_resp_content_type("text/html")
     |> send_resp(status || 200, body)
   end
+
+  EEx.function_from_file(:def, :render_index, Path.join(@template_dir, "index.html.eex"), [
+    :assigns
+  ])
 end

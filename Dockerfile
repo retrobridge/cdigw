@@ -33,12 +33,17 @@ COPY docker/entrypoint.sh /opt/bin/entrypoint
 
 ENV PATH=${PATH}:/opt/bin
 
-COPY src/mix.* /opt/app/
+
+################################################################################
+FROM base AS dev
+
+COPY src/mix.* .
 
 RUN mix do deps.get, deps.compile
 RUN env MIX_ENV=test mix do deps.compile
 
 ENTRYPOINT ["/opt/bin/entrypoint"]
+
 
 ################################################################################
 FROM base AS builder
@@ -48,15 +53,14 @@ COPY src /opt/app
 ENV MIX_ENV=prod \
     MIX_BUILD_PATH=/opt/mix/build/prod
 
-RUN mix do deps.get --only $MIX_ENV, release
+COPY src/mix.* .
+RUN mix deps.get --only $MIX_ENV
 
+COPY src .
+RUN mix release
 
 ################################################################################
 FROM alpine AS release
-
-ARG git_commit=unknown
-
-LABEL git.commit=${git_commit}
 
 RUN apk --no-cache add bash openssl libstdc++ libgcc
 
