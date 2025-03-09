@@ -1,4 +1,4 @@
-.PHONY: build-base build-test push-release release shell test test-credo test-format
+.PHONY: build-dev build-test push-release release shell test test-credo test-format
 
 HTTP_PORT = 8880
 CDDBP_PORT = 8888
@@ -8,23 +8,23 @@ DOCKER_ORG = retrobridge
 TAG = $(APP)_elixir_$(ELIXIR_VER)
 GIT_COMMIT = $(shell git rev-parse --verify --short HEAD)
 
-build-base:
-	docker build --build-arg elixir_ver=$(ELIXIR_VER) --target base -t $(TAG) .
+build-dev:
+	docker build --build-arg elixir_ver=$(ELIXIR_VER) --target dev -t $(TAG) .
 
-shell: build-base
+shell: build-dev
 	docker run --rm -it \
 		-v $(PWD)/src:/opt/app \
 		-p $(HTTP_PORT):80 \
 		-p $(CDDBP_PORT):888 \
 		$(TAG) bash
 
-test: build-base
+test: build-dev
 	docker run --rm -v $(PWD)/src:/opt/app -e MIX_ENV=test $(TAG) mix do ecto.migrate, test
 
-test-format: build-base
+test-format: build-dev
 	docker run --rm -v $(PWD)/src:/opt/app $(TAG) mix format --check-formatted
 
-test-credo: build-base
+test-credo: build-dev
 	docker run --rm -v $(PWD)/src:/opt/app $(TAG) mix credo --strict
 
 release:
@@ -32,6 +32,8 @@ release:
 	docker build \
 		--build-arg elixir_ver=$(ELIXIR_VER) \
 		--build-arg git_commit=$(GIT_COMMIT) \
+		--label "org.opencontainers.image.created=$(shell date --utc --rfc-3339=seconds)" \
+		--label "org.opencontainers.image.revision=$(GIT_COMMIT)" \
 		--target release \
 		--tag $(DOCKER_ORG)/$(APP):$(GIT_COMMIT) .
 	docker tag $(DOCKER_ORG)/$(APP):$(GIT_COMMIT) $(DOCKER_ORG)/$(APP):latest
