@@ -7,7 +7,7 @@ defmodule Cddbp.Helpers do
   across all the modules in Cddbp.
   """
 
-  alias Cddbp.State
+  alias Cddbp.{CommandHandler, State}
 
   @newline Cddb.line_separator()
 
@@ -32,18 +32,18 @@ defmodule Cddbp.Helpers do
   def sites, do: Cdigw.sites()
 
   @doc "Return a syntax error response and increment state error counter"
-  def cmd_syntax_error(state) do
-    state
-    |> State.increment_errors()
-    |> puts("500 Command syntax error.")
-    |> finish_response()
-  end
+  def cmd_syntax_error(state), do: error(state, "500 Command syntax error.")
+  def unrecognized_command(state), do: error(state, "500 Unrecognized command.")
 
-  def unrecognized_command(state) do
-    state
-    |> State.increment_errors()
-    |> puts("500 Unrecognized command.")
-    |> finish_response()
+  defp error(state, message) do
+    state = state |> State.increment_errors() |> puts(message)
+
+    if state.errors >= server_config(:max_errors) do
+      state
+      |> CommandHandler.Quit.handle([])
+    else
+      finish_response(state)
+    end
   end
 
   @doc "Finish event handling and return the new state"
