@@ -49,7 +49,8 @@ ENTRYPOINT ["/opt/bin/entrypoint"]
 FROM base AS builder
 
 ENV MIX_ENV=prod \
-    MIX_BUILD_PATH=/opt/mix/build/prod
+    MIX_BUILD_PATH=/opt/mix/build/prod \
+    HEX_HTTP_TIMEOUT=120
 
 COPY src/mix.* .
 RUN mix deps.get --only $MIX_ENV
