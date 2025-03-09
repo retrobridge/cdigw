@@ -10,10 +10,29 @@ defmodule CdigwWeb.CddbPlugTest do
     |> Jason.decode!()
   end
 
+  defp mock_response(:no_matches) do
+    %{
+      "release-offset" => 0,
+      "release-count" => 0,
+      "releases" => []
+    }
+  end
+
   setup do
     Tesla.Mock.mock(fn
-      %{method: :get, url: "https://musicbrainz.org/ws/2/discid/-" <> _} ->
+      %{
+        method: :get,
+        url:
+          "https://musicbrainz.org/ws/2/discid/-?fmt=json&inc=artists+recordings+genres&toc=1+13+205050+150+15239+29625+45763+61420+75862+91642+108918+123698+139895+153589+169239+188495"
+      } ->
         Tesla.Mock.json(mock_response(:fuzzy))
+
+      %{
+        method: :get,
+        url:
+          "https://musicbrainz.org/ws/2/discid/-?fmt=json&inc=artists+recordings+genres&toc=1+15+197550+150+12771+34340+52243+67707+71132+83878+101161+106048+122745+128236+136646+147292+151317+174116"
+      } ->
+        Tesla.Mock.json(mock_response(:no_matches))
     end)
 
     :ok
@@ -81,5 +100,18 @@ defmodule CdigwWeb.CddbPlugTest do
     """
 
     assert read_resp.resp_body == expected_read
+  end
+
+  @tag capture_log: false
+  test "query with no hits on MusicBrainz" do
+    proto = "6"
+
+    cmd =
+      "cddb+query+c50a480f+15+150+12771+34340+52243+67707+71132+83878+101161+106048+122745+128236+136646+147292+151317+174116+2634&hello=xrecode3+xrecode.com+XRECODE3+1.163"
+
+    query_req = conn(:get, "?cmd=#{cmd}&proto=#{proto}")
+    query_resp = CddbPlug.call(query_req, %{})
+
+    assert query_resp.resp_body == "202 No match"
   end
 end

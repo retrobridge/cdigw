@@ -86,12 +86,7 @@ defmodule Cddb do
           |> Enum.uniq_by(fn disc -> {disc.genre, disc.id} end)
           |> maybe_cache_discs()
 
-        [disc | _] = discs
-
-        context
-        |> Map.put(:title, disc.title)
-        |> Map.put(:artist, disc.artist)
-        |> Cdigw.Stats.log_successful_query()
+        log_disc_result(context, discs)
 
         {:ok, discs}
 
@@ -119,5 +114,16 @@ defmodule Cddb do
 
   defp cache_key(disc_id, genre) do
     String.downcase("#{disc_id}-#{genre}")
+  end
+
+  defp log_disc_result(context, []) do
+    Cdigw.Stats.log_unsuccessful_query(context)
+  end
+
+  defp log_disc_result(context, [disc | _]) do
+    context
+    |> Map.put(:title, disc.title)
+    |> Map.put(:artist, disc.artist)
+    |> Cdigw.Stats.log_successful_query()
   end
 end
