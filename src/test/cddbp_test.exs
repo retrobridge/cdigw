@@ -140,9 +140,7 @@ defmodule CddbpTest do
       "cddb query 940aac0d 13 150 15239 29625 45763 61420 75862 91642 108918 123698 139895 153589 169239 188495 2734"
 
     assert send_recv(socket, query) == ~S"""
-           210 Found exact matches, list follows (until terminating `.')
-           misc 940aac0d Marina & the Diamonds / The Family Jewels
-           .
+           200 misc 940aac0d Marina & the Diamonds / The Family Jewels
            """
 
     assert send_recv(socket, "CDDB READ misc 940aac0d") == ~S"""

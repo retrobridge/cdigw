@@ -49,9 +49,7 @@ defmodule CdigwWeb.CddbPlugTest do
     query_resp = CddbPlug.call(query_req, %{})
 
     expected = ~S"""
-    210 Found exact matches, list follows (until terminating `.')
-    misc 940aac0d Marina & the Diamonds / The Family Jewels
-    .
+    200 misc 940aac0d Marina & the Diamonds / The Family Jewels
     """
 
     assert query_resp.resp_body == expected
