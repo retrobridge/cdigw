@@ -31,6 +31,8 @@ defmodule Cddbp.Handler do
 
     state = Cddbp.State.new(socket, transport, peername)
 
+    Logger.metadata(peer: peername)
+
     puts(
       state,
       "201 #{server_config(:hostname)} CDDBP server v#{server_version()} ready at #{now}"
@@ -40,9 +42,17 @@ defmodule Cddbp.Handler do
   end
 
   def handle_info({:tcp, _, message}, state) do
+    # The newline char will be included. Get rid of it.
+    message = String.trim_trailing(message)
+
+    # With protocol level 2 and above, we're supposed to support quoted arguments
+    # and then replace spaces inside with `_` and support `\` as an escape.
+    # That seems excessive given that this is all read-only and clients
+    # will only be sending simple strings of numbers and genre names
+    # A simple quoted splitter: Regex.scan(~r/(?: "([^"]+)" | \b(\S+)\b )/x, str)
     args = String.split(message, ~r/\s+/, trim: true)
 
-    Logger.info("<<< [#{state.peername}] args=#{inspect(args)}")
+    Logger.info("< #{message}")
 
     state
     |> Map.put(:last_command_at, DateTime.utc_now())
@@ -50,18 +60,18 @@ defmodule Cddbp.Handler do
   end
 
   def handle_info({:tcp_closed, _}, state) do
-    Logger.info("[#{state.peername}] disconnected")
+    Logger.info("Peer disconnected")
     end_session(state)
   end
 
   def handle_info({:tcp_error, _, reason}, state) do
-    Logger.info("[#{state.peername}] TCP error: #{inspect(reason)}")
+    Logger.info("TCP error: #{inspect(reason)}")
     end_session(state)
   end
 
   def handle_info(:timeout, state) do
     timeout_sec = trunc(state.timeout / 1000)
-    Logger.info("[#{state.peername}] timed-out after #{timeout_sec} seconds")
+    Logger.info("Connection timed-out after #{timeout_sec} seconds")
 
     state
     |> puts("530 Inactivity timeout after #{timeout_sec} seconds, closing connection.")

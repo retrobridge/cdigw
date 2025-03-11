@@ -17,6 +17,10 @@ Sub-headings should group changes by type. Types are:
 Unreleased
 ----------
 
+### Internal
+
+* Improve CDDBP session logging using log metadata, logging responses
+
 [1.0.1] - 2025-03-11
 --------------------
 

@@ -7,6 +7,8 @@ defmodule Cddbp.Helpers do
   across all the modules in Cddbp.
   """
 
+  require Logger
+
   alias Cddbp.{CommandHandler, State}
 
   @newline Cddb.line_separator()
@@ -54,6 +56,8 @@ defmodule Cddbp.Helpers do
 
   @doc "Send text to the client, no newline."
   def write(%{transport: transport, socket: socket} = state, text) do
+    Logger.debug(fn -> "> #{String.trim_trailing(text)}" end)
+
     transport.send(socket, text)
     state
   end
