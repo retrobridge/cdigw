@@ -116,11 +116,20 @@ defmodule MusicBrainz do
   Convert a release to a `Disc` structure
   """
   def release_to_disc(cddb_disc_id, release) do
+    year =
+      case Regex.named_captures(~r/^(?<year>\d{4})-/, release["date"] || "") do
+        %{"year" => str} ->
+          str
+
+        _ ->
+          nil
+      end
+
     disc = %Disc{
       id: cddb_disc_id,
       artist: groom_text(dig(release, ["artist-credit", 0, "name"])),
       title: groom_text(release["title"]),
-      year: String.slice(release["date"], 0..3),
+      year: year,
       genre: genre(release["genres"])
     }
 
