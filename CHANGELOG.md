@@ -17,6 +17,10 @@ Sub-headings should group changes by type. Types are:
 Unreleased
 ----------
 
+### Added
+
+* (CDDBP) `STAT` command to show basic server stats
+
 ### Changed
 
 * (CDDBP) Handshake now required before `QUERY` or `READ`

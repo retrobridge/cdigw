@@ -15,6 +15,7 @@ defmodule Cddbp.CommandHandler.Root do
   command("proto", Cddbp.CommandHandler.ProtocolLevel)
   command("quit", Cddbp.CommandHandler.Quit)
   command("sites", Cddbp.CommandHandler.Sites)
+  command("stat", Cddbp.CommandHandler.Stat)
   command("ver", Cddbp.CommandHandler.ServerVersion)
 
   def handle_command(state, _, _), do: unrecognized_command(state)

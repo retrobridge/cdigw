@@ -80,6 +80,7 @@ defmodule CddbpTest do
            PROTO [level]
            QUIT
            SITES
+           STAT
            VER
 
            .
