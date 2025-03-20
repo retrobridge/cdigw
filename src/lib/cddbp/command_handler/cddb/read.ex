@@ -14,6 +14,10 @@ defmodule Cddbp.CommandHandler.Cddb.Read do
     """
   end
 
+  def handle(%{hello: nil} = state, _query) do
+    no_handshake(state)
+  end
+
   def handle(state, [category, disc_id]) do
     case Cddb.get_cached_disc(category, disc_id) do
       {:ok, disc} ->

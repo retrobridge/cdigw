@@ -36,6 +36,7 @@ defmodule Cddbp.Helpers do
   @doc "Return a syntax error response and increment state error counter"
   def cmd_syntax_error(state), do: error(state, "500 Command syntax error.")
   def unrecognized_command(state), do: error(state, "500 Unrecognized command.")
+  def no_handshake(state), do: error(state, "409 No handshake.")
 
   defp error(state, message) do
     state = state |> State.increment_errors() |> puts(message)

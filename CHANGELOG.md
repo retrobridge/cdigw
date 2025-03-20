@@ -17,6 +17,10 @@ Sub-headings should group changes by type. Types are:
 Unreleased
 ----------
 
+### Changed
+
+* (CDDBP) Handshake now required before `QUERY` or `READ`
+
 ### Internal
 
 * Improve CDDBP session logging using log metadata, logging responses
