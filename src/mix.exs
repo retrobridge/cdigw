@@ -34,7 +34,7 @@ defmodule Cdigw.MixProject do
 
   defp version do
     case File.read("VERSION") do
-      {:ok, version} -> version
+      {:ok, version} -> String.trim_trailing(version)
       {:error, _} -> "0.0.1-alpha"
     end
   end
