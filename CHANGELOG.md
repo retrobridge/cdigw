@@ -17,6 +17,9 @@ Sub-headings should group changes by type. Types are:
 Unreleased
 ----------
 
+[1.0.2] - 2025-03-20
+--------------------
+
 ### Added
 
 * (CDDBP) `STAT` command to show basic server stats
