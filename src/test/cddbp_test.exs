@@ -80,6 +80,7 @@ defmodule CddbpTest do
            PROTO [level]
            QUIT
            SITES
+           STAT
            VER
 
            .
@@ -119,14 +120,16 @@ defmodule CddbpTest do
            .
            """
 
+    query =
+      "cddb query 940aac0d 13 150 15239 29625 45763 61420 75862 91642 108918 123698 139895 153589 169239 188495 2734"
+
+    assert send_recv(socket, query) == "409 No handshake.\n"
+
     assert send_recv(socket, "cddb hello user test.localhost exunit 1.2.3") == ~S"""
            200 Hello and welcome user@test.localhost running exunit 1.2.3
            """
 
     assert send_recv(socket, "proto") == "200 CDDB protocol level: current 1, supported 6\n"
-
-    query =
-      "cddb query 940aac0d 13 150 15239 29625 45763 61420 75862 91642 108918 123698 139895 153589 169239 188495 2734"
 
     assert send_recv(socket, query) == ~S"""
            200 misc 940aac0d Marina & the Diamonds / The Family Jewels

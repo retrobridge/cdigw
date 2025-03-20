@@ -16,6 +16,10 @@ defmodule Cddbp.CommandHandler.Cddb.Query do
     """
   end
 
+  def handle(%{hello: nil} = state, _query) do
+    no_handshake(state)
+  end
+
   def handle(state, query) when is_list(query) do
     user_agent =
       case state.hello do

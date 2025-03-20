@@ -7,6 +7,8 @@ defmodule Cddbp.Helpers do
   across all the modules in Cddbp.
   """
 
+  require Logger
+
   alias Cddbp.{CommandHandler, State}
 
   @newline Cddb.line_separator()
@@ -34,6 +36,7 @@ defmodule Cddbp.Helpers do
   @doc "Return a syntax error response and increment state error counter"
   def cmd_syntax_error(state), do: error(state, "500 Command syntax error.")
   def unrecognized_command(state), do: error(state, "500 Unrecognized command.")
+  def no_handshake(state), do: error(state, "409 No handshake.")
 
   defp error(state, message) do
     state = state |> State.increment_errors() |> puts(message)
@@ -54,6 +57,8 @@ defmodule Cddbp.Helpers do
 
   @doc "Send text to the client, no newline."
   def write(%{transport: transport, socket: socket} = state, text) do
+    Logger.debug(fn -> "> #{String.trim_trailing(text)}" end)
+
     transport.send(socket, text)
     state
   end

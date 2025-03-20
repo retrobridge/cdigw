@@ -12,4 +12,8 @@ config :cdigw, :cddbp_server,
 config :cdigw, Cdigw.Repo, database: "tmp/cdigw.db"
 config :cdigw, ecto_repos: [Cdigw.Repo]
 
+config :logger, :default_formatter,
+  format: "$time $metadata[$level] $message\n",
+  metadata: [:peer]
+
 import_config "#{Mix.env()}.exs"

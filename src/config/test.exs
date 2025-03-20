@@ -10,7 +10,8 @@ config :cdigw, :http_server,
 
 config :cdigw, :cddbp_server,
   hostname: "localhost",
-  port: 9888
+  port: 9888,
+  max_errors: 10
 
 config :mix_test_watch,
   tasks: ["test", "format --check-formatted", "credo --strict"]

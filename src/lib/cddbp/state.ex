@@ -25,7 +25,9 @@ defmodule Cddbp.State do
           timeout: non_neg_integer()
         }
 
-  defguard is_protocol_level(val) when is_integer(val) and val >= 1 and val <= 6
+  @max_protocol_level 6
+
+  defguard is_protocol_level(val) when is_integer(val) and val >= 1 and val <= @max_protocol_level
   defguard is_hello(list) when is_list(list) and length(list) == 4
 
   alias __MODULE__
@@ -55,6 +57,8 @@ defmodule Cddbp.State do
   def set_protocol_level(%State{}, _level) do
     {:error, :invalid_argument}
   end
+
+  def max_protocol_level, do: @max_protocol_level
 
   def set_hello(%State{hello: nil} = state, args) when is_hello(args) do
     case Cddb.HelloParser.parse(args) do
