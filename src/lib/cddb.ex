@@ -78,13 +78,13 @@ defmodule Cddb do
       |> Map.put(:query, disc_info.query)
       |> Map.put_new(:interface, "cddb")
 
-    case MusicBrainz.find_release(disc_info.length_seconds, disc_info.track_lbas) do
-      {:ok, releases} ->
+    case MusicBrainz.find_discs(disc_info) do
+      {:ok, discs} ->
         # cddb effectively uses genre and disc ID as a composite key, so it
         # makes no sense to return disc with duplicated values.
         discs =
-          releases
-          |> Enum.map(&MusicBrainz.release_to_disc(disc_info.disc_id, &1))
+          discs
+          |> Enum.map(fn disc -> Map.put(disc, :id, disc_info.disc_id) end)
           |> Enum.uniq_by(fn disc -> {disc.genre, disc.id} end)
           |> maybe_cache_discs()
 
