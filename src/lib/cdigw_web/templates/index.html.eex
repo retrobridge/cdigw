@@ -227,9 +227,7 @@
       </p>
       <p>
         Add this entry, save, and it should start working right away.
-<pre>
-188.166.117.156 www.tunes.com
-</pre>
+        <pre><%= @public_ip %> www.tunes.com</pre>
       </p>
 
       <p>
@@ -246,9 +244,7 @@
 
       <h4>Windows 98</h4>
       <p>Edit <code>C:\Windows\Hosts</code> and add the following line:</p>
-<pre>
-188.166.117.156 cddb.cddb.com
-</pre>
+      <pre><%= @public_ip %> cddb.cddb.com</pre>
 
       <h3>cdrdao v1.2.4</h3>
       <p class="success">Working!</p>

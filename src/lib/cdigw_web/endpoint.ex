@@ -24,6 +24,7 @@ defmodule CdigwWeb.Endpoint do
 
     conn
     |> assign(:recent_lookups, recent_lookups)
+    |> assign(:public_ip, Cdigw.http_config()[:public_ip])
     |> render("index")
   end
 

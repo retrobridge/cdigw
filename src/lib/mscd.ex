@@ -11,25 +11,22 @@ defmodule Mscd do
   matching releases and return the first one as a disc.
   """
   def lookup_disc(query, user) do
-    {:ok, toc} = Mscd.RequestParser.parse_query(query)
-    mb_disc_id = MusicBrainz.calculate_disc_id(toc.lead_out_lba, toc.track_lbas)
-    {:ok, %{"releases" => releases}} = MusicBrainz.get_releases_by_disc_id(mb_disc_id)
+    {:ok, disc_info} = Mscd.RequestParser.parse_query(query)
+    {:ok, discs} = MusicBrainz.find_discs(disc_info)
 
     stat =
       user
       |> Map.put(:query, query)
       |> Map.put(:interface, "mscd")
 
-    case releases do
+    case discs do
       [] ->
         Cdigw.Stats.log_unsuccessful_query(stat)
 
         {:error, :not_found}
 
       # Only one disc is expected in the response
-      [release | _] ->
-        disc = MusicBrainz.release_to_disc(nil, release)
-
+      [disc | _] ->
         stat
         |> Map.put(:title, disc.title)
         |> Map.put(:artist, disc.artist)

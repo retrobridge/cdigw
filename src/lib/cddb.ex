@@ -1,4 +1,6 @@
 defmodule Cddb do
+  import Bitwise
+
   @moduledoc """
   High level interface and configuration for CDDB
   """
@@ -76,13 +78,13 @@ defmodule Cddb do
       |> Map.put(:query, disc_info.query)
       |> Map.put_new(:interface, "cddb")
 
-    case MusicBrainz.find_release(disc_info.length_seconds, disc_info.track_lbas) do
-      {:ok, releases} ->
+    case MusicBrainz.find_discs(disc_info) do
+      {:ok, discs} ->
         # cddb effectively uses genre and disc ID as a composite key, so it
         # makes no sense to return disc with duplicated values.
         discs =
-          releases
-          |> Enum.map(&MusicBrainz.release_to_disc(disc_info.disc_id, &1))
+          discs
+          |> Enum.map(fn disc -> Map.put(disc, :id, disc_info.disc_id) end)
           |> Enum.uniq_by(fn disc -> {disc.genre, disc.id} end)
           |> maybe_cache_discs()
 
@@ -103,6 +105,53 @@ defmodule Cddb do
       nil -> {:error, :not_found}
       disc -> {:ok, disc}
     end
+  end
+
+  @doc """
+  Calculate the CDDB Disc ID given the disc structure
+
+  https://courses.cs.duke.edu/cps006g/fall04/class/isis/freedb.pdf
+
+      iex> Cddb.calculate_disc_id(%{length_seconds: 4519, track_lbas: [150, 18064, 34719, 48510, 64506, 82409, 99569, 117860, 137646, 147539, 166275, 184290, 205587, 223455, 241522, 258378, 275550, 294931, 320173]})
+      "1f11a513"
+
+      iex> Cddb.calculate_disc_id(%{lead_out_lba: 338952, track_lbas: [150, 18064, 34719, 48510, 64506, 82409, 99569, 117860, 137646, 147539, 166275, 184290, 205587, 223455, 241522, 258378, 275550, 294931, 320173]})
+      "1f11a513"
+  """
+  def calculate_disc_id(%{track_lbas: toc, lead_out_lba: lead_out_lba}) do
+    calculate_disc_id(%{track_lbas: toc, length_seconds: floor(lead_out_lba / 75)})
+  end
+
+  def calculate_disc_id(%{track_lbas: track_lbas, length_seconds: length_seconds}) do
+    # On a music CD, each second is stored across 75 frames or sectors of the disc.
+    # Each LBA offset indicates how many frames/sectors into the disc the track starts.
+    frames_per_second = 75
+
+    # Tracks are not necessarily stored in evenly divisible numbers of frames.
+    # CDDB doesn't include partial frame numbers for this calculation.
+    second_offsets = Enum.map(track_lbas, fn lba -> floor(lba / frames_per_second) end)
+
+    # Each second offset's digits are tallied e.g. "152" => 1 + 5 + 2 = 8
+    n =
+      Enum.reduce(second_offsets, 0, fn sec, acc ->
+        sec
+        |> Integer.digits()
+        |> Enum.sum()
+        |> Kernel.+(acc)
+      end)
+      |> Kernel.rem(0xFF)
+
+    # CDDB queries don't explicitly send where the leadout starts but we
+    # can take an educated guess based on the total length and the first track offset.
+    leadout_sec = length_seconds - Enum.at(second_offsets, 0)
+    track_count = Enum.count(track_lbas)
+
+    tot = n <<< 24 ||| leadout_sec <<< 8 ||| track_count
+
+    tot
+    |> Integer.to_string(16)
+    |> String.pad_leading(8, "0")
+    |> String.downcase()
   end
 
   defp maybe_cache_discs([]), do: []
