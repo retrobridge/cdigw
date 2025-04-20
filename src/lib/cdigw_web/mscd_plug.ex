@@ -10,6 +10,7 @@ defmodule CdigwWeb.MscdPlug do
   # Sending UTF-8 garbles non-ASCII chars. Setting the `charset` has no effect,
   # but send it anyway to correctly indicate how we've encoded the text.
   @content_type "text/plain; charset=iso-8859-1"
+  @newline "\n"
 
   def init(options), do: options
 
@@ -29,12 +30,20 @@ defmodule CdigwWeb.MscdPlug do
 
         conn
         |> put_resp_header("content-type", @content_type)
-        |> send_resp(200, response)
+        |> send_resp(200, ensure_trailing_newline(response))
 
       {:error, :not_found} ->
         conn
         |> put_resp_header("content-type", @content_type)
         |> send_resp(404, "No matching disc found")
+    end
+  end
+
+  defp ensure_trailing_newline(str) do
+    if String.last(str) == @newline do
+      str
+    else
+      str <> @newline
     end
   end
 end

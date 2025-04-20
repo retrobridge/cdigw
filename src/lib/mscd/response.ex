@@ -14,9 +14,7 @@ defmodule Mscd.Response do
       |> render_fields()
       |> Enum.map(fn {key, value} -> "#{key}=#{value}" end)
 
-    body = ["[CD]" | body]
-
-    Enum.join(body, @line_separator)
+    Enum.join(["[CD]" | body], @line_separator)
   end
 
   def render_fields(%Disc{title: title, artist: artist, tracks: tracks}) do

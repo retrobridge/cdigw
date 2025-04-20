@@ -236,6 +236,6 @@ defmodule CdigwWeb.CddbPlugTest do
     Track19=Guilty as Sin? (acoustic version)
     """
 
-    assert resp.resp_body == String.strip(expected)
+    assert resp.resp_body == expected
   end
 end
