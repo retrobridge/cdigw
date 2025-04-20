@@ -2,6 +2,7 @@ import Config
 
 config :cdigw, :http_server,
   hostname: "localhost",
+  public_ip: "127.0.0.1",
   port: 80
 
 config :cdigw, :cddbp_server,
