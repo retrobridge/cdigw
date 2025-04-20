@@ -14,6 +14,6 @@ config :cdigw, ecto_repos: [Cdigw.Repo]
 
 config :logger, :default_formatter,
   format: "$time $metadata[$level] $message\n",
-  metadata: [:peer]
+  metadata: [:peer, :request_id]
 
 import_config "#{Mix.env()}.exs"
