@@ -124,7 +124,7 @@ defmodule CdigwWeb.CddbPlugTest do
     query_req = conn(:get, "?cmd=#{cmd}&proto=#{proto}")
     query_resp = CddbPlug.call(query_req, %{})
 
-    assert query_resp.resp_body == "202 No match"
+    assert query_resp.resp_body == "202 No match\n"
   end
 
   @tag capture_log: true

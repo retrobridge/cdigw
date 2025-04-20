@@ -24,6 +24,8 @@ Unreleased
 
 * For albums with multiple discs, requesting disc 2 or more would incorrectly
   return the data for disc 1. This affected CDDB and MSCD.
+* CDDB over HTTP: Missing a trailing newline in the response broke some clients'
+  ability to process the response, like Exact Audio Copy.
 
 [1.0.2] - 2025-03-20
 --------------------

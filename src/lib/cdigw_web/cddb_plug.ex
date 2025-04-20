@@ -6,6 +6,8 @@ defmodule CdigwWeb.CddbPlug do
   import Plug.Conn
   require Logger
 
+  @newline "\n"
+
   def init(options), do: options
 
   def call(conn, _opts) do
@@ -62,10 +64,20 @@ defmodule CdigwWeb.CddbPlug do
   defp send_encoded_response(conn, response, proto) do
     {charset, encoded} = Cddb.encode_response(response, proto)
 
+    encoded = ensure_trailing_newline(encoded)
+
     Logger.debug("response enc=#{charset} body=<<<EOF\n#{encoded}\nEOF")
 
     conn
     |> put_resp_content_type("text/plain", charset)
     |> send_resp(200, encoded)
+  end
+
+  def ensure_trailing_newline(str) do
+    if String.last(str) == @newline do
+      str
+    else
+      str <> @newline
+    end
   end
 end
